@@ -1,0 +1,6 @@
+{
+  "blocks": ["banner"],
+  "blocks_path": "blocks",
+  "blocks_part": "blocks",
+  "blocks_inc": "inc/blocks"
+}
