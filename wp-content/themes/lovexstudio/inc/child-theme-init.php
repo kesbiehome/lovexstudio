@@ -200,7 +200,7 @@ class Kesbie_Theme
 			'show_in_rest'               => true,
 		);
 
-		register_taxonomy('Category', array('project'), $args);
+		register_taxonomy('project_cat', array('project'), $args);
 	}
 }
 
