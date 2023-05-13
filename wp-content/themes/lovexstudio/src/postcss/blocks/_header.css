@@ -1,0 +1,32 @@
+header {
+	background-color: var(--header) !important;
+
+	& .main-navigation li.menu-item {
+		&.current-menu-item a {
+			color: var(--primary);
+		}
+
+		& a {
+			text-transform: uppercase;
+			color: var(--white);
+			transition: 0.3s;
+			line-height: 30px;
+
+			&:hover {
+				color: var(--primary) !important;
+			}
+		}
+	}
+}
+
+#menu-main-menu {
+	& > li:last-child {
+		background-color: var(--primary);
+
+		& a {
+			color: var(--header) !important;
+			border-radius: 3px;
+			dispay: inine-block;
+		}
+	}
+}
