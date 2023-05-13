@@ -4,7 +4,7 @@ git fetch origin
 git reset --hard origin/master
 git merge origin/develop --no-ff --no-edit
 git push origin HEAD:master
-cd ./wp-content/themes/sonkimono
+cd ./wp-content/themes/lovexstudio
 rm -rf assets/js/*.js.LICENSE.txt
 rm -rf src/
 rm -rf node_modules/
