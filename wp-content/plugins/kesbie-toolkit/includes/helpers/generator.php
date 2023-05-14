@@ -8,6 +8,7 @@ function kesbie_generate_swiper_slides($slides, $args = [])
 	}
 
 	$_class = 'swiper';
+
 	if (!empty($args['class'])) :
 		$_class .= ' ' . esc_attr($args['class']);
 	endif;
@@ -43,7 +44,6 @@ function kesbie_generate_swiper_slides($slides, $args = [])
 
 		$markup .= '</div>'; // <!-- End .swiper-slide -->
 	}
-	$markup .= '</div>'; // <!-- End .swiper-wrapper -->
 
 	if (isset($args['pagination']) && $args['pagination']) :
 		$markup .= '<div class="swiper-pagination"></div>';
@@ -53,10 +53,27 @@ function kesbie_generate_swiper_slides($slides, $args = [])
 		ob_start(); ?>
 		<div class="swiper-button-prev"></div>
 		<div class="swiper-button-next"></div>
-		<?php $markup .= ob_get_clean();
+	<?php $markup .= ob_get_clean();
 	endif;
 
 	if (isset($args['scrollbar']) && $args['scrollbar']) :
+		$markup .= '<div class="swiper-scrollbar"></div>';
+	endif;
+
+	$markup .= '</div>'; // <!-- End .swiper-wrapper -->
+
+	if (isset($args['paginationOutSide']) && $args['paginationOutSide']) :
+		$markup .= '<div class="swiper-pagination"></div>';
+	endif;
+
+	if (isset($args['prevNextButtonOutSide']) && $args['prevNextButtonOutSide']) :
+		ob_start(); ?>
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+		<?php $markup .= ob_get_clean();
+	endif;
+
+	if (isset($args['scrollbarOutSide']) && $args['scrollbarOutSide']) :
 		$markup .= '<div class="swiper-scrollbar"></div>';
 	endif;
 

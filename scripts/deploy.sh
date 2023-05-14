@@ -4,13 +4,13 @@ git fetch origin
 git reset --hard origin/master
 git merge origin/develop --no-ff --no-edit
 git push origin HEAD:master
-cd ./wp-content/themes/sonkimono
+cd ./wp-content/themes/lovexstudio
 rm -rf assets/js/*.js.LICENSE.txt
 rm -rf src/
 rm -rf node_modules/
 rm -rf postcss.config.js
 rm -rf package*.json
-rm -rf .babelrc .browserslistrc .editorconfig .eslintrc.js .prettierignore .stylelintrc .gitignore
+rm -rf .babelrc .browserslistrc .editorconfig .eslintrc.js .prettierignore .stylelintrc
 rm -rf webpack.config.js CONTRIBUTING.md CHANGELOG.md composer.json
 git add .
 git commit -m "Release package"
