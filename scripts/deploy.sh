@@ -10,7 +10,7 @@ rm -rf src/
 rm -rf node_modules/
 rm -rf postcss.config.js
 rm -rf package*.json
-rm -rf .babelrc .browserslistrc .editorconfig .eslintrc.js .prettierignore .stylelintrc
+rm -rf .babelrc .browserslistrc .editorconfig .eslintrc.js .prettierignore .stylelintrc .gitignore
 rm -rf webpack.config.js CONTRIBUTING.md CHANGELOG.md composer.json
 git add .
 git commit -m "Release package"
