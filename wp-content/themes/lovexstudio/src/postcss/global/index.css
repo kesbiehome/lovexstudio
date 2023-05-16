@@ -1,2 +1,4 @@
-@import '_section';
 @import '_slider';
+.site-content {
+    flex-direction: column;
+}

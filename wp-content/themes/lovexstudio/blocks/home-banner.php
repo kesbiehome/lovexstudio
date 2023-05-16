@@ -6,23 +6,18 @@ if (!empty($images)) :
         <div class="home-hero-slider">
             <?php if (!empty($image['image'])) : ?>
                 <div class="home-hero-slider__media">
-                    <picture class="image image--default">
-                        <?php
-                        $image_attributes = array(
-                            'class' => 'wp-post-image image__img lazyload',
-                            'loading' => false
-                        );
-
-                        echo wp_get_attachment_image(
-                            $image['image'],
-                            'full',
-                            false,
-                            $image_attributes
-                        );
-                        ?>
+                    <?php
+                    the_block(
+                        'image',
+                        [
+                            'image' => $image,
+                            'class' => 'image--default',
+                            'size' => 'full'
+                        ]
+                    )
+                    ?>
                 </div>
             <?php endif; ?>
-        </div>
         </div>
 <?php
 
@@ -40,7 +35,7 @@ if (!empty($images)) :
         'class' => 'hero-banner-slider js-hero-slider',
         'slide_class' => 'hero-banner-slide',
         'prevNextButton' => true,
-        // 'lazyload' => true,
+        'lazyload' => true,
     ]);
 
     $content .= ob_get_clean();

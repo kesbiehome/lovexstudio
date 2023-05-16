@@ -47,7 +47,9 @@ class About_Us extends Kesbie_Toolkit_Block implements Kesbie_Toolkit_Block_Inte
     $this->block_title = __('About Us', 'lovexstudio');
     $this->fields = [
       // Settings
-      'images'
+      'image',
+      'desc',
+      'rows',
     ];
 
     parent::__construct();
