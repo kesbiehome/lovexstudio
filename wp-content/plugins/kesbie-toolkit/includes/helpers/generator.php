@@ -45,14 +45,29 @@ function kesbie_generate_swiper_slides($slides, $args = [])
 		$markup .= '</div>'; // <!-- End .swiper-slide -->
 	}
 
+
+
+	$markup .= '</div>'; // <!-- End .swiper-wrapper -->
 	if (isset($args['pagination']) && $args['pagination']) :
 		$markup .= '<div class="swiper-pagination"></div>';
 	endif;
 
-	if (isset($args['prevNextButton']) && $args['prevNextButton']) :
+	if (isset($args['prevNextButton']) && !$args['prevNextButtonOutSide']) :
 		ob_start(); ?>
-		<div class="swiper-button-prev"></div>
-		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev">
+			<svg width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="42" cy="42" r="41.5" stroke="#E3B24C" />
+				<path d="M27.4633 42.9102C27.1778 42.7113 27.1778 42.2887 27.4633 42.0898L46.4642 28.8499C46.7956 28.619 47.25 28.8562 47.25 29.2602L47.25 55.7398C47.25 56.1438 46.7956 56.381 46.4642 56.15L27.4633 42.9102Z" stroke="#E3B24C" />
+				<path d="M37.1236 43.3109C36.5705 42.9118 36.5705 42.0883 37.1236 41.6891L55.4148 28.4886C56.0762 28.0113 57 28.4839 57 29.2995L57 55.7006C57 56.5162 56.0762 56.9887 55.4148 56.5114L37.1236 43.3109Z" fill="#E3B24C" />
+			</svg>
+		</div>
+		<div class="swiper-button-next">
+			<svg width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="42" cy="42" r="41.5" stroke="#E3B24C" />
+				<path d="M58.5538 42.0915C58.8361 42.2907 58.8361 42.7093 58.5538 42.9085L41.0383 55.2684C40.7071 55.5021 40.25 55.2652 40.25 54.8599L40.25 30.1401C40.25 29.7348 40.7071 29.4979 41.0383 29.7316L58.5538 42.0915Z" stroke="#E3B24C" />
+				<path d="M49.785 41.6732C50.3682 42.0701 50.3682 42.9299 49.785 43.3268L31.5626 55.7262C30.8987 56.1779 30 55.7024 30 54.8994L30 30.1006C30 29.2976 30.8987 28.8221 31.5626 29.2738L49.785 41.6732Z" fill="#E3B24C" />
+			</svg>
+		</div>
 	<?php $markup .= ob_get_clean();
 	endif;
 
@@ -60,16 +75,26 @@ function kesbie_generate_swiper_slides($slides, $args = [])
 		$markup .= '<div class="swiper-scrollbar"></div>';
 	endif;
 
-	$markup .= '</div>'; // <!-- End .swiper-wrapper -->
-
 	if (isset($args['paginationOutSide']) && $args['paginationOutSide']) :
 		$markup .= '<div class="swiper-pagination"></div>';
 	endif;
 
-	if (isset($args['prevNextButtonOutSide']) && $args['prevNextButtonOutSide']) :
+	if (isset($args['prevNextButton']) && $args['prevNextButtonOutSide']) :
 		ob_start(); ?>
-		<div class="swiper-button-prev"></div>
-		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev">
+			<svg width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="42" cy="42" r="41.5" stroke="#E3B24C" />
+				<path d="M27.4633 42.9102C27.1778 42.7113 27.1778 42.2887 27.4633 42.0898L46.4642 28.8499C46.7956 28.619 47.25 28.8562 47.25 29.2602L47.25 55.7398C47.25 56.1438 46.7956 56.381 46.4642 56.15L27.4633 42.9102Z" stroke="#E3B24C" />
+				<path d="M37.1236 43.3109C36.5705 42.9118 36.5705 42.0883 37.1236 41.6891L55.4148 28.4886C56.0762 28.0113 57 28.4839 57 29.2995L57 55.7006C57 56.5162 56.0762 56.9887 55.4148 56.5114L37.1236 43.3109Z" fill="#E3B24C" />
+			</svg>
+		</div>
+		<div class="swiper-button-next">
+			<svg width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="42" cy="42" r="41.5" stroke="#E3B24C" />
+				<path d="M58.5538 42.0915C58.8361 42.2907 58.8361 42.7093 58.5538 42.9085L41.0383 55.2684C40.7071 55.5021 40.25 55.2652 40.25 54.8599L40.25 30.1401C40.25 29.7348 40.7071 29.4979 41.0383 29.7316L58.5538 42.0915Z" stroke="#E3B24C" />
+				<path d="M49.785 41.6732C50.3682 42.0701 50.3682 42.9299 49.785 43.3268L31.5626 55.7262C30.8987 56.1779 30 55.7024 30 54.8994L30 30.1006C30 29.2976 30.8987 28.8221 31.5626 29.2738L49.785 41.6732Z" fill="#E3B24C" />
+			</svg>
+		</div>
 		<?php $markup .= ob_get_clean();
 	endif;
 
