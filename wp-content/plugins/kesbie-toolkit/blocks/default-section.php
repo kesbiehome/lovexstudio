@@ -2,7 +2,7 @@
 $_attrs  = '';
 $_attrs .= !empty($id) ? sprintf(' id="%s"', esc_attr($id)) : '';
 $_attrs .= !empty($attributes) ? ' ' . $attributes : '';
-$_class  = 'default-section';
+$_class  = 'section';
 $_class .= !empty($background_image) ? ' has-bg-image' : '';
 $_class .= !empty($class) ? ' ' . $class : '';
 $_tag    = !empty($tag) ? $tag : 'div';
@@ -42,10 +42,10 @@ if (!empty($content)) : ?>
 		endif;
 		?>
 		<?php if (!empty($header)) : ?>
-			<div class="wp-block-group default-section__header">
-				<div class="wp-block-group__inner-container container default-section__container default-section__container--header">
-					<div class="wp-block-group default-section__inner default-section__inner--header">
-						<div class="wp-block-group__inner-content">
+			<div class="section__header">
+				<div class="section__container section__container--header">
+					<div class="section__inner section__inner--header">
+						<div class="section__inner-content">
 							<?php echo $header; ?>
 						</div>
 					</div>
@@ -57,10 +57,10 @@ if (!empty($content)) : ?>
 			echo $before_main;
 		endif;
 		?>
-		<div class="wp-block-group default-section__main">
-			<div class="wp-block-group__inner-container container default-section__container default-section__container--main">
-				<div class="wp-block-group default-section__inner default-section__inner--main">
-					<div class="wp-block-group__inner-content js-main-content">
+		<div class="section__main">
+			<div class="section__container section__container--main">
+				<div class="section__inner section__inner--main">
+					<div class="section__inner-content js-main-content">
 						<?php
 						echo $_content;
 						?>
@@ -74,10 +74,10 @@ if (!empty($content)) : ?>
 		endif;
 		?>
 		<?php if (!empty($footer)) : ?>
-			<div class="wp-block-group default-section__footer">
-				<div class="wp-block-group__inner-container container default-section__container default-section__container--footer">
-					<div class="wp-block-group default-section__inner default-section__inner--footer">
-						<div class="wp-block-group__inner-container">
+			<div class="section__footer">
+				<div class="section__container section__container--footer">
+					<div class="section__inner section__inner--footer">
+						<div class="section__inner-container">
 							<?php echo $footer; ?>
 						</div>
 					</div>
