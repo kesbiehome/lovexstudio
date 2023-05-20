@@ -46,7 +46,9 @@ if (!empty($content)) : ?>
 				<div class="section__container section__container--header">
 					<div class="section__inner section__inner--header">
 						<div class="section__inner-content">
-							<?php echo $header; ?>
+							<h2 class="section__title">
+								<?php echo $header; ?>
+							</h2>
 						</div>
 					</div>
 				</div>
