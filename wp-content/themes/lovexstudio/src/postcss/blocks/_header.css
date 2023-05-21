@@ -20,10 +20,14 @@ header {
 		}
 	}
 
+	& .menu-item-has-children > a {
+		padding-right: 20px !important;
+	}
+
 	& .sub-menu {
 		background-color: var(--contrast-2) !important;
 		border-top: 3px solid var(--primary);
-		margin-top: -0.5em;
+		margin-top: -0.25em;
 		width: 100% !important;
 		padding: 0.5em 0;
 		transition: 0.3s;

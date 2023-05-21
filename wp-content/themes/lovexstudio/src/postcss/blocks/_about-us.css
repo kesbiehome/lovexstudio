@@ -8,8 +8,8 @@
 	display: flex;
 	position: relative;
 	gap: 150px;
-    max-width: 1200px;
-    margin: auto;
+	max-width: 1200px;
+	margin: auto;
 }
 
 .home-about-us__media {
@@ -19,8 +19,8 @@
 }
 
 .home-about-us__media img {
-    height: 100%;
-    object-fit: cover;
+	height: 100%;
+	object-fit: cover;
 }
 
 .home-about-us__desc {
@@ -29,7 +29,7 @@
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 29px;
-    max-width: 440px;
+	max-width: 440px;
 }
 
 .home-about-us__bottom {
