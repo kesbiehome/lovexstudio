@@ -85,6 +85,7 @@ class Kesbie_Toolkit
 
 		Kesbie_Toolkit_Admin::instance();
     Kesbie_Toolkit_Templates::instance();
+    Kesbie_Toolkit_Assets::instance();
 
     if (kesbie_is_supported_theme()) {
       $this->custom_theme_settings = $this->get_custom_theme_settings();
@@ -123,6 +124,7 @@ class Kesbie_Toolkit
 
     require_once KESBIE_TOOLKIT_DIR . 'includes/classes/class-kesbie-toolkit-block.php';
     require_once KESBIE_TOOLKIT_DIR . 'includes/classes/interface-kesbie-toolkit-block.php';
+    require_once KESBIE_TOOLKIT_DIR . 'includes/classes/class-kesbie-toolkit-assets.php';
 
     // ACF
     require_once KESBIE_TOOLKIT_DIR . 'includes/classes/class-kesbie-toolkit-templates.php';
