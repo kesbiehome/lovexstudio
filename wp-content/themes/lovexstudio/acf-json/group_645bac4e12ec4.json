@@ -3,6 +3,94 @@
     "title": "Page Options",
     "fields": [
         {
+            "key": "field_6468923cf8134",
+            "label": "Global",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_64689251f8135",
+            "label": "Socials",
+            "name": "socials",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_64689269f8136",
+                    "label": "Type",
+                    "name": "type",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "facebook": "Facebook",
+                        "instagram": "Instagram",
+                        "youtube": "Youtube",
+                        "behance": "Behance"
+                    },
+                    "default_value": "facebook",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_64689251f8135"
+                },
+                {
+                    "key": "field_646892dff8137",
+                    "label": "URL",
+                    "name": "url",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_64689251f8135"
+                }
+            ]
+        },
+        {
             "key": "field_645bac65beba1",
             "label": "Contacts",
             "name": "",
@@ -173,5 +261,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1683729720
+    "modified": 1684659902
 }

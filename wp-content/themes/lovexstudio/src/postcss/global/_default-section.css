@@ -1,0 +1,10 @@
+.section__title {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 80px;
+	line-height: 117px;
+	/* identical to box height */
+
+	text-transform: uppercase;
+	color: var(--primary);
+}

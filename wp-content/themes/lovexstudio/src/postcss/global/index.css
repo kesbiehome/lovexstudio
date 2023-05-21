@@ -1,0 +1,6 @@
+@import '_slider';
+@import '_default-section';
+
+.site-content {
+	flex-direction: column;
+}
