@@ -120,8 +120,6 @@ const init = () => {
 		})
 	}
 
-	console.log(blockListEl);
-
 	if (blockListEl && blockListHtml) {
 		blockListEl.innerHTML = blockListHtml.innerHTML
 
