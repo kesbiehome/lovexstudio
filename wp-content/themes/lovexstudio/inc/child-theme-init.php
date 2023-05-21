@@ -167,6 +167,13 @@ class Kesbie_Theme
 				'capability'    => 'edit_posts',
 				'redirect'      => false
 			));
+
+			$sub_page = acf_add_options_sub_page(array(
+				'page_title'  => __('404 pages'),
+				'menu_title'  => __('404 pages'),
+				'parent_slug' => $option_page['menu_slug'],
+				'menu_slug'	  => 'error_page'
+			));
 		}
 	}
 
