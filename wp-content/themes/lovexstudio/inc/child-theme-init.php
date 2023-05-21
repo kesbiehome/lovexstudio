@@ -56,7 +56,7 @@ class Kesbie_Theme
 		add_action('after_setup_theme', [$this, 'load_child_theme_language'], 99);
 		add_action('wp_enqueue_scripts', [$this, 'load_assets'], 30);
 		add_action('generate_inside_slideout_navigation', [$this, 'logo_mobile_header_menu'],1);
-		add_action( 'generate_inside_slideout_navigation', [$this, 'socials_link_shortcode']);
+		add_action( 'generate_inside_slideout_navigation', [$this, 'social_links_shortcode']);
 		add_filter( 'generate_svg_icon', [$this, 'change_svg_icon_slideout_menu'], 10, 2);
 	}
 
@@ -221,6 +221,9 @@ class Kesbie_Theme
 		$logo_id = get_theme_mod( 'custom_logo' );
 
 		if ($logo_id) {
+			?>
+			<div class="slideout-navigation__logo">
+			<?php
 			the_block(
 				'image',
 				[
@@ -229,14 +232,22 @@ class Kesbie_Theme
 					'size' => 'small'
 				]
 			);
+			?>
+			</div>
+			<?php
 		}
 	}
 
-	function socials_link_shortcode()
+	function social_links_shortcode()
 	{
-		$logo_id = get_theme_mod( 'custom_logo' );
+		$social_links = get_field('socials', 'options');
 
-		echo 'ahihi';
+		if (!empty($social_links)) { ?>
+			<div class="slideout-navigation__social-links social-links">
+				<?php get_template_part('template-parts/social-links'); ?>
+			</div>
+		<?php
+		}
 	}
 
 	function change_svg_icon_slideout_menu( $output, $icon )

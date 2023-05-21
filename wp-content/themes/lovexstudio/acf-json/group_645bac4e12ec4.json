@@ -58,8 +58,8 @@
                     "choices": {
                         "facebook": "Facebook",
                         "instagram": "Instagram",
-                        "telegram": "Telegram",
-                        "tiktok": "Tiktok"
+                        "youtube": "Youtube",
+                        "behance": "Behance"
                     },
                     "default_value": "facebook",
                     "return_format": "value",
@@ -261,5 +261,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1684606960
+    "modified": 1684659902
 }
