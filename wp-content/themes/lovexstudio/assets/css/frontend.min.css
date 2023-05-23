@@ -2,24 +2,24 @@
 .example {
 	color: white;
 }
-header {
-	background-color: var(--header) !important
-}
-header .main-navigation li.menu-item:hover > a {
+.slideout-menu li.menu-item:hover > a, .main-navigation li.menu-item:hover > a {
 				color: #1346af !important;
 				color: var(--primary) !important;
 			}
-header .main-navigation li.menu-item.current-menu-item a {
-			color: #1346af;
-			color: var(--primary);
+.slideout-menu li.menu-item.current-menu-item a, .main-navigation li.menu-item.current-menu-item a {
+			color: #1346af !important;
+			color: var(--primary) !important;
 		}
-header .main-navigation li.menu-item a {
+.slideout-menu li.menu-item a, .main-navigation li.menu-item a {
 			text-transform: uppercase;
-			color: #fff;
-			color: var(--white);
+			color: #fff !important;
+			color: var(--white) !important;
 			transition: 0.3s;
 			line-height: 70px;
 		}
+header {
+	background-color: var(--header) !important
+}
 header .menu-item-has-children > a {
 		padding-right: 20px !important;
 	}
@@ -205,7 +205,7 @@ header .site-logo {
 		margin: 50px auto 20px
 	}
 #generate-slideout-menu .main-nav li {
-			text-align: center;
+			text-align: center !important;
 		}
 #generate-slideout-menu .slideout-navigation__social-links {
 		order: 4;
