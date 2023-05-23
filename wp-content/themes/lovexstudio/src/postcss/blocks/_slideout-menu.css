@@ -35,7 +35,7 @@
 		margin: 50px auto 20px;
 
 		& li {
-			text-align: center;
+			text-align: center !important;
 		}
 	}
 

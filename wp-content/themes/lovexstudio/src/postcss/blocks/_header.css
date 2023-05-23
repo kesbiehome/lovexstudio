@@ -1,7 +1,6 @@
-header {
-	background-color: var(--header) !important;
-
-	& .main-navigation li.menu-item {
+.slideout-menu,
+.main-navigation {
+	& li.menu-item {
 		&:hover {
 			& > a {
 				color: var(--primary) !important;
@@ -9,16 +8,20 @@ header {
 		}
 
 		&.current-menu-item a {
-			color: var(--primary);
+			color: var(--primary) !important;
 		}
 
 		& a {
 			text-transform: uppercase;
-			color: var(--white);
+			color: var(--white) !important;
 			transition: 0.3s;
 			line-height: 70px;
 		}
 	}
+}
+
+header {
+	background-color: var(--header) !important;
 
 	& .menu-item-has-children > a {
 		padding-right: 20px !important;
