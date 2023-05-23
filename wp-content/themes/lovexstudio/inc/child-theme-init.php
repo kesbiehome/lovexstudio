@@ -243,8 +243,8 @@ class Kesbie_Theme
 		$social_links = get_field('socials', 'options');
 
 		if (!empty($social_links)) { ?>
-			<div class="slideout-navigation__social-links social-links">
-				<?php get_template_part('template-parts/social-links'); ?>
+			<div class="slideout-navigation__social-links">
+				<?php echo do_shortcode('[social_links]'); ?>
 			</div>
 		<?php
 		}

@@ -23,4 +23,5 @@ add_action('after_setup_theme', 'theme_load_dependencies');
  */
 function theme_load_dependencies() {
   require_once THEME_INCLUDES_DIR . '/child-theme-init.php';
+  require_once THEME_INCLUDES_DIR . '/helpers/shortcodes.php';
 }
