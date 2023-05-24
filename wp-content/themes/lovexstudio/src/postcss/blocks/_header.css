@@ -54,6 +54,26 @@ header {
 			width: auto;
 		}
 	}
+
+	& .has-sticky-branding {
+		background-color: var(--header);
+
+		& .is-logo-image {
+			max-width: 200px;
+			height: auto !important;
+		}
+
+		& .main-navigation a {
+			font-size: 90%;
+			transition: 0.1s;
+		}
+
+		& button.menu-toggle,
+		& button.menu-toggle:hover,
+		& button.menu-toggle:focus {
+			color: var(--white);
+		}
+	}
 }
 
 .mobile-menu-control-wrapper {
