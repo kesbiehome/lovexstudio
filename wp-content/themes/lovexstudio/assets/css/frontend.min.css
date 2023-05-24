@@ -49,6 +49,23 @@ header .site-logo {
 			width: auto
 	}
 		}
+header .has-sticky-branding {
+		background-color: var(--header)
+	}
+header .has-sticky-branding .is-logo-image {
+			max-width: 200px;
+			height: auto !important;
+		}
+header .has-sticky-branding .main-navigation a {
+			font-size: 90%;
+			transition: 0.1s;
+		}
+header .has-sticky-branding button.menu-toggle,
+		header .has-sticky-branding button.menu-toggle:hover,
+		header .has-sticky-branding button.menu-toggle:focus {
+			color: #fff;
+			color: var(--white);
+		}
 .mobile-menu-control-wrapper {
 	margin-right: -15px
 }
