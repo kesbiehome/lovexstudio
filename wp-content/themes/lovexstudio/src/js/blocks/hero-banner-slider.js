@@ -13,7 +13,6 @@ const BREAKPOINT = 781
 export default el => {
 	const initApp = () => {
 		const sliderEl = select('.js-hero-slider', el)
-		console.log(sliderEl)
 		let slider = null
 		let slideEls = null
 		if (sliderEl) {

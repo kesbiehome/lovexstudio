@@ -1,53 +1,66 @@
-.section-about-us .section__header {
-	position: relative;
-}
-
-.section-about-us .section__header::before {
-	content: '';
-	position: absolute;
-	height: 100%;
-	width: 20%;
-	border-bottom: 120px solid var(--primary);
-	border-left: 0 solid var(--primary);
-	border-right: 65px solid transparent;
-	border-top: 0 solid transparent;
+.section-about-us .section__title {
+	margin-left: 65%;
 }
 
 .home-about-us__bottom {
 	position: relative;
 }
 
-.home-about-us__bottom::before {
+.home-about-us__top {
+	padding: 40px 0;
+	height: 400px;
+	background: var(--primary);
+	position: relative;
+	z-index: 1;
+}
+
+.home-about-us__top::before {
 	content: '';
 	position: absolute;
-	top: 0;
+	min-width: 170px;
+	top: -70px;
+	left: 0;
+	height: 70px;
+	width: 20%;
+	border-bottom: 120px solid #1346af;
+	border-bottom: 120px solid var(--primary);
+	border-left: 0 solid #1346af;
+	border-left: 0 solid var(--primary);
+	border-right: 65px solid transparent;
+	border-top: 0 solid transparent;
+}
+
+.home-about-us__top::after {
+	content: '';
+	position: absolute;
+	bottom: -54px;
 	right: 0;
 	width: 20%;
 	border-bottom: 0px solid transparent;
 	border-left: 50px solid transparent;
 	border-right: 0px solid transparent;
-	border-top: 80px solid var(--primary);
-}
-
-.home-about-us__top {
-	padding: 80px 0;
-	height: 400px;
-	background: var(--primary);
+	border-top: 55px solid var(--primary);
 }
 
 .home-about-us__top-wrapper {
+	width: min(100% - 30px, 1200px);
+	margin: 0 auto;
 	display: flex;
+	flex-direction: column-reverse;
+	gap: 40px;
 	position: relative;
-	gap: 150px;
-	max-width: 1200px;
-	margin: auto;
+	z-index: 3;
 }
 
 .home-about-us__media {
-	width: 50%;
-	position: absolute;
-	height: 400px;
-	z-index: 1;
+	@mixin ratio 9/16;
+
+	width: 75%;
+	z-index: 2;
+	position: relative;
+	margin: 0 auto;
+	max-height: 370px;
+	min-width: 335px;
 }
 
 .home-about-us__media img {
@@ -56,21 +69,24 @@
 }
 
 .home-about-us__desc {
-	margin-left: 60%;
 	font-style: normal;
 	font-weight: 500;
-	font-size: 20px;
-	line-height: 29px;
-	max-width: 440px;
+	font-size: 17px;
+	line-height: 22px;
+	max-width: 80%;
+	margin: 0 auto;
+	min-width: 350px;
 }
 
 .home-about-us__bottom {
-	padding-top: 200px;
+	padding-top: 145px;
 	padding-bottom: 70px;
 	background: #181b26;
 }
 
 .home-about-us__bottom-wrapper {
+	width: min(100% - 30px, 1200px);
+	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	gap: 50px;
@@ -79,6 +95,8 @@
 
 .about-us__row {
 	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
 
 .about-us__row-title {
@@ -94,4 +112,93 @@
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 23px;
+}
+
+@media (--s) {
+	.home-about-us__top {
+		padding: 80px 0;
+	}
+
+	.home-about-us__top::before {
+		top: -70px;
+		height: 70px;
+	}
+
+	.home-about-us__bottom {
+		padding-top: 200px;
+	}
+
+	.home-about-us__top::before {
+		content: '';
+		position: absolute;
+		min-width: 170px;
+		top: -70px;
+		left: 0;
+		height: 70px;
+		width: 20%;
+		border-bottom: 120px solid #1346af;
+		border-bottom: 120px solid var(--primary);
+		border-left: 0 solid #1346af;
+		border-left: 0 solid var(--primary);
+		border-right: 65px solid transparent;
+		border-top: 0 solid transparent;
+	}
+
+	.home-about-us__top::after {
+		content: '';
+		position: absolute;
+		bottom: -80px;
+		right: 0;
+		width: 20%;
+		border-bottom: 0px solid transparent;
+		border-left: 50px solid transparent;
+		border-right: 0px solid transparent;
+		border-top: 80px solid #1346af;
+		border-top: 80px solid var(--primary);
+	}
+}
+
+@media (--sm) {
+	.about-us__row {
+		display: flex;
+		flex-direction: row;
+		gap: 0;
+	}
+
+	.home-about-us__media {
+		width: 50%;
+		position: absolute;
+		height: 400px;
+		z-index: 1;
+	}
+
+	.home-about-us__top::before {
+		top: -90px;
+		height: 90px;
+	}
+
+	.home-about-us__top-wrapper {
+		display: flex;
+		position: relative;
+		flex-direction: row;
+
+		height: 100%;
+		gap: 150px;
+	}
+
+	.home-about-us__desc {
+		margin-left: 65%;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 29px;
+		max-width: 440px;
+	}
+}
+
+@media (--ml) {
+	.home-about-us__top::before {
+		top: -117px;
+		height: 117px;
+	}
 }

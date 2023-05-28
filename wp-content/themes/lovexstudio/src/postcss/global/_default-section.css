@@ -1,17 +1,38 @@
 .section__title {
 	font-style: normal;
 	font-weight: 700;
-	font-size: 80px;
-	line-height: 117px;
+	font-size: 40px;
+	line-height: 70px;
+
 	/* identical to box height */
 
 	text-transform: uppercase;
 	color: var(--primary);
 	margin-bottom: 0;
-	margin-left: 60%;
 }
 
 .section__inner--header {
-	max-width: 1200px;
+	width: min(100% - 30px, 1200px);
 	margin: 0 auto;
+}
+
+@media (--s) {
+	.section__title {
+		font-size: 55px;
+		line-height: 70px;
+	}
+}
+
+@media (--sm) {
+	.section__title {
+		font-size: 65px;
+		line-height: 90px;
+	}
+}
+
+@media (--ml) {
+	.section__title {
+		line-height: 117px;
+		font-size: 80px;
+	}
 }
