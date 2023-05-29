@@ -1,0 +1,5 @@
+.service-listing {
+	& > .wp-block-group__inner-container {
+		padding-top: 0;
+	}
+}
