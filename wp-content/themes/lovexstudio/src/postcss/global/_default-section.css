@@ -11,10 +11,6 @@
 	margin-bottom: 0;
 }
 
-.section__inner--header {
-	width: min(100% - 30px, 1200px);
-	margin: 0 auto;
-}
 
 @media (--s) {
 	.section__title {
