@@ -7,7 +7,6 @@ git push origin HEAD:master
 cd ./wp-content/themes/lovexstudio
 rm -rf assets/js/*.js.LICENSE.txt
 rm -rf src/
-rm -rf node_modules/
 rm -rf postcss.config.js
 rm -rf package*.json
 rm -rf .babelrc .browserslistrc .editorconfig .eslintrc.js .prettierignore .stylelintrc .gitignore

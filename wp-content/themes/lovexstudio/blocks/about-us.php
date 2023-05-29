@@ -6,9 +6,9 @@
                 <?php
                 echo wp_get_attachment_image(
                     $image,
-                    'full',
+                    'large image__img',
                     false,
-                    $image_attributes
+                    'image__img',
                 );
                 ?>
             </div>
@@ -16,7 +16,9 @@
 
         <?php if (!empty($desc)) : ?>
             <div class="home-about-us__desc">
-                <?php esc_html_e($desc); ?>
+                <span>
+                    <?php esc_html_e($desc); ?>
+                </span>
             </div>
         <?php endif; ?>
     </div>
@@ -27,13 +29,17 @@
             <div class="about-us__row">
                 <?php if (!empty($row['title'])) : ?>
                     <div class="about-us__row-title">
-                        <?php esc_html_e($row['title']); ?>
+                        <span>
+                            <?php esc_html_e($row['title']); ?>
+                        </span>
                     </div>
                 <?php endif; ?>
 
                 <?php if (!empty($row['subtitle'])) : ?>
                     <div class="about-us__row-subtitle">
-                        <?php esc_html_e($row['subtitle']); ?>
+                        <span>
+                            <?php esc_html_e($row['subtitle']); ?>
+                        </span>
                     </div>
                 <?php endif; ?>
             </div>
