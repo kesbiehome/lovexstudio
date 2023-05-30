@@ -1,0 +1,6 @@
+.project-card {
+}
+
+.image--large {
+	@mixin ratio 447/372;
+}

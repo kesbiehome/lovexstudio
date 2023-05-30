@@ -1,0 +1,14 @@
+.project-tabs__link {
+    display: flex;
+}
+
+.project-tabs__button {
+    padding: 1em;
+    text-decoration: none;
+	background: rgba(252, 189, 26, 0.3);
+	border: 1px solid #fcbd1a;
+	border-radius: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+}

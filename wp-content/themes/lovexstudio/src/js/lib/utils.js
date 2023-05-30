@@ -422,8 +422,19 @@ const initStyle = (src, id = '') => {
 	document.head.appendChild(script)
 }
 
+const addQueryVar = (key, value, url) => {
+	return url
+		.replace(
+			RegExp('([?&]' + key + '(?=[=&#]|$)[^#&]*|(?=#|$))'),
+			'&' + key + '=' + encodeURIComponent(value)
+		)
+		.replace(/^([^?&]+)&/, '$1?')
+}
+
+
 export {
 	add,
+	addQueryVar,
 	allPass,
 	always,
 	anyPass,
