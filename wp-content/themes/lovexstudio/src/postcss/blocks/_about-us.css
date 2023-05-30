@@ -2,6 +2,12 @@
 	margin-left: 65%;
 }
 
+.section-about-us .section__inner {
+	background-image: url('/vendor-assets/images/dot-orange.png');
+	background-repeat: no-repeat;
+	background-position: 350px 50%;
+}
+
 .home-about-us__bottom {
 	position: relative;
 }
@@ -12,6 +18,10 @@
 	background: var(--primary);
 	position: relative;
 	z-index: 1;
+
+	background-image: url('/vendor-assets/images/white-bg.png');
+	background-repeat: no-repeat;
+	background-position: calc(50%) -16px;
 }
 
 .home-about-us__top::before {
