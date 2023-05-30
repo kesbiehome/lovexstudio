@@ -431,7 +431,6 @@ const addQueryVar = (key, value, url) => {
 		.replace(/^([^?&]+)&/, '$1?')
 }
 
-
 export {
 	add,
 	addQueryVar,

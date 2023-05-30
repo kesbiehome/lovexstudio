@@ -11,7 +11,6 @@
 	margin-bottom: 0;
 }
 
-
 @media (--s) {
 	.section__title {
 		font-size: 55px;
@@ -45,4 +44,8 @@
 
 .mb-0 {
 	margin-bottom: 0;
+}
+
+body.home {
+	background-color: #1a1b22;
 }

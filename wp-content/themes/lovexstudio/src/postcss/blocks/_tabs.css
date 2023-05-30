@@ -1,30 +1,29 @@
 .kesbie-tabs__nav-items {
-    display: flex;
-    
+	display: flex;
 }
 
 .kesbie-tabs__nav-item {
-    list-style: none;
-    cursor: pointer;
+	list-style: none;
+	cursor: pointer;
 }
 
 .kesbie-tabs__tab-contents {
-    position: relative;
-    transition: height 0.3s;
+	position: relative;
+	transition: height 0.3s;
 }
 
 .kesbie-tabs__tab-content {
-    @mixin abs-full;
+	@mixin abs-full;
 
-    margin: 0;
-    transition: opacity 0.3s ease;
-    opacity: 0;
-    z-index: 0;
-    pointer-events: none;
+	margin: 0;
+	transition: opacity 0.3s ease;
+	opacity: 0;
+	z-index: 0;
+	pointer-events: none;
 
-    &.is-active {
-        opacity: 1;
-        z-index: 2;
-        pointer-events: visible;
-    }
+	&.is-active {
+		opacity: 1;
+		z-index: 2;
+		pointer-events: visible;
+	}
 }

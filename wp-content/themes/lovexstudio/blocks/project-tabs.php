@@ -42,7 +42,7 @@ the_block(
     'default-section',
     [
         'attributes' => ' data-child-block="project-tabs"',
-        'class' => $_class,
+        'class' => $_class . ' bg-dark',
         'header' => $title ?? '',
         'content' => $content ?? '',
         'footer' => $footer ?? ''
