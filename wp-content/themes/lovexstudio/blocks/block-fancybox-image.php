@@ -17,3 +17,5 @@ $image = block_value('image');
 		);
 		?>
 </a>
+
+<div class="title"><span><?php echo $title;  ?></span></div>

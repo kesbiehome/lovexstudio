@@ -45,6 +45,10 @@
 			gap: 120px;
 		}
 	}
+
+	& .wp-block-columns {
+		flex-direction: column-reverse;
+	}
 }
 
 .two-up-intro__image {

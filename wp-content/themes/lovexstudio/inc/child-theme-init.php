@@ -86,6 +86,10 @@ class Kesbie_Theme
 		wp_enqueue_style('fancybox', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css', [], '5.0');
 
 		wp_enqueue_script('kesbie-theme-frontend-js', THEME_ASSETS_URI . '/js/frontend' . $this->theme_environment . '.js', array(), THEME_VERSION, true);
+		wp_localize_script('kesbie-theme-frontend-js', 'lovexstudioConfig', [
+			'restUrl' => get_rest_url(null, '/'),
+			'loadMoreProjectsApi' => 'lovexstudio/v1/loadMoreProjects'
+		]);
 		wp_enqueue_script('fancybox', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js', [], '5.0');
 	}
 
@@ -206,7 +210,7 @@ class Kesbie_Theme
 
 		$args = array(
 			'labels'                     => $labels,
-			'hierarchical'               => false,
+			'hierarchical'               => true,
 			'public'                     => true,
 			'show_ui'                    => true,
 			'show_admin_column'          => true,

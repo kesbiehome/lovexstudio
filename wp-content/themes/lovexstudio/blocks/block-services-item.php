@@ -7,7 +7,7 @@ $image = block_value('image');
 <div class="service-card">
 	<div class="service-card__top">
 		<img src="<?php echo THEME_VENDOR_ASSETS_URI . '/images/service-1.png' ;?>" alt="">
-		<span class="service-card__title"><?php echo $title; ?></span>
+		<div class="service-card__title"><span><?php echo $title; ?></span></div>
 	</div>
 	<div class="service-card__image">
 		<?php

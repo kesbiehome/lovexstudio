@@ -1,0 +1,155 @@
+{
+  "layout_55fcf2t12tsu2e": {
+    "key": "layout_55fcf2t12tsu2e",
+    "name": "project_tabs",
+    "label": "Project Tabs",
+    "display": "row",
+    "sub_fields": [
+      {
+        "key": "field_647253e0siue2",
+        "label": "Title",
+        "name": "title",
+        "aria-label": "",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_64725413siue3",
+        "label": "Project Category",
+        "name": "project_category",
+        "aria-label": "",
+        "type": "taxonomy",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "taxonomy": "project_cat",
+        "add_term": 1,
+        "save_terms": 1,
+        "load_terms": 1,
+        "return_format": "object",
+        "field_type": "checkbox",
+        "multiple": 0,
+        "allow_null": 0
+      },
+      {
+        "key": "field_6474e608siuc3",
+        "label": "Number of projects",
+        "name": "number_of_projects",
+        "aria-label": "",
+        "type": "number",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": 6,
+        "min": 6,
+        "max": "",
+        "placeholder": "",
+        "step": "",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_6474e664siuc4",
+        "label": "Button",
+        "name": "button",
+        "aria-label": "",
+        "type": "group",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "layout": "row",
+        "sub_fields": [
+          {
+            "key": "field_6474e676siuc5",
+            "label": "Title",
+            "name": "title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+          },
+          {
+            "key": "field_6474e686e36c6",
+            "label": "Url",
+            "name": "url",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+          }
+        ]
+      },
+      {
+        "key": "field_6474e6absiuc7",
+        "label": "Load More",
+        "name": "load_more",
+        "aria-label": "",
+        "type": "true_false",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "message": "",
+        "default_value": 0,
+        "ui": 0,
+        "ui_on_text": "",
+        "ui_off_text": ""
+      }
+    ],
+    "min": "",
+    "max": ""
+  }
+}

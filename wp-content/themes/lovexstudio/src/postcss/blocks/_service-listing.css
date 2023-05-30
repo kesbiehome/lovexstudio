@@ -3,3 +3,15 @@
 		padding-top: 0;
 	}
 }
+
+.wp-block-columns > .wp-block-column.service-listing__item {
+	flex-basis: 100% !important;
+
+	@media (--xs) {
+		flex-basis: 40% !important;
+	}
+
+	@media (--m) {
+		flex-basis: 0 !important;
+	}
+}
