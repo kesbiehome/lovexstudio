@@ -202,13 +202,16 @@ body > .site-footer > footer {
 	}
 .project-tabs {
 	width: calc(100% - 2em);
-	margin: 0 1em;
 	padding: 40px 0
 }
 @media (min-width: 1280px) {
 .project-tabs {
 		width: 100%
 }
+	}
+.project-tabs .section__container {
+		max-width: 1200px;
+		margin: 0 auto;
 	}
 .project-tabs .section__title {
 		text-align: center;
