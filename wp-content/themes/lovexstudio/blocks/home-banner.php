@@ -10,7 +10,7 @@ if (!empty($images)) :
                     the_block(
                         'image',
                         [
-                            'image' => $image,
+                            'image' => $image['image'],
                             'class' => 'image--default',
                             'size' => 'full'
                         ]
