@@ -1,6 +1,5 @@
 body > .site-footer {
 	background-color: var(--header);
-	margin-top: 2em;
 	text-align: center;
 
 	& .inside-footer-widgets {
