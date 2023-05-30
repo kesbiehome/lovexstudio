@@ -43,7 +43,10 @@
 
 	& .contact-right {
 		width: 60%;
-		background-color: rgba(252, 189, 26, 0.9);
+		background-color: var(--primary);
+		background-image: url('/vendor-assets/images/background.png');
+		background-repeat: no-repeat;
+		background-position: right;
 
 		& .contact-right__wrapper {
 			padding: 60px;
@@ -61,8 +64,8 @@
 		& input {
 			background: unset !important;
 			border: unset !important;
-			color: white !important;
-			border-bottom: 1px solid white !important;
+			color: black !important;
+			border-bottom: 1px solid black !important;
 			padding: 10px 25px !important;
 		}
 
@@ -70,13 +73,20 @@
 			outline: unset;
 			background: unset !important;
 			border: unset !important;
-			color: white !important;
-			border-bottom: 1px solid white !important;
+			color: black !important;
+			border-bottom: 1px solid black !important;
 		}
 
 		& input::placeholder {
 			/* Chrome, Firefox, Opera, Safari 10.1+ */
-			color: white;
+			color: black;
+		}
+
+		& input:-webkit-autofill,
+		& input:-webkit-autofill:hover,
+		& input:-webkit-autofill:focus,
+		& input:-webkit-autofill:active {
+			-webkit-box-shadow: 0 0 0 30px var(--primary) inset !important;
 		}
 
 		& .gform_footer.top_label {
@@ -96,10 +106,11 @@
 				line-height: 23px;
 				text-transform: uppercase;
 				transition: all 0.5s;
+				border-bottom: unset !important;
 			}
 
 			& input[type='submit']:hover {
-				background: var(--primary) !important;
+				background: var(--secondary) !important;
 				color: var(--black) !important;
 			}
 		}
@@ -107,5 +118,6 @@
 
 	& .contact-logo {
 		margin-bottom: 60px;
+		width: 200px;
 	}
 }
