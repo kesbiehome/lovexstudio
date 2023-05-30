@@ -1,5 +1,5 @@
 {
-  "blocks": ["banner", "home-banner", "about-us","home-contact"],
+  "blocks": ["banner", "home-banner", "about-us","home-contact","contact-page"],
   "blocks_path": "blocks",
   "blocks_part": "blocks",
   "blocks_inc": "inc/blocks"
