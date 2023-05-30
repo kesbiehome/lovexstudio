@@ -1,10 +1,48 @@
 .section__title {
 	font-style: normal;
 	font-weight: 700;
-	font-size: 80px;
-	line-height: 117px;
+	font-size: 40px;
+	line-height: 70px;
+
 	/* identical to box height */
 
 	text-transform: uppercase;
 	color: var(--primary);
+	margin-bottom: 0;
+}
+
+
+@media (--s) {
+	.section__title {
+		font-size: 55px;
+		line-height: 70px;
+	}
+}
+
+@media (--sm) {
+	.section__title {
+		font-size: 65px;
+		line-height: 90px;
+	}
+}
+
+@media (--ml) {
+	.section__title {
+		line-height: 117px;
+		font-size: 80px;
+	}
+}
+
+.bg-dark {
+	background-color: var(--header);
+	color: var(--white);
+}
+
+.bg-primary {
+	background-color: var(--primary);
+	color: var(--black);
+}
+
+.mb-0 {
+	margin-bottom: 0;
 }

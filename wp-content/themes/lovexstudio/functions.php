@@ -12,6 +12,7 @@ if (!defined('ABSPATH')) exit;
 
 define( 'THEME_INCLUDES_DIR', get_stylesheet_directory() . '/inc' );
 define( 'THEME_ASSETS_URI', get_stylesheet_directory_uri() . '/assets' );
+define( 'THEME_VENDOR_ASSETS_URI', get_stylesheet_directory_uri() . '/vendor-assets' );
 define( 'THEME_VERSION', wp_get_theme( get_template() )->get( 'Version' ) );
 
 add_action('after_setup_theme', 'theme_load_dependencies');
@@ -26,4 +27,5 @@ function theme_load_dependencies() {
   require_once THEME_INCLUDES_DIR . '/api.php';
   require_once THEME_INCLUDES_DIR . '/helpers/shortcodes.php';
   require_once THEME_INCLUDES_DIR . '/helpers/project.php';
+  require_once THEME_INCLUDES_DIR . '/helpers/global.php';
 }
