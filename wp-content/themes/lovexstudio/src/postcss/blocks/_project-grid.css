@@ -1,4 +1,10 @@
 .project-grid {
 	display: flex;
-	gap: 40px;
+	flex-wrap: wrap;
+	gap: 20px;
+
+	@media (--s) {
+		flex-wrap: nowrap;
+		gap: 40px;
+	}
 }

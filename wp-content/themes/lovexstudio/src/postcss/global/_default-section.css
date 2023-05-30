@@ -11,17 +11,16 @@
 	margin-bottom: 0;
 }
 
-
 @media (--s) {
 	.section__title {
-		font-size: 55px;
+		font-size: 30px;
 		line-height: 70px;
 	}
 }
 
 @media (--sm) {
 	.section__title {
-		font-size: 65px;
+		font-size: 45px;
 		line-height: 90px;
 	}
 }
@@ -29,7 +28,7 @@
 @media (--ml) {
 	.section__title {
 		line-height: 117px;
-		font-size: 80px;
+		font-size: 60px;
 	}
 }
 
@@ -45,4 +44,8 @@
 
 .mb-0 {
 	margin-bottom: 0;
+}
+
+body.home {
+	background-color: #1a1b22;
 }

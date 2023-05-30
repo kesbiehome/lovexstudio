@@ -20,8 +20,8 @@ export default (el) => {
 
 	const projectTabs = select('[data-child-block="project-tabs"]');
 
-	const projectGridEl = select('.project-grid', el);
-	const projectColumnEls = selectAll('.project-column', projectGridEl);
+	const projectGridEl = select('.project-grid', el)
+	const projectColumnEls = selectAll('.project-column', projectGridEl)
 
 	const loadMore = () => {
 		let restUrl = `${lovexstudioConfig.restUrl}${lovexstudioConfig.loadMoreProjectsApi}`;
@@ -65,8 +65,8 @@ export default (el) => {
 	on(
 		'click',
 		() => {
-			loadMore();
+			loadMore()
 		},
 		loadMoreButton
-	);
-};
+	)
+}

@@ -11,7 +11,7 @@ $data = get_project_data_by_id($project_id);
 
 <div class="<?php echo esc_attr($class); ?>">
     <a class="project-card__link" href="<?php echo esc_url($data['project_url']); ?>">
-        <?php 
+        <?php
             the_block('image', [
                 'image' => $data['project_thumbnail'],
                 'size' => $image_size,
@@ -20,4 +20,7 @@ $data = get_project_data_by_id($project_id);
             ]);
         ?>
     </a>
+	<div class="project-card__decor">
+		<img src="<?php echo THEME_VENDOR_ASSETS_URI . '/images/home-decor-1.png' ;?>" alt="">
+	</div>
 </div>
