@@ -1,7 +1,17 @@
 .section-home-contact {
 	& .section__header {
 		padding-bottom: 30px;
+		background-image: url('/vendor-assets/images/green-bg.png');
+		background-repeat: no-repeat;
+		background-position: 0 calc(100% - 40px);
+
+		& .section__inner {
+			background-image: url('/vendor-assets/images/dot-orange.png');
+			background-repeat: no-repeat;
+			background-position: 100% calc(100% - 10px);
+		}
 	}
+
 	& .section__container {
 		width: min(100% - 30px, 1200px);
 		margin: 0 auto;
