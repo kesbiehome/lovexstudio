@@ -1,5 +1,12 @@
 {
-  "blocks": ["banner", "home-banner", "about-us"],
+  "blocks": [
+    "banner",
+    "home-banner",
+    "about-us",
+    "home-contact",
+    "contact-page",
+    "project-tabs"
+  ],
   "blocks_path": "blocks",
   "blocks_part": "blocks",
   "blocks_inc": "inc/blocks"
