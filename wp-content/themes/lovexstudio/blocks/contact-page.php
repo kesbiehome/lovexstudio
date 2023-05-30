@@ -28,9 +28,7 @@
                 <div class="contact-content">
                     <div class="contact-content__right">
                         <div class="contact-logo">
-                            <a href="//localhost:3000/" rel="home">
-                                <img class="header-image is-logo-image" alt="Love X Studio" src="http://beta.lovexstudio.com.vn/wp-content/uploads/2023/05/Logog-5.png" width="217" height="33">
-                            </a>
+                            <img src="<?php echo THEME_VENDOR_ASSETS_URI . '/images/logo.png'; ?>" alt="Love X Studio">
                         </div>
                         <div class="contact-info">
                             <?php if (!empty($address)) : ?>

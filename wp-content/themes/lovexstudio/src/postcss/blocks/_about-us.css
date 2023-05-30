@@ -85,7 +85,7 @@
 }
 
 .home-about-us__bottom-wrapper {
-	width: min(100% - 30px, 1200px);
+	width: min(90% - 30px, 1100px);
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
