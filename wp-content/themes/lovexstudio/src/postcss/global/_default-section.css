@@ -32,3 +32,17 @@
 		font-size: 80px;
 	}
 }
+
+.bg-dark {
+	background-color: var(--header);
+	color: var(--white);
+}
+
+.bg-primary {
+	background-color: var(--primary);
+	color: var(--black);
+}
+
+.mb-0 {
+	margin-bottom: 0;
+}

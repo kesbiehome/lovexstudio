@@ -83,8 +83,10 @@ class Kesbie_Theme
 
 		wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper@8/swiper-bundle.min.css', [], '8.4.7');
 		wp_enqueue_style('swiper', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper.min.css', [], '9.1.0');
+		wp_enqueue_style('fancybox', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css', [], '5.0');
 
 		wp_enqueue_script('kesbie-theme-frontend-js', THEME_ASSETS_URI . '/js/frontend' . $this->theme_environment . '.js', array(), THEME_VERSION, true);
+		wp_enqueue_script('fancybox', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js', [], '5.0');
 	}
 
 	/**
