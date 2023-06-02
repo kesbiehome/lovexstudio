@@ -1,7 +1,5 @@
 <?php
 
-var_dump($data);
-
 get_header();
 
 

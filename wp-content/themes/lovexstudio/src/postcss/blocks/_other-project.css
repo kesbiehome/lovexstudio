@@ -1,0 +1,20 @@
+.other-project {
+    margin-bottom: 2em;
+	
+    width: 100%;
+
+    & .other-project__list {
+        display: flex;
+        width: 100%;
+
+    }
+
+	& .project-card {
+        margin-right: 40px;
+		width: calc((100% - 40px * 2) / 3);
+
+        &:last-child {
+            margin-right: 0;
+        }
+	}
+}
