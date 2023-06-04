@@ -1181,6 +1181,101 @@ body > .site-footer > footer {
 			color: var(--black);
 			overflow: hidden;
 		}
+.other-project {
+	display: flex;
+	background-color: #222635
+}
+.other-project .other-project__container {
+		padding: 3em 0;
+		max-width: 1200px;
+		width: 100%;
+		margin: 0 auto;
+	}
+.other-project .other-project__list {
+		display: flex;
+		width: 100%;
+	}
+.other-project .project-card {
+		margin-right: 40px;
+		width: calc((100% - 40px * 2) / 3)
+	}
+.other-project .project-card:last-child {
+			margin-right: 0;
+		}
+.other-project__title {
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+	color: #1346af;
+	color: var(--primary);
+	margin-bottom: 1em;
+}
+.other-project__button {
+	display: flex;
+	justify-content: center;
+	margin-top: 2em;
+}
+.project-info {
+	display: flex;
+	margin: 0 auto;
+	max-width: 1440px;
+}
+.project-info__media {
+	width: 55%;
+}
+.project-info__description {
+	width: 45%;
+	display: flex;
+	color: white;
+}
+.project-info__description--inner {
+	margin: auto 5em;
+	position: relative;
+}
+.project-info__sub--title,
+.project-info__title {
+	font-size: 6rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.project-info__sub--title {
+	-webkit-text-stroke: 1px #1346af;
+	-webkit-text-stroke: 1px var(--primary);
+	color: transparent;
+}
+.project-info__title {
+	position: absolute;
+	top: 30px;
+	left: 45px;
+}
+.project-info__tag {
+	margin-top: 3em;
+	margin-left: 90px;
+	position: relative;
+	font-size: 1.25rem;
+	text-transform: uppercase;
+	display: flex
+}
+.project-info__tag::before {
+		content: '';
+		position: absolute;
+		top: 6px;
+		left: -90px;
+		width: 80px;
+		height: 2px;
+		background-color: #0dca5c;
+	}
+.project-info__excerpt {
+	font-size: 1rem;
+}
+.project-content {
+	display: flex;
+	flex-direction: column;
+	width: 1200px;
+	margin: 2em auto 4em;
+	grid-gap: 1em;
+	gap: 1em;
+}
 .hero-banner-slider {
 	position: relative
 }
@@ -1246,6 +1341,10 @@ body > .site-footer > footer {
 body.home {
 	background-color: #1a1b22;
 }
+.single-project .grid-container {
+		max-width: 100%;
+		background-color: #181b26;
+	}
 .site-content {
 	flex-direction: column;
 }
