@@ -1,7 +1,14 @@
 .other-project {
-    margin-bottom: 2em;
-	
-    width: 100%;
+    display: flex;
+    background-color: #222635;
+
+
+    & .other-project__container {
+        padding: 3em 0;
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+    }
 
     & .other-project__list {
         display: flex;
@@ -17,4 +24,18 @@
             margin-right: 0;
         }
 	}
+}
+
+.other-project__title {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 1em;
+}
+
+.other-project__button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
 }
