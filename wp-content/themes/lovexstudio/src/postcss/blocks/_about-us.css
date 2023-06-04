@@ -2,10 +2,22 @@
 	margin-left: 65%;
 }
 
+.section-about-us .section__inner-content {
+	position: relative;
+}
+
+.section-about-us .white-stripes {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+	left: 50%;
+	display: flex;
+}
+
 .section-about-us .section__inner {
 	background-image: url('/vendor-assets/images/dot-orange.png');
 	background-repeat: no-repeat;
-	background-position: 350px 50%;
+	background-position: 25% 50%;
 }
 
 .home-about-us__bottom {
@@ -127,6 +139,7 @@
 @media (--s) {
 	.home-about-us__top {
 		padding: 80px 0;
+		height: unset;
 	}
 
 	.home-about-us__top::before {
@@ -146,9 +159,7 @@
 		left: 0;
 		height: 70px;
 		width: 20%;
-		border-bottom: 120px solid #1346af;
 		border-bottom: 120px solid var(--primary);
-		border-left: 0 solid #1346af;
 		border-left: 0 solid var(--primary);
 		border-right: 65px solid transparent;
 		border-top: 0 solid transparent;
@@ -163,7 +174,6 @@
 		border-bottom: 0px solid transparent;
 		border-left: 50px solid transparent;
 		border-right: 0px solid transparent;
-		border-top: 80px solid #1346af;
 		border-top: 80px solid var(--primary);
 	}
 }
