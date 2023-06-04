@@ -12,9 +12,27 @@
 
 	& .swiper-button-next {
 		right: 80px;
+		display: none;
 	}
 
 	& .swiper-button-prev {
 		left: 80px;
+		display: none;
+	}
+
+	& .swiper-pagination-bullet {
+		background: var(--primary);
+		border-radius: 0;
+	}
+
+	@media (--sm) {
+		& .swiper-button-next,
+		& .swiper-button-prev {
+			display: flex;
+		}
+
+		& .swiper-pagination-bullet {
+			display: none;
+		}
 	}
 }
