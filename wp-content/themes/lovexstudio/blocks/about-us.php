@@ -1,4 +1,13 @@
 <?php ob_start(); ?>
+<div class="white-stripes">
+    <svg width="123" height="32" viewBox="0 0 123 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.578 32H0L15.422 0H29L13.578 32Z" fill="white" />
+        <path d="M36.578 32H23L38.422 0H52L36.578 32Z" fill="white" />
+        <path d="M60.578 32H47L62.422 0H76L60.578 32Z" fill="white" />
+        <path d="M83.578 32H70L85.422 0H99L83.578 32Z" fill="white" />
+        <path d="M107.578 32H94L109.422 0H123L107.578 32Z" fill="white" />
+    </svg>
+</div>
 <div class="home-about-us__top">
     <div class="home-about-us__top-wrapper">
         <?php if (!empty($image)) : ?>
