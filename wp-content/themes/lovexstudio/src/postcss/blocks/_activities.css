@@ -29,8 +29,8 @@
 		height: 20px;
 		display: block;
 		position: absolute;
-		right: 3px;
-		top: 3px;
+		right: 0;
+		top: 0;
 		background-image: url(data:image/svg+xml,%3Csvg width=%2732%27 height=%2733%27 viewBox=%270 0 32 33%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M28.1623 31.8129L0.698394 4.34903C-0.561536 3.0891 0.330795 0.934814 2.1126 0.934814H29.5765C30.6811 0.934814 31.5765 1.83024 31.5765 2.93481V30.3987C31.5765 32.1805 29.4222 33.0729 28.1623 31.8129Z%27 fill=%27%234EA773%27/%3E%3C/svg%3E%0A);
 		background-repeat: no-repeat;
 		z-index: 2;

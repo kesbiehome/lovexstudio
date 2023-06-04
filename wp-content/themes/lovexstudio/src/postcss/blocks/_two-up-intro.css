@@ -48,12 +48,18 @@
 
 	& .wp-block-columns {
 		flex-direction: column-reverse;
+
+		@media (--s) {
+			flex-direction: row;
+		}
 	}
 }
 
 .two-up-intro__image {
 	position: relative;
 	overflow: hidden;
+	display: flex;
+    justify-content: center;
 
 	&.vat-bottom {
 		&::before {
