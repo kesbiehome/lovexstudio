@@ -9,7 +9,7 @@
 	& .decor-1 {
 		margin-top: -40px;
 		background-color: var(--header);
-		margin-bottom: 50px;
+		margin-bottom: 100px;
 
 		&::before {
 			content: '';
@@ -24,18 +24,18 @@
 	}
 
 	& .decor-2 {
-		margin-top: 50px;
+		margin-top: 100px;
 		margin-bottom: -40px;
 		background-color: var(--primary);
 
 		&::before {
 			content: '';
 			height: 0px;
-			width: 94%;
+			width: 90%;
 			display: block;
-			border-bottom: 70px solid var(--header);
+			border-bottom: 100px solid var(--header);
 			border-left: 0 solid var(--header);
-			border-right: 45px solid transparent;
+			border-right: 60px solid transparent;
 			border-top: 0 solid transparent;
 		}
 	}
@@ -59,7 +59,7 @@
 	position: relative;
 	overflow: hidden;
 	display: flex;
-    justify-content: center;
+	justify-content: center;
 
 	&.vat-bottom {
 		&::before {
