@@ -3,7 +3,7 @@
 	flex-wrap: wrap;
 	gap: 20px;
 
-	@media (--s) {
+	@media (--xs) {
 		flex-wrap: nowrap;
 		gap: 40px;
 	}
