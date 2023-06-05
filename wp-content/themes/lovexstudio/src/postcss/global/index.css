@@ -1,6 +1,8 @@
 @import '_slider';
 @import '_default-section';
 @import '_single-project';
+@import '_404-page';
+
 .site-content {
 	flex-direction: column;
 }
