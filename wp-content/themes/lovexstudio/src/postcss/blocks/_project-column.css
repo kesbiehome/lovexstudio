@@ -1,0 +1,11 @@
+.project-column {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 20px;
+
+	@media (--s) {
+		width: calc(100% / 3);
+		gap: 40px;
+	}
+}

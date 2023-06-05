@@ -1,0 +1,49 @@
+.hero-banner {
+	background: #1f222d;
+	width: 100%;
+}
+
+.hero-banner__cover {
+	@mixin ratio 0.5;
+	max-height: 70vh;
+}
+
+.hero-banner__wrapper {
+	position: relative;
+}
+
+.hero-banner__title {
+	position: absolute;
+	width: max-content;
+	display: flex;
+	align-items: center;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 1em;
+	z-index: 1;
+	color: var(--white);
+	gap: 1em;
+
+	@media (--s) {
+		left: 50px;
+	}
+
+	& h1 {
+		margin-bottom: 0;
+		font-size: 30px;
+
+		@media (--s) {
+			font-size: 42px;
+		}
+	}
+}
+
+.hero-banner__button {
+	& svg {
+		width: 40px;
+
+		@media (--s) {
+			width: 84px;
+		}
+	}
+}

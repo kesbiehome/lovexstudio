@@ -10,7 +10,7 @@ if (!empty($images)) :
                     the_block(
                         'image',
                         [
-                            'image' => $image,
+                            'image' => $image['image'],
                             'class' => 'image--default',
                             'size' => 'full'
                         ]
@@ -36,6 +36,7 @@ if (!empty($images)) :
         'slide_class' => 'hero-banner-slide',
         'prevNextButton' => true,
         'lazyload' => true,
+        'pagination' => true,
     ]);
 
     $content .= ob_get_clean();
