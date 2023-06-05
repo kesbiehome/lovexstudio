@@ -1,4 +1,6 @@
 .project-tabs {
+	padding: 60px 0 100px;
+
 	& .section__container {
 		width: min(100% - 30px, 1200px);
 		margin: 0 auto;
