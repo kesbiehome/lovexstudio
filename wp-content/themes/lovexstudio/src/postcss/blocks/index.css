@@ -1,5 +1,6 @@
 @import '_header';
 @import '_footer';
+@import '_preloader';
 @import '_tabs';
 @import '_project-tabs';
 @import '_project-card';
