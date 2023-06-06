@@ -1,13 +1,7 @@
 .project-tabs {
-	width: calc(100% - 2em);
-	padding: 40px 0;
-
-	@media (--ml) {
-		width: 100%;
-	}
-
+	padding: 60px 0 100px;
 	& .section__container {
-		max-width: 1200px;
+		width: min(100% - 30px, 1200px);
 		margin: 0 auto;
 	}
 
@@ -16,6 +10,7 @@
 		margin-bottom: 20px;
 	}
 }
+
 .project-tabs__link {
 	display: flex;
 }

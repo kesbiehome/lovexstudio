@@ -1,6 +1,7 @@
 <?php
 $title = block_value('title');
 $image = block_value('image');
+$description = block_value('description');
 
 ?>
 
@@ -21,4 +22,9 @@ $image = block_value('image');
 		);
 		?>
 	</div>
+	<?php if (!empty($description)) : ?>
+	<div class="service-card__description">
+		<?php echo $description; ?>
+	</div>
+	<?php endif; ?>
 </div>

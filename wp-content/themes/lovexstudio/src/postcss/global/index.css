@@ -4,3 +4,7 @@
 .site-content {
 	flex-direction: column;
 }
+
+.inside-article {
+	overflow: hidden;
+}
