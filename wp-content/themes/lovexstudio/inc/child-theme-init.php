@@ -318,6 +318,9 @@ class Kesbie_Theme
 
 	function render_loader()
 	{
+		if (is_404()) {
+			return;
+		}
 		?>
 		<div id="preloader">
 			<div class="txt">
