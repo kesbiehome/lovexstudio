@@ -1,8 +1,8 @@
 body {
 	position: relative;
-}
-.is-loading {
-	overflow: hidden;
+	&.is-loading {
+		overflow: hidden;
+	}
 }
 
 #preloader {
