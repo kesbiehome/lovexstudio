@@ -6,34 +6,40 @@ import {
 	addClass,
 	removeClass,
 } from './js/lib/dom';
-import { map } from './js/lib/utils';
+import { map, throttle } from './js/lib/utils';
 import imagesLoaded from 'imagesloaded';
 import { gsap } from 'gsap';
 
 const blocks = document.querySelectorAll('[data-child-block]');
 const bodyEl = select('body');
+const preloaderEl = select('#preloader');
 
 let loadedCount = 0; //current number of images loaded
 let loadingProgress = 0; //timeline progress - starts at 0
 let imagesToLoad = 0; //number of slides with .bcg container
-let progressTl = gsap.timeline({
-	paused: true,
-	onUpdate: progressUpdate,
-	onComplete: loadComplete,
-});
 
-progressTl
-	//tween the progress bar width
-	.to(select('.progress span'), {
-		duration: 1,
-		width: 100,
-		ease: 'none',
+let progressTl = null;
+
+if (preloaderEl) {
+	progressTl = gsap.timeline({
+		paused: true,
+		onUpdate: progressUpdate,
+		onComplete: loadComplete,
 	});
+
+	progressTl
+		//tween the progress bar width
+		.to(select('.progress span'), {
+			duration: 1,
+			width: 100,
+			ease: 'none',
+		});
+}
 
 //as the progress bar width updates and grows we put the percentage loaded in the screen
 function progressUpdate() {
 	//the percentage loaded based on the tween's progress
-	loadingProgress = Math.round(progressTl.progress() * 100);
+	loadingProgress = Math.round(this.progress() * 100);
 	addClass('is-loading', bodyEl);
 
 	//we put the percentage in the screen
@@ -62,10 +68,10 @@ function loadComplete() {
 			yPercent: 100,
 			ease: 'Power4.inOut',
 		})
-		.set(select('#preloader'), { className: 'is-hidden' });
-
-	removeClass('is-loading', bodyEl);
-
+		.set(select('#preloader'), { className: 'is-hidden' })
+		.then(() => {
+			removeClass('is-loading', bodyEl);
+		});
 	return preloaderOutTl;
 }
 
@@ -83,6 +89,10 @@ const initChildBlocks = () => {
 };
 
 function load() {
+	if (!preloaderEl) {
+		return;
+	}
+
 	const imgEls = selectAll('.image__img');
 	const imgViewPort = [];
 	let imgLoad = null;

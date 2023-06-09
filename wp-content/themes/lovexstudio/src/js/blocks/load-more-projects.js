@@ -36,6 +36,11 @@ export default el => {
 				const args = res.args
 
 				map((column, index) => {
+
+					if (!columnContent[index]) {
+						return;
+					}
+
 					const columnNode = createNodes(columnContent[index])
 					const cardEls = selectAll('.project-card', columnNode[0])
 
