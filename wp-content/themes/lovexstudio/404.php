@@ -6,7 +6,7 @@ $image = get_field('error_image', 'options');
 get_header();
 
 ?>
-<div class="inside-error-site error404__wrapper" data-child-block="error-404">
+<div class="inside-error-site error404__wrapper">
     <div class="error404__background">
         <?php the_block('image', [
             'image' => $background_image,
@@ -19,7 +19,7 @@ get_header();
         <div class="error404__image">
             <?php the_block('image', [
                 'image' => $image,
-                'size' => [200, 200],
+                'size' => [704, 325],
                 'class' => 'image--default',
                 'lazyload' => true
             ]); ?>

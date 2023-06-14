@@ -36,9 +36,8 @@ export default el => {
 				const args = res.args
 
 				map((column, index) => {
-
 					if (!columnContent[index]) {
-						return;
+						return
 					}
 
 					const columnNode = createNodes(columnContent[index])
