@@ -88,6 +88,12 @@ const initChildBlocks = () => {
 	}
 }
 
+
+	Fancybox.bind('[data-fancybox]', {
+		// Your custom options
+	})
+}
+
 function load () {
 	if (!preloaderEl) {
 		return
