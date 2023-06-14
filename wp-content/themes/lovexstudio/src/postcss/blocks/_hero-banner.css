@@ -1,6 +1,11 @@
 .hero-banner {
 	background: #1f222d;
 	width: 100%;
+	padding: 40px;
+
+	& > .wp-block-group__inner-container {
+		padding: 0;
+	}
 }
 
 .hero-banner__cover {
@@ -10,6 +15,9 @@
 
 .hero-banner__wrapper {
 	position: relative;
+	max-width: 1200px;
+	width: 100%;
+	margin: auto;
 }
 
 .hero-banner__title {
