@@ -86,12 +86,7 @@ const initChildBlocks = () => {
 			require(`./js/blocks/${blockName}.js`).default(block)
 		})
 	}
-}
-
-
-	Fancybox.bind('[data-fancybox]', {
-		// Your custom options
-	})
+	Fancybox.bind('[data-fancybox]', {})
 }
 
 function load () {
