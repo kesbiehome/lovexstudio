@@ -88,7 +88,15 @@ const initChildBlocks = () => {
 			require(`./js/blocks/${blockName}.js`).default(block)
 		})
 	}
-	Fancybox.bind('[data-fancybox]', {})
+
+	const fancyboxEls = selectAll('[data-fancybox]')
+	if (fancyboxEls.length > 0) {
+		Fancybox.bind('[data-fancybox]')
+	}
+
+	window.scrollTo({
+		top: 0
+	})
 }
 
 function load () {
