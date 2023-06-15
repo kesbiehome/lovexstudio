@@ -540,6 +540,10 @@ const loadNoscriptContent = (el, className = 'is-not-loaded') => {
 	}
 }
 
+const getTagName = el => {
+	return el.tagName.toLowerCase()
+}
+
 export {
 	addClass,
 	append,
@@ -562,6 +566,7 @@ export {
 	getParent,
 	getScrollTop,
 	getStyle,
+	getTagName,
 	hasClass,
 	hide,
 	inViewPort,

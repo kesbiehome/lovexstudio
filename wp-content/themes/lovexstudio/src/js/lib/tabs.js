@@ -63,10 +63,26 @@ export default (el, customOptions = {}) => {
 		tabPanel.innerHTML = content
 	}
 
+	const getParentElByTagName = (tag, el) => {
+		let newEl = el.parentElement
+
+		if (newEl.tagName.toLowerCase() === tag) {
+			return newEl
+		}
+
+		return getParentElByTagName(tag, newEl)
+	}
+
 	on(
 		'click',
 		e => {
-			const navItem = e.target
+			let navItem = e.target
+
+			if (navItem.tagName.toLowerCase() != 'li') {
+				navItem = getParentElByTagName('li', e.target)
+			}
+
+			console.log(navItem)
 
 			trigger(
 				{

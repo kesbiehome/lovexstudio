@@ -6,7 +6,10 @@ import {
 	getHeight,
 	setAttribute
 } from 'lib/dom'
+import { map, throttle } from 'lib/utils'
 import Tabs from 'lib/tabs'
+
+const MAX_MOBILE_WIDTH = 768
 
 export default el => {
 	let tabInstance = Tabs(el, {
@@ -16,6 +19,7 @@ export default el => {
 
 	const parentContentEl = select('.js-tab-contents', el)
 	const tabContentEls = selectAll('[role="tabpanel"]', el)
+
 	// const tabActive =
 	const setParentHeight = height => {
 		if (!parentContentEl) {
@@ -41,6 +45,43 @@ export default el => {
 		}
 	}
 
+	const handleData = el => {
+		const cardHandled = []
+		const cardRaw = []
+		const columnEls = selectAll('.project-column', el)
+
+		map(el => {
+			const cardEls = selectAll('.project-card', el)
+			cardRaw.push(cardEls)
+		}, columnEls)
+
+		console.log(cardRaw)
+
+		map((el, index) => {
+			console.log(el)
+			console.log(index)
+		}, cardRaw)
+	}
+
+	const setMobileLayout = () => {
+		const windowWidth =
+			window.innerWidth || document.documentElement.clientWidth
+
+		console.log(windowWidth)
+
+		if (windowWidth > MAX_MOBILE_WIDTH) {
+			return
+		}
+
+		if (!tabContentEls) {
+			return
+		}
+
+		map(el => {
+			handleData(el)
+		}, tabContentEls)
+	}
+
 	setTabActive(0)
 
 	/**
@@ -54,5 +95,13 @@ export default el => {
 			setTabActive(currentTabIndex)
 		},
 		el
+	)
+
+	on(
+		'load',
+		() => {
+			setMobileLayout()
+		},
+		window
 	)
 }
