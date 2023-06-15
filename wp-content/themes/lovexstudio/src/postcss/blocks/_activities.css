@@ -1,4 +1,4 @@
-.activities__wrapper {
+.activities__wrapper.first-once {
 	@media (--xs) {
 		display: grid !important;
 		grid-template-areas:
@@ -15,6 +15,26 @@
 
 	@media (--m) {
 		gap: 50px;
+	}
+
+	& .activities__item {
+		@media (--xs) {
+			&:nth-of-type(1) {
+				grid-area: block1;
+			}
+			&:nth-of-type(2) {
+				grid-area: block2;
+				& picture {
+					@mixin ratio 0.625;
+				}
+			}
+			&:nth-of-type(3) {
+				grid-area: block3;
+			}
+			&:nth-of-type(4) {
+				grid-area: block4;
+			}
+		}
 	}
 }
 
@@ -50,28 +70,16 @@
 		transform: rotate(45deg);
 	}
 
-	@media (--xs) {
-		&:nth-of-type(1) {
-			grid-area: block1;
-		}
-		&:nth-of-type(2) {
-			grid-area: block2;
-			& picture {
-				@mixin ratio 0.625;
-			}
-		}
-		&:nth-of-type(3) {
-			grid-area: block3;
-		}
-		&:nth-of-type(4) {
-			grid-area: block4;
+	&:hover {
+		& picture {
+			transform: scale(1.15);
 		}
 	}
-
 	& picture,
 	& img {
 		display: block;
 		width: 100%;
+		transition: 0.3s;
 	}
 
 	& picture {
