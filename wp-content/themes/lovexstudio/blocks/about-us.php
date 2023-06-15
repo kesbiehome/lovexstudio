@@ -11,7 +11,7 @@
 <div class="home-about-us__top">
     <div class="home-about-us__top-wrapper">
         <?php if (!empty($image)) : ?>
-            <div class="home-about-us__media">
+            <div class="home-about-us__media" data-aos="fade-up">
                 <?php
                 echo wp_get_attachment_image(
                     $image,
@@ -24,7 +24,7 @@
         <?php endif; ?>
 
         <?php if (!empty($desc)) : ?>
-            <div class="home-about-us__desc">
+            <div class="home-about-us__desc" data-aos="fade-up">
                 <span>
                     <?php esc_html_e($desc); ?>
                 </span>
@@ -35,7 +35,7 @@
 <div class="home-about-us__bottom">
     <div class="home-about-us__bottom-wrapper">
         <?php foreach ($rows as $row) : ?>
-            <div class="about-us__row">
+            <div class="about-us__row" data-aos="fade-up">
                 <?php if (!empty($row['title'])) : ?>
                     <div class="about-us__row-title">
                         <span>

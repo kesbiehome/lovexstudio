@@ -28,7 +28,7 @@ if (!empty($images)) :
         ];
     }
 
-    $content = '<div class="hero-banner-slider" data-child-block="hero-banner-slider">';
+    $content = '<div class="hero-banner-slider" data-aos="fade-up" data-child-block="hero-banner-slider">';
 
     ob_start();
     echo kesbie_generate_swiper_slides($columns, [

@@ -9,7 +9,7 @@ $image_class = $is_large_card ? 'image--large image--cover' : 'image--square ima
 $data = get_project_data_by_id($project_id);
 ?>
 
-<div class="<?php echo esc_attr($class); ?>">
+<div class="<?php echo esc_attr($class); ?>" data-aos="fade-up">
     <a class="project-card__link" href="<?php echo esc_url($data['project_url']); ?>">
         <?php
         the_block('image', [
