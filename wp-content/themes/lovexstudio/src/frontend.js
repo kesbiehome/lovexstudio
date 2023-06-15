@@ -4,7 +4,9 @@ import {
 	selectAll,
 	inViewPort,
 	addClass,
-	removeClass
+	removeClass,
+	appendHtml,
+	delegate
 } from './js/lib/dom'
 import { map, throttle } from './js/lib/utils'
 import imagesLoaded from 'imagesloaded'
@@ -86,6 +88,7 @@ const initChildBlocks = () => {
 			require(`./js/blocks/${blockName}.js`).default(block)
 		})
 	}
+	Fancybox.bind('[data-fancybox]', {})
 }
 
 function load () {
@@ -125,6 +128,54 @@ function load () {
 	})
 }
 
+function initAboutUs () {
+	const galleryMoreEls = selectAll('.js-view-more-gallery')
+	const widthOffset = select('.js-first-gallery').offsetWidth
+
+	if (galleryMoreEls.length) {
+		map((item, index) => {
+			if (index === 0) {
+				appendHtml(
+					item.parentNode,
+					'<button class="js-activities-button" style="margin: auto; display: block;">View More</button>'
+				)
+			}
+			addClass('d-none', item)
+		}, galleryMoreEls)
+
+		delegate(
+			'click',
+			e => {
+				const gallerysHiddenCurent = selectAll('.js-view-more-gallery.d-none')
+				const theFirstOnece = gallerysHiddenCurent.length
+					? gallerysHiddenCurent[0]
+					: null
+
+				const space = ((widthOffset - 48) / 4) * 1.5
+
+				if (theFirstOnece) {
+					removeClass('d-none', theFirstOnece)
+				}
+
+				if (gallerysHiddenCurent.length === 1) {
+					addClass('d-none', e.target)
+				}
+
+				window.scrollTo({
+					behavior: 'smooth',
+					top:
+						e.target.parentNode.getBoundingClientRect().top -
+						document.body.getBoundingClientRect().top +
+						space * (galleryMoreEls.length + 1 - gallerysHiddenCurent.length) +
+						200
+				})
+			},
+			'.js-activities-button',
+			document.body
+		)
+	}
+}
+
 function loadProgress (imgLoad, image) {
 	//one more image has been loaded
 	loadedCount++
@@ -142,4 +193,5 @@ function loadProgress (imgLoad, image) {
 document.addEventListener('DOMContentLoaded', () => {
 	load()
 	initChildBlocks()
+	initAboutUs()
 })

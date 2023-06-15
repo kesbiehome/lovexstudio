@@ -1085,7 +1085,11 @@ body.is-loading {
 .hero-banner {
 	background: #1f222d;
 	width: 100%;
+	padding: 40px
 }
+.hero-banner > .wp-block-group__inner-container {
+		padding: 0;
+	}
 .hero-banner__cover {
 	position: relative;
 }
@@ -1108,6 +1112,9 @@ body.is-loading {
 }
 .hero-banner__wrapper {
 	position: relative;
+	max-width: 1200px;
+	width: 100%;
+	margin: auto;
 }
 .hero-banner__title {
 	position: absolute;
@@ -1116,8 +1123,7 @@ body.is-loading {
 	width: max-content;
 	display: flex;
 	align-items: center;
-	top: 50%;
-	transform: translateY(-50%);
+	bottom: 0;
 	left: 1em;
 	z-index: 1;
 	color: #fff;
@@ -1127,7 +1133,8 @@ body.is-loading {
 }
 @media (min-width: 768px) {
 .hero-banner__title {
-		left: 50px
+		left: 50px;
+		bottom: 50px
 }
 	}
 .hero-banner__title h1 {
@@ -1348,7 +1355,7 @@ body.is-loading {
 		   object-fit: cover;
 	}
 @media (min-width: 480px) {
-.activities__wrapper {
+.activities__wrapper.first-once {
 		display: grid !important;
 		grid-template-areas:
 			'block1 block1'
@@ -1359,18 +1366,49 @@ body.is-loading {
 }
 	}
 @media (min-width: 768px) {
-.activities__wrapper {
+.activities__wrapper.first-once {
 		grid-template-areas:
 			'block1 block1 block2 block2'
 			'block1 block1 block3 block4'
 }
 	}
 @media (min-width: 1024px) {
-.activities__wrapper {
+.activities__wrapper.first-once {
 		grid-gap: 50px;
 		gap: 50px
 }
 	}
+@media (min-width: 480px) {
+			.activities__wrapper.first-once .activities__item:nth-of-type(1) {
+				grid-area: block1;
+			}
+			.activities__wrapper.first-once .activities__item:nth-of-type(2) {
+				grid-area: block2
+			}
+				.activities__wrapper.first-once .activities__item:nth-of-type(2) picture {
+					position: relative;
+				}
+					.activities__wrapper.first-once .activities__item:nth-of-type(2) picture::before {
+    content: '';
+    display: block;
+    padding-top: calc(0.625 * 100%);
+  }
+					.activities__wrapper.first-once .activities__item:nth-of-type(2) picture .image__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+  }
+			.activities__wrapper.first-once .activities__item:nth-of-type(3) {
+				grid-area: block3;
+			}
+			.activities__wrapper.first-once .activities__item:nth-of-type(4) {
+				grid-area: block4;
+			}
+		}
 .activities__item {
 	cursor: pointer;
 	position: relative;
@@ -1401,41 +1439,14 @@ body.is-loading {
 		z-index: 1;
 		transform: rotate(45deg);
 	}
-@media (min-width: 480px) {
-		.activities__item:nth-of-type(1) {
-			grid-area: block1;
+.activities__item:hover picture {
+			transform: scale(1.15);
 		}
-		.activities__item:nth-of-type(2) {
-			grid-area: block2
-		}
-			.activities__item:nth-of-type(2) picture {
-				position: relative;
-			}
-				.activities__item:nth-of-type(2) picture::before {
-    content: '';
-    display: block;
-    padding-top: calc(0.625 * 100%);
-  }
-				.activities__item:nth-of-type(2) picture .image__img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    z-index: 1;
-  }
-		.activities__item:nth-of-type(3) {
-			grid-area: block3;
-		}
-		.activities__item:nth-of-type(4) {
-			grid-area: block4;
-		}
-	}
 .activities__item picture,
 	.activities__item img {
 		display: block;
 		width: 100%;
+		transition: 0.3s;
 	}
 .activities__item picture {
 		position: relative;
@@ -1638,6 +1649,9 @@ body.is-loading {
 		font-size: 60px;
 	}
 }
+.d-none {
+	display: none !important;
+}
 .bg-dark {
 	background-color: var(--header);
 	color: #fff;
@@ -1664,5 +1678,42 @@ body.home {
 }
 .inside-article {
 	overflow: hidden;
+}
+body.error404 .grid-container {
+	max-width: 100%;
+}
+.error404__wrapper {
+	position: relative;
+	min-height: 70vh;
+}
+.error404__background {
+	position: absolute;
+	width: 100%;
+	height: 100%
+}
+.error404__background img {
+		width: 100%;
+		height: 100%;
+		-o-object-fit: cover;
+		   object-fit: cover;
+	}
+.error404__content {
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	max-width: 700px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	padding: 1em
+}
+.error404__content img {
+		max-width: 300px;
+		margin: auto;
+	}
+.error404__image {
+	width: 60%;
+	margin: auto auto 2em;
 }
 
