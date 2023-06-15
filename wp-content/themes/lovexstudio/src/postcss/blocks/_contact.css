@@ -58,30 +58,25 @@
 		justify-content: center;
 
 		& input[type='submit'] {
-			background: rgba(251, 217, 96, 0.4) !important;
 			border: 1px solid #fdc020 !important;
 			position: relative;
 			font-weight: 700;
 			font-size: 16px;
 			line-height: 23px;
 			text-transform: uppercase;
-			transition: all 0.5s;
-		}
-
-		::before {
-			content: '';
-			position: absolute;
-			top: 20px;
-			right: -500%;
-			background: rgba(255, 255, 255, 0.8);
-			transform-origin: 54% 0;
-			transform: rotate(45deg);
-			z-index: -1;
+			transition: all 0.3s ease-out;
+			background: linear-gradient(
+				to right,
+				var(--primary) 50%,
+				rgba(252, 189, 26, 0.4) 50%
+			) !important;
+			background-size: 200% 100% !important;
+			background-position: right bottom !important;
 		}
 
 		& input[type='submit']:hover {
-			background: var(--primary) !important;
-			color: var(--black) !important;
+			color: black !important;
+			background-position: left bottom !important;
 		}
 	}
 }
