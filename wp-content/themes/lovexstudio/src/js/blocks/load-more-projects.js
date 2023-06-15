@@ -12,8 +12,6 @@ import {
 import { addQueryVar, map } from 'lib/utils'
 import { selectAll } from '../lib/dom'
 
-
-
 export default el => {
 	const loadMoreButton = select('.js-button', el)
 	let settings = getData('set', loadMoreButton)
