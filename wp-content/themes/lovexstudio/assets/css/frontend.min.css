@@ -1552,7 +1552,6 @@ body.is-loading {
 }
 .project-info {
 	display: flex;
-	margin: 0 auto;
 	max-width: 1440px;
 }
 .project-info__media {
@@ -1609,8 +1608,11 @@ body.is-loading {
 	width: 1200px;
 	margin: 2em auto 4em;
 	grid-gap: 1em;
-	gap: 1em;
+	gap: 1em
 }
+.project-content img {
+		width: 100%;
+	}
 .page-id-49 .grid-container {
 		max-width: 100%;
 	}
