@@ -42,3 +42,38 @@
 		color: var(--black);
 	}
 }
+
+.project-tabs__link--hover {
+	content: '';
+	display: block;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	width: 120%;
+	z-index: 1;
+	transform: translateX(-100%) skew(-10deg);
+	left: -5%;
+	transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+.project-tabs__link--text {
+	position: relative;
+	z-index: 2;
+}
+
+.project-tabs__link {
+	position: relative;
+	overflow: hidden;
+
+	&:hover {
+		& .project-tabs__link--hover {
+			background: var(--primary);
+			transform: translateX(0) skew(-10deg);
+		}
+	}
+}
+
+.tab-thumbnail {
+	height: 48px;
+	width: 48px;
+}

@@ -134,7 +134,7 @@ function kesbie_generate_tabs_data($items)
 			$nav_items[] = [
 				'id' => $tab_id,
 				'is_active' => $index === 0,
-				'name' => sanitize_text_field($item['name'])
+				'name' => $item['name']
 			];
 
 			$content_items[] = [
