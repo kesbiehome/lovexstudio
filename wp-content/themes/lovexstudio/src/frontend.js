@@ -6,7 +6,8 @@ import {
 	addClass,
 	removeClass,
 	appendHtml,
-	delegate
+	delegate,
+	hasClass
 } from './js/lib/dom'
 import { map, throttle } from './js/lib/utils'
 import imagesLoaded from 'imagesloaded'
@@ -88,7 +89,12 @@ const initChildBlocks = () => {
 			require(`./js/blocks/${blockName}.js`).default(block)
 		})
 	}
-	Fancybox.bind('[data-fancybox]', {})
+
+	AOS.init({
+		duration: 800,
+		delay: 200
+	})
+
 }
 
 function load () {
@@ -129,6 +135,9 @@ function load () {
 }
 
 function initAboutUs () {
+	if (!hasClass('page-id-41', document.body)) {
+		return
+	}
 	const galleryMoreEls = selectAll('.js-view-more-gallery')
 	const widthOffset = select('.js-first-gallery').offsetWidth
 
