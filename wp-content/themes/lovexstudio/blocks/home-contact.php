@@ -1,5 +1,5 @@
 <?php ob_start(); ?>
-<div class="home-contact__wrapper">
+<div class="home-contact__wrapper" data-aos="fade-up">
     <?php
     echo do_shortcode('[gravityform id="1" title="false"]');
     ?>

@@ -5,7 +5,7 @@ $description = block_value('description');
 
 ?>
 
-<div class="service-card">
+<div class="service-card" data-aos="fade-up">
 	<div class="service-card__top">
 		<img src="<?php echo THEME_VENDOR_ASSETS_URI . '/images/service-1.png' ;?>" alt="">
 		<div class="service-card__title"><span><?php echo $title; ?></span></div>
