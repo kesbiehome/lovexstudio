@@ -66,12 +66,13 @@
 			text-transform: uppercase;
 			transition: all 0.3s ease-out;
 			background: linear-gradient(
-				to right,
+				111deg,
 				var(--primary) 50%,
 				rgba(252, 189, 26, 0.4) 50%
 			) !important;
-			background-size: 200% 100% !important;
+			background-size: 215% 100% !important;
 			background-position: right bottom !important;
+			border-radius: 2px;
 		}
 
 		& input[type='submit']:hover {
