@@ -152,7 +152,7 @@ function initAboutUs () {
 			if (index === 0) {
 				appendHtml(
 					item.parentNode,
-					'<button class="js-activities-button" style="margin: auto; display: block;">View More</button>'
+					'<button class="js-activities-button btn" style="margin: auto; display: block;">View More</button>'
 				)
 			}
 			addClass('d-none', item)
