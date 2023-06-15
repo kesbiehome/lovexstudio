@@ -17,13 +17,17 @@
 .kesbie-tabs__nav-item {
 	list-style: none;
 	cursor: pointer;
-	padding: 0.75em 0.8em;
+	padding: 0.5em 0.5em;
 	line-height: 1;
 	text-transform: capitalize;
 	border: 1px solid transparent;
 	transition: 0.3s;
 	color: var(--white);
-	display: inline-block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border-radius: 5px;
 	margin-right: 20px;
 
 	&.is-active {
