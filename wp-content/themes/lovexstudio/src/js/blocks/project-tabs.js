@@ -55,19 +55,12 @@ export default el => {
 			cardRaw.push(cardEls)
 		}, columnEls)
 
-		console.log(cardRaw)
-
-		map((el, index) => {
-			console.log(el)
-			console.log(index)
-		}, cardRaw)
+		map((el, index) => {}, cardRaw)
 	}
 
 	const setMobileLayout = () => {
 		const windowWidth =
 			window.innerWidth || document.documentElement.clientWidth
-
-		console.log(windowWidth)
 
 		if (windowWidth > MAX_MOBILE_WIDTH) {
 			return
