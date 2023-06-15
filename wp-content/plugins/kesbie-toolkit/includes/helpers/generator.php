@@ -160,7 +160,7 @@ function kesbie_generate_tabs($items, $args = [])
 
 	$tab_data = kesbie_generate_tabs_data($items);
 
-	$markup = sprintf('<div class="%s">', esc_attr($_class));
+	$markup = sprintf('<div class="%s" data-aos="fade-up">', esc_attr($_class));
 
 	$lazyload = $args['lazyload'] ?? true;
 
@@ -169,7 +169,7 @@ function kesbie_generate_tabs($items, $args = [])
 	 */
 	ob_start();
 	if (!empty($tab_data['nav_items'])):
-		echo '<ul class="kesbie-tabs__nav-items" aria-controls="js-tab-contents" role="tablist">';
+		echo '<ul class="kesbie-tabs__nav-items" data-aos="fade-up" aria-controls="js-tab-contents" role="tablist">';
 		foreach ($tab_data['nav_items'] as $nav_item):
 			printf(
 				'<li class="rel kesbie-tabs__nav-item" role="tab" aria-controls="%1$s" aria-selected="%2$s">%3$s</li>',
