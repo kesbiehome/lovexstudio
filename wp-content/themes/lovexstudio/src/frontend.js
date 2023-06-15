@@ -6,11 +6,15 @@ import {
 	addClass,
 	removeClass,
 	appendHtml,
-	delegate
+	delegate,
+	hasClass,
+	setData
 } from './js/lib/dom'
-import { map, throttle } from './js/lib/utils'
+import { map } from './js/lib/utils'
 import imagesLoaded from 'imagesloaded'
 import { gsap } from 'gsap'
+import { Fancybox } from '@fancyapps/ui'
+import AOS from 'aos'
 
 const blocks = document.querySelectorAll('[data-child-block]')
 const bodyEl = select('body')
@@ -137,6 +141,9 @@ function load () {
 }
 
 function initAboutUs () {
+	if (!hasClass('page-id-41', document.body)) {
+		return
+	}
 	const galleryMoreEls = selectAll('.js-view-more-gallery')
 	const widthOffset = select('.js-first-gallery').offsetWidth
 
@@ -198,8 +205,23 @@ function loadProgress (imgLoad, image) {
 	})
 }
 
+function initAos () {
+	const aosEls = selectAll('.js-aos-element')
+	if (aosEls.length > 0) {
+		map(item => {
+			setData('aos', 'fade-up', item)
+		}, aosEls)
+	}
+
+	AOS.init({
+		duration: 800,
+		delay: 200
+	})
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	load()
 	initChildBlocks()
 	initAboutUs()
+	initAos()
 })

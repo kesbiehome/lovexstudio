@@ -48,12 +48,14 @@
     "webpack-cli": "^4.8.0"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.19",
     "@wordpress/block-editor": "^7.0.1",
     "@wordpress/blocks": "^11.0.1",
     "@wordpress/components": "^16.0.0",
     "@wordpress/data": "^6.0.1",
     "@wordpress/element": "^4.0.0",
     "@wordpress/i18n": "^4.2.1",
+    "aos": "^2.3.4",
     "body-scroll-lock": "^3.1.5",
     "classnames": "^2.3.1",
     "core-js": "^3.17.2",

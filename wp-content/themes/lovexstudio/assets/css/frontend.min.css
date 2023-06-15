@@ -817,33 +817,30 @@ body.is-loading {
 		justify-content: center
 	}
 .section-home-contact .gform_footer.top_label input[type='submit'] {
-			background: rgba(251, 217, 96, 0.4) !important;
 			border: 1px solid #fdc020 !important;
 			position: relative;
 			font-weight: 700;
 			font-size: 16px;
 			line-height: 23px;
 			text-transform: uppercase;
-			transition: all 0.5s;
+			transition: all 0.3s ease-out;
+			background: linear-gradient(
+				111deg,
+				#1346af 50%,
+				rgba(252, 189, 26, 0.4) 50%
+			) !important;
+			background: linear-gradient(
+				111deg,
+				var(--primary) 50%,
+				rgba(252, 189, 26, 0.4) 50%
+			) !important;
+			background-size: 215% 100% !important;
+			background-position: right bottom !important;
+			border-radius: 2px;
 		}
-.section-home-contact .gform_footer.top_label {
-
-		::before {
-			content: '';
-			position: absolute;
-			top: 20px;
-			right: -500%;
-			background: rgba(255, 255, 255, 0.8);
-			transform-origin: 54% 0;
-			transform: rotate(45deg);
-			z-index: -1;
-		}
-	}
 .section-home-contact .gform_footer.top_label input[type='submit']:hover {
-			background: #1346af !important;
-			background: var(--primary) !important;
-			color: #000 !important;
-			color: var(--black) !important;
+			color: black !important;
+			background-position: left bottom !important;
 		}
 .section-contact-page .contact-page__wrapper {
 	}
@@ -1700,13 +1697,34 @@ body.is-loading {
 .mb-0 {
 	margin-bottom: 0;
 }
-body.home {
+body {
 	background-color: #1a1b22;
 }
 .single-project .grid-container {
 		max-width: 100%;
 		background-color: #181b26;
 	}
+.btn {
+	transition: all 0.3s ease-out;
+	background: linear-gradient(
+		111deg,
+		#1346af 50%,
+		rgba(252, 189, 26, 0.4) 50%
+	) !important;
+	background: linear-gradient(
+		111deg,
+		var(--primary) 50%,
+		rgba(252, 189, 26, 0.4) 50%
+	) !important;
+	border: 1px solid #fdc020 !important;
+	background-size: 215% 100% !important;
+	background-position: right bottom !important;
+	border-radius: 2px;
+}
+.btn:hover {
+	color: black !important;
+	background-position: left bottom !important;
+}
 .site-content {
 	flex-direction: column;
 }

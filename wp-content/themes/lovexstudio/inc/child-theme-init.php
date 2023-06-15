@@ -84,11 +84,13 @@ class Kesbie_Theme
 			wp_enqueue_style('kesbie-theme-frontend-css', THEME_ASSETS_URI . '/css/frontend' . $this->theme_environment . '.css', array(), THEME_VERSION);
 		endif;
 
-		wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper@8/swiper-bundle.min.css', [], '8.4.7');
+		wp_enqueue_style('aos-css', 'https://unpkg.com/aos@2.3.1/dist/aos.css', [], '2.3.1');
 		wp_enqueue_style('swiper', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper.min.css', [], '9.1.0');
 		wp_enqueue_style('fancybox', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css', [], '5.0');
+		wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper@8/swiper-bundle.min.css', [], '8.4.7');
 
 		wp_enqueue_script('fancybox', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js', [], '5.0');
+		wp_enqueue_script('aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js', [], '2.3.1');
 		wp_enqueue_script('kesbie-theme-frontend-js', THEME_ASSETS_URI . '/js/frontend' . $this->theme_environment . '.js', array(), THEME_VERSION, true);
 		wp_localize_script('kesbie-theme-frontend-js', 'lovexstudioConfig', [
 			'restUrl' => get_rest_url(null, '/'),

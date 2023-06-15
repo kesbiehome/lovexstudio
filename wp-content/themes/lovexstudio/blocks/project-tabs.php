@@ -66,7 +66,7 @@ if (!empty($button['title']) && !empty($button['url'])) {
 the_block(
     'default-section',
     [
-        'attributes' => ' data-child-block="project-tabs"',
+        'attributes' => 'data-aos="fade-up" data-child-block="project-tabs"',
         'class' => $_class . 'bg-dark project-tabs',
         'header' => $title ?? '',
         'content' => $content ?? '',
