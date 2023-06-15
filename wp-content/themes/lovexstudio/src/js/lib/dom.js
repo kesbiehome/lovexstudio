@@ -540,7 +540,7 @@ const loadNoscriptContent = (el, className = 'is-not-loaded') => {
 	}
 }
 
-const getTagName = (el) => {
+const getTagName = el => {
 	return el.tagName.toLowerCase()
 }
 

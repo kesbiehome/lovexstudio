@@ -1,0 +1,17 @@
+.btn {
+	transition: all 0.3s ease-out;
+	background: linear-gradient(
+		111deg,
+		var(--primary) 50%,
+		rgba(252, 189, 26, 0.4) 50%
+	) !important;
+	border: 1px solid #fdc020 !important;
+	background-size: 215% 100% !important;
+	background-position: right bottom !important;
+	border-radius: 2px;
+}
+
+.btn:hover {
+	color: black !important;
+	background-position: left bottom !important;
+}
