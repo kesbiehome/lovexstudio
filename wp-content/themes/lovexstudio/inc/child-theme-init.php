@@ -80,7 +80,7 @@ class Kesbie_Theme
 	 */
 	public function load_assets()
 	{
-		if (!$this->is_localhost()):
+		if (!$this->is_localhost()) :
 			wp_enqueue_style('kesbie-theme-frontend-css', THEME_ASSETS_URI . '/css/frontend' . $this->theme_environment . '.css', array(), THEME_VERSION);
 		endif;
 
@@ -194,6 +194,41 @@ class Kesbie_Theme
 
 	function custom_taxonomy()
 	{
+		// Register Custom Taxonomy
+
+		$game_labels = array(
+			'name'                       => _x('Games', 'Taxonomy General Name', 'lovexstudio'),
+			'singular_name'              => _x('Game', 'Taxonomy Singular Name', 'lovexstudio'),
+			'menu_name'                  => __('Game', 'lovexstudio'),
+			'all_items'                  => __('All Items', 'lovexstudio'),
+			'parent_item'                => __('Parent Item', 'lovexstudio'),
+			'parent_item_colon'          => __('Parent Item:', 'lovexstudio'),
+			'new_item_name'              => __('New Item Name', 'lovexstudio'),
+			'add_new_item'               => __('Add New Item', 'lovexstudio'),
+			'edit_item'                  => __('Edit Item', 'lovexstudio'),
+			'update_item'                => __('Update Item', 'lovexstudio'),
+			'view_item'                  => __('View Item', 'lovexstudio'),
+			'separate_items_with_commas' => __('Separate items with commas', 'lovexstudio'),
+			'add_or_remove_items'        => __('Add or remove items', 'lovexstudio'),
+			'choose_from_most_used'      => __('Choose from the most used', 'lovexstudio'),
+			'popular_items'              => __('Popular Items', 'lovexstudio'),
+			'search_items'               => __('Search Items', 'lovexstudio'),
+			'not_found'                  => __('Not Found', 'lovexstudio'),
+			'no_terms'                   => __('No items', 'lovexstudio'),
+			'items_list'                 => __('Items list', 'lovexstudio'),
+			'items_list_navigation'      => __('Items list navigation', 'lovexstudio'),
+		);
+		$game_args = array(
+			'labels'                     => $game_labels,
+			'hierarchical'               => false,
+			'public'                     => true,
+			'show_ui'                    => true,
+			'show_admin_column'          => true,
+			'show_in_nav_menus'          => true,
+			'show_tagcloud'              => true,
+			'show_in_rest'               => true,
+		);
+
 		$labels = array(
 			'name' => _x('Categories', 'Taxonomy General Name', 'lovexstudio'),
 			'singular_name' => _x('Category', 'Taxonomy Singular Name', 'lovexstudio'),
@@ -228,8 +263,41 @@ class Kesbie_Theme
 			'show_in_rest' => true,
 		);
 
+		$partner_labels = array(
+			'name'                       => _x('Partners', 'Taxonomy General Name', 'lovexstudio'),
+			'singular_name'              => _x('Partner', 'Taxonomy Singular Name', 'lovexstudio'),
+			'menu_name'                  => __('Partner', 'lovexstudio'),
+			'all_items'                  => __('All Items', 'lovexstudio'),
+			'parent_item'                => __('Parent Item', 'lovexstudio'),
+			'parent_item_colon'          => __('Parent Item:', 'lovexstudio'),
+			'new_item_name'              => __('New Item Name', 'lovexstudio'),
+			'add_new_item'               => __('Add New Item', 'lovexstudio'),
+			'edit_item'                  => __('Edit Item', 'lovexstudio'),
+			'update_item'                => __('Update Item', 'lovexstudio'),
+			'view_item'                  => __('View Item', 'lovexstudio'),
+			'separate_items_with_commas' => __('Separate items with commas', 'lovexstudio'),
+			'add_or_remove_items'        => __('Add or remove items', 'lovexstudio'),
+			'choose_from_most_used'      => __('Choose from the most used', 'lovexstudio'),
+			'popular_items'              => __('Popular Items', 'lovexstudio'),
+			'search_items'               => __('Search Items', 'lovexstudio'),
+			'not_found'                  => __('Not Found', 'lovexstudio'),
+			'no_terms'                   => __('No items', 'lovexstudio'),
+			'items_list'                 => __('Items list', 'lovexstudio'),
+			'items_list_navigation'      => __('Items list navigation', 'lovexstudio'),
+		);
+		$partner_args = array(
+			'labels'                     => $partner_labels,
+			'hierarchical'               => false,
+			'public'                     => true,
+			'show_ui'                    => true,
+			'show_admin_column'          => true,
+			'show_in_nav_menus'          => true,
+			'show_tagcloud'              => true,
+			'show_in_rest'               => true,
+		);
 
-
+		// register_taxonomy('game', array('project'), $game_args);
+		register_taxonomy('partner', array('project'), $partner_args);
 		register_taxonomy('project_cat', array('project'), $args);
 	}
 
@@ -270,7 +338,6 @@ class Kesbie_Theme
 			'show_in_rest' => true,
 		);
 		register_taxonomy('tag', array('project'), $args);
-
 	}
 
 	function logo_mobile_header_menu()
@@ -278,7 +345,7 @@ class Kesbie_Theme
 		$logo_id = get_theme_mod('custom_logo');
 
 		if ($logo_id) {
-			?>
+?>
 			<div class="slideout-navigation__logo">
 				<?php
 				the_block(
@@ -291,7 +358,7 @@ class Kesbie_Theme
 				);
 				?>
 			</div>
-			<?php
+		<?php
 		}
 	}
 
@@ -303,7 +370,7 @@ class Kesbie_Theme
 			<div class="slideout-navigation__social-links">
 				<?php echo do_shortcode('[social_links]'); ?>
 			</div>
-			<?php
+		<?php
 		}
 	}
 
@@ -332,7 +399,7 @@ class Kesbie_Theme
 				</div>
 			</div>
 		</div>
-		<?php
+<?php
 	}
 }
 
