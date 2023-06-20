@@ -45,6 +45,10 @@ function get_project_data_by_id($post_id = null)
         return;
     }
 
+    $partner_term_ids = get_the_terms($id, 'partner');
+
+    
+    $project_partner = $partner_term_ids ? $partner_term_ids[0] : false;
     $project_title =  $data->post_title;
     $project_thumbnail = get_post_thumbnail_id($id);
     $project_url = get_permalink($id);
@@ -61,5 +65,6 @@ function get_project_data_by_id($post_id = null)
         'project_thumbnail' => $project_thumbnail,
         'project_url' => $project_url,
         'project_gallery_ids' => $project_gallery_ids,
+        'project_partner' => $project_partner
     ];
 }
