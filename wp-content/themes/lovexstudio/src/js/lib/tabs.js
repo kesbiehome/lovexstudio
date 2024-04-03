@@ -14,6 +14,7 @@ export default (el, customOptions = {}) => {
 		activeNavClass: 'is-active',
 		activePanelClass: 'is-active',
 		lazyload: true,
+		index: 0,
 		lazyloadCallback: function () {}
 	}
 
@@ -82,8 +83,6 @@ export default (el, customOptions = {}) => {
 				navItem = getParentElByTagName('li', e.target)
 			}
 
-			console.log(navItem)
-
 			trigger(
 				{
 					event: 'update',
@@ -101,7 +100,7 @@ export default (el, customOptions = {}) => {
 		{
 			event: 'update',
 			data: {
-				currentIndex: 0
+				currentIndex: options.index
 			}
 		},
 		el

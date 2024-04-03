@@ -13,7 +13,7 @@ foreach ($services as $service) :
 
     ob_start(); ?>
 
-    <div class="service-tab-title">
+    <div class="service-tab-title" id="<?php esc_attr_e('service_'.$slug) ?>">
         <?php esc_html_e($service_name);  ?>
     </div>
 
