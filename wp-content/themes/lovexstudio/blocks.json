@@ -6,7 +6,8 @@
     "home-contact",
     "contact-page",
     "project-tabs",
-    "video-banner"
+    "video-banner",
+    "service-tabs"
   ],
   "blocks_path": "blocks",
   "blocks_part": "blocks",

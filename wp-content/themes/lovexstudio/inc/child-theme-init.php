@@ -296,9 +296,45 @@ class Kesbie_Theme
 			'show_in_rest'               => true,
 		);
 
+		$service_label =  array(
+			'name'                       => _x('Services', 'Taxonomy General Name', 'lovexstudio'),
+			'singular_name'              => _x('Service', 'Taxonomy Singular Name', 'lovexstudio'),
+			'menu_name'                  => __('Service', 'lovexstudio'),
+			'all_items'                  => __('All Items', 'lovexstudio'),
+			'parent_item'                => __('Parent Item', 'lovexstudio'),
+			'parent_item_colon'          => __('Parent Item:', 'lovexstudio'),
+			'new_item_name'              => __('New Item Name', 'lovexstudio'),
+			'add_new_item'               => __('Add New Item', 'lovexstudio'),
+			'edit_item'                  => __('Edit Item', 'lovexstudio'),
+			'update_item'                => __('Update Item', 'lovexstudio'),
+			'view_item'                  => __('View Item', 'lovexstudio'),
+			'separate_items_with_commas' => __('Separate items with commas', 'lovexstudio'),
+			'add_or_remove_items'        => __('Add or remove items', 'lovexstudio'),
+			'choose_from_most_used'      => __('Choose from the most used', 'lovexstudio'),
+			'popular_items'              => __('Popular Items', 'lovexstudio'),
+			'search_items'               => __('Search Items', 'lovexstudio'),
+			'not_found'                  => __('Not Found', 'lovexstudio'),
+			'no_terms'                   => __('No items', 'lovexstudio'),
+			'items_list'                 => __('Items list', 'lovexstudio'),
+			'items_list_navigation'      => __('Items list navigation', 'lovexstudio'),
+		);
+
+		$service_args = array(
+			'labels'                     => $service_label,
+			'hierarchical'               => false,
+			'public'                     => true,
+			'show_ui'                    => true,
+			'show_admin_column'          => true,
+			'show_in_nav_menus'          => true,
+			'show_tagcloud'              => true,
+			'show_in_rest'               => true,
+		);
+
 		// register_taxonomy('game', array('project'), $game_args);
 		register_taxonomy('partner', array('project'), $partner_args);
 		register_taxonomy('project_cat', array('project'), $args);
+		register_taxonomy('service', array('project'), $service_args);
+
 	}
 
 	// Register Custom Taxonomy
