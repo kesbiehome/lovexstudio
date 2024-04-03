@@ -22,28 +22,13 @@ if (!empty($data['project_partner'])) {
 <div class="<?php echo esc_attr($class); ?>" data-aos="fade-up">
     <a class="project-card__link" href="<?php echo esc_url($data['project_url']); ?>">
         <?php
-        if (!empty($data['project_partner']) && !empty($partner_avatar_id)) :
+        if (!empty($data['project_title'])) :
 
         ?>
-            <div class="project-card__overlay">
-                <div class="project-card__info">
-                    <div class="project-card__info--left">
-                        <?php
-                        the_block('image', [
-                            'image' => $partner_avatar_id,
-                            'size' => [60, 60],
-                            'class' => 'image--square project-card__partner--image',
-                            'lazyload' => true
-                        ]);
-                        ?>
-                    </div>
-                    <div class="project-card__info--right">
-                        <div class="project-card__title">
-                            <?php echo esc_html($data['project_title']); ?>
-                        </div>
-                        <div class="project-card__name">
-                            <?php echo esc_html($partner_name); ?>
-                        </div>
+            <div class="project-card__info">
+                <div class="project-card__info--right">
+                    <div class="project-card__title">
+                        <?php echo esc_html($data['project_title']); ?>
                     </div>
                 </div>
             </div>
@@ -58,6 +43,4 @@ if (!empty($data['project_partner'])) {
         ]);
         ?>
     </a>
-    <div class="project-card__decor">
-    </div>
 </div>

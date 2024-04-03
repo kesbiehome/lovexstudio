@@ -1,10 +1,16 @@
 .project-grid {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 20px;
+	justify-content: center;
+	grid-gap: 30px;
+	gap: 30px;
 
 	@media (--xs) {
 		flex-wrap: nowrap;
 		gap: 40px;
 	}
+}
+
+.project-grid .project-card {
+	width: calc(100% / 2 - 15px);
 }

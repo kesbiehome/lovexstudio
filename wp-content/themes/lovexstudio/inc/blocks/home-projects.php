@@ -1,6 +1,6 @@
 <?php
 
-class About_Us extends Kesbie_Toolkit_Block implements Kesbie_Toolkit_Block_Interface
+class Home_Projects extends Kesbie_Toolkit_Block implements Kesbie_Toolkit_Block_Interface
 {
   /**
    * @var string
@@ -22,14 +22,14 @@ class About_Us extends Kesbie_Toolkit_Block implements Kesbie_Toolkit_Block_Inte
   /**
    * Singleton instance
    *
-   * @var About_Us
+   * @var Home_Projects
    */
   private static $instance;
 
   /**
    * Get singleton instance.
    *
-   * @return About_Us
+   * @return Home_Projects
    */
   public final static function instance()
   {
@@ -42,18 +42,17 @@ class About_Us extends Kesbie_Toolkit_Block implements Kesbie_Toolkit_Block_Inte
   public function __construct()
   {
 
-    $this->block_name = 'about-us';
-    $this->block_slug = 'about_us';
-    $this->block_title = __('About Us', 'lovexstudio');
+    $this->block_name = 'home-projects';
+    $this->block_slug = 'home-projects';
+    $this->block_title = __('Projects', 'lovexstudio');
     $this->fields = [
       // Settings
-      'image',
-      'desc',
-      'rows',
+      'section_title',
+      'button',
     ];
 
     parent::__construct();
   }
 }
 
-About_Us::instance();
+Home_Projects::instance();
