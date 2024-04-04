@@ -28,8 +28,8 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		grid-gap: 30px;
-		gap: 30px;
+		grid-gap: 20px;
+		gap: 20px;
 
 		@media (--xs) {
 			flex-wrap: nowrap;
@@ -38,6 +38,19 @@
 	}
 
 	& .project-grid .project-card {
-		width: calc(100% / 2 - 15px);
+		width: calc(100%);
+	}
+}
+
+@media (min-width: 768px) {
+	.section-home-projects {
+		& .project-grid {
+			grid-gap: 30px;
+			gap: 30px;
+		}
+
+		& .project-grid .project-card {
+			width: calc(100% / 2 - 15px);
+		}
 	}
 }

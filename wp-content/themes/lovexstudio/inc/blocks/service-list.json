@@ -1,0 +1,35 @@
+{
+  "layout_523cf83kjtsu2e": {
+    "key": "layout_523cf83kjtsu2e",
+    "name": "service_list",
+    "label": "Service List",
+    "display": "row",
+    "sub_fields": [
+      {
+        "key": "field_6472csx3s2se3",
+        "label": "Services",
+        "name": "services",
+        "aria-label": "",
+        "type": "taxonomy",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "taxonomy": "service",
+        "add_term": 1,
+        "save_terms": 1,
+        "load_terms": 1,
+        "return_format": "object",
+        "field_type": "checkbox",
+        "multiple": 0,
+        "allow_null": 0
+      }
+    ],
+    "min": "",
+    "max": ""
+  }
+}

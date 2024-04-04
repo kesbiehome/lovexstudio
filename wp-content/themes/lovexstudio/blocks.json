@@ -7,7 +7,9 @@
     "contact-page",
     "project-tabs",
     "video-banner",
-    "service-tabs"
+    "service-tabs",
+    "service-list",
+    "service-desc"
   ],
   "blocks_path": "blocks",
   "blocks_part": "blocks",
