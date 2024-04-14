@@ -1,0 +1,55 @@
+{
+  "layout_523cf2t12tsu2e": {
+    "key": "layout_523cf2t12tsu2e",
+    "name": "service_tabs",
+    "label": "Service Tabs",
+    "display": "row",
+    "sub_fields": [
+      {
+        "key": "field_647253e2diue2",
+        "label": "Title",
+        "name": "title",
+        "aria-label": "",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_64725413s2se3",
+        "label": "Services",
+        "name": "services",
+        "aria-label": "",
+        "type": "taxonomy",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "taxonomy": "service",
+        "add_term": 1,
+        "save_terms": 1,
+        "load_terms": 1,
+        "return_format": "object",
+        "field_type": "checkbox",
+        "multiple": 0,
+        "allow_null": 0
+      }
+    ],
+    "min": "",
+    "max": ""
+  }
+}

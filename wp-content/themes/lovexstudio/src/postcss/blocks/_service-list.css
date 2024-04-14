@@ -1,0 +1,155 @@
+.service-list {
+	padding-top: 40px;
+	color: var(--white);
+
+	.service-list-item__wrapper.bg-black {
+		background-color: var(--black);
+	}
+
+	& .container {
+		width: min(100% - 30px, 1200px);
+		margin: 0 auto;
+	}
+
+	& .section__title {
+		text-align: center;
+		margin-bottom: 20px;
+		color: var(--white);
+	}
+
+	& .service-title {
+		font-size: 30px;
+		margin-bottom: 5px;
+		font-weight: bolder;
+		text-transform: uppercase;
+	}
+
+	& .service-desc {
+		font-size: 16px;
+		font-weight: bolder;
+	}
+
+	& .service-link {
+		margin-top: 30px;
+		display: flex;
+		justify-content: end;
+	}
+
+	& .service-list-item {
+		padding: 30px 0;
+		display: flex;
+		grid-gap: 20px;
+		gap: 20px;
+	}
+
+	& .service-list-right {
+		aspect-ratio: unset;
+	}
+
+	& .service-list-left {
+		& .image {
+			@mixin ratio 9/16;
+		}
+	}
+
+	& .service-list-item {
+		flex-direction: column-reverse;
+	}
+
+	& .service-list-item.revert {
+		flex-direction: column-reverse;
+	}
+
+	& .service-list-right {
+		width: 100%;
+		aspect-ratio: unset;
+	}
+
+	& .service-list-left {
+		width: 100%;
+		& .service-list-item__media {
+			border-radius: 12px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.service-list {
+		& .service-list-item {
+			padding: 40px 0;
+			grid-gap: 30px;
+			gap: 30px;
+		}
+
+		& .service-list-item.revert {
+		}
+
+		& .service-title {
+			font-size: 50px;
+			margin-bottom: 20px;
+			font-weight: bolder;
+			text-transform: uppercase;
+		}
+
+		& .service-desc {
+			font-size: 20px;
+			font-weight: bolder;
+		}
+
+		& .service-list-right {
+			aspect-ratio: unset;
+		}
+
+		& .service-list-left {
+			& .service-list-item__media {
+				border-radius: 24px;
+				overflow: hidden;
+			}
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.service-list {
+		& .service-list-item {
+			padding: 60px 0;
+			grid-gap: 40px;
+			gap: 40px;
+			flex-direction: row-reverse;
+		}
+
+		& .service-list-item.revert {
+			flex-direction: row;
+		}
+
+		& .service-title {
+			font-size: 50px;
+			margin-bottom: 20px;
+			font-weight: bolder;
+			text-transform: uppercase;
+		}
+
+		& .service-desc {
+			font-size: 20px;
+			font-weight: bolder;
+		}
+
+		& .service-list-right {
+			width: calc(100% / 3);
+			aspect-ratio: unset;
+		}
+
+		& .service-list-left {
+			width: calc(100% * 2 / 3);
+
+			& .service-list-item__media {
+				border-radius: 24px;
+				overflow: hidden;
+			}
+
+			& .image {
+				@mixin ratio 9/16;
+			}
+		}
+	}
+}

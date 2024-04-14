@@ -81,3 +81,9 @@
 		}
 	}
 }
+
+.form_confirmation_message {
+	padding: 70px 40px;
+	color: white;
+	text-align: center;
+}

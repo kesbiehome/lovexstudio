@@ -1,7 +1,6 @@
 .hero-banner {
 	background: #1f222d;
 	width: 100%;
-	padding: 40px;
 
 	& > .wp-block-group__inner-container {
 		padding: 0;
@@ -9,15 +8,23 @@
 }
 
 .hero-banner__cover {
-	@mixin ratio 0.5;
-	max-height: 70vh;
+	@mixin ratio 7/16;
 }
 
 .hero-banner__wrapper {
 	position: relative;
-	max-width: 1200px;
 	width: 100%;
-	margin: auto;
+	margin-bottom: 8px;
+}
+
+.hero-banner__wrapper::after {
+	content: '';
+	height: 8px;
+	width: 100%;
+	background-color: var(--light-green);
+	position: absolute;
+	bottom: 0;
+	z-index: 1;
 }
 
 .hero-banner__title {
@@ -30,19 +37,15 @@
 	z-index: 1;
 	color: var(--white);
 	gap: 1em;
+	font-weight: bolder;
 
 	@media (--s) {
-		left: 50px;
-		bottom: 50px;
+		left: 60px;
+		bottom: 20px;
 	}
 
 	& h1 {
 		margin-bottom: 0;
-		font-size: 30px;
-
-		@media (--s) {
-			font-size: 42px;
-		}
 	}
 }
 

@@ -1,0 +1,29 @@
+.section-service-desc {
+	background-color: var(--secondary);
+	display: flex;
+	justify-content: center;
+	padding: 20px 15px;
+	font-size: 20px;
+	text-align: center;
+	font-weight: bolder;
+	color: var(--white);
+
+	@media (min-width: 768px) {
+		font-size: 24px;
+		padding: 24px 24px;
+	}
+
+	@media (min-width: 960px) {
+		font-size: 30px;
+		padding: 30px 40px;
+	}
+
+	@media (min-width: 1280px) {
+		font-size: 40px;
+		padding: 60px 40px;
+	}
+}
+
+.section-service-desc span {
+	max-width: 900px;
+}

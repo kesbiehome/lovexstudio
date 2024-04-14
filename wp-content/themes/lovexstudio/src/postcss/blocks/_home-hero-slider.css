@@ -1,5 +1,15 @@
 .hero-banner-slider {
 	width: 100%;
+	margin-bottom: 8px;
+}
+
+.hero-banner-slider::after {
+	content: '';
+	height: 8px;
+	width: 100%;
+	background-color: var(--light-green);
+	position: absolute;
+	bottom: 0;
 }
 
 .home-hero-slider {

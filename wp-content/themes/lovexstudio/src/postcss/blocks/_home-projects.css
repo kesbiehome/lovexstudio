@@ -1,0 +1,57 @@
+.section-home-projects {
+	padding: 30px 0 40px;
+
+	& .section__container {
+		width: min(100% - 30px, 1200px);
+		margin: 0 auto;
+	}
+
+	& .section__title {
+		text-align: center;
+		margin-bottom: 20px;
+		color: var(--white);
+	}
+
+	& .section__footer {
+		margin-top: 30px;
+		& .section__inner-container {
+			display: flex;
+			justify-content: end;
+		}
+	}
+
+	& .home-projects-footer {
+		display: flex;
+	}
+
+	& .project-grid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		grid-gap: 20px;
+		gap: 20px;
+
+		@media (--xs) {
+			gap: 40px;
+		}
+	}
+
+	& .project-grid .project-card {
+		width: calc(100%);
+	}
+}
+
+@media (min-width: 768px) {
+	.section-home-projects {
+		padding: 60px 0 100px;
+
+		& .project-grid {
+			grid-gap: 30px;
+			gap: 30px;
+		}
+
+		& .project-grid .project-card {
+			width: calc(100% / 2 - 15px);
+		}
+	}
+}

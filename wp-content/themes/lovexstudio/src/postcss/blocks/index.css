@@ -8,7 +8,7 @@
 @import '_project-column';
 @import '_example';
 @import '_home-hero-slider';
-@import '_about-us';
+@import '_home-projects';
 @import '_social-links';
 @import '_slideout-menu';
 @import '_contact';
@@ -22,3 +22,6 @@
 @import '_project-info';
 @import '_project-content';
 @import '_projects-page';
+@import '_service-tabs';
+@import '_service-list';
+@import '_service-desc';

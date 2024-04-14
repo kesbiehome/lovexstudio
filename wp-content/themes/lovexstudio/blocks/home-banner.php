@@ -36,7 +36,7 @@ if (!empty($images)) :
         'slide_class' => 'hero-banner-slide',
         'prevNextButton' => true,
         'lazyload' => true,
-        'pagination' => true,
+        'pagination' => false,
     ]);
 
     $content .= ob_get_clean();

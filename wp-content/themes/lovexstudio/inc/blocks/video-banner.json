@@ -2,7 +2,7 @@
   "layout_55fcf2t1444u2e": {
     "key": "layout_55fcf2t1444u2e",
     "name": "video_banner",
-    "label": "Video Banner",
+    "label": "Banner Image",
     "display": "row",
     "sub_fields": [
       {
@@ -27,7 +27,7 @@
       },
       {
         "key": "field_6475e44333636",
-        "label": "Video Thumbnail",
+        "label": "Image Thumbnail",
         "name": "video_thumbnail",
         "aria-label": "",
         "type": "image",
@@ -49,26 +49,6 @@
         "max_size": "",
         "mime_types": "",
         "preview_size": "medium"
-      },
-      {
-        "key": "field_6474e343436c6",
-        "label": "video Url",
-        "name": "video_url",
-        "aria-label": "",
-        "type": "text",
-        "instructions": "",
-        "required": 0,
-        "conditional_logic": 0,
-        "wrapper": {
-          "width": "",
-          "class": "",
-          "id": ""
-        },
-        "default_value": "",
-        "maxlength": "",
-        "placeholder": "",
-        "prepend": "",
-        "append": ""
       }
     ],
     "min": "",
