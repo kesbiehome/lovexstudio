@@ -416,6 +416,7 @@ body.is-loading {
 	font-size: 1.25rem;
 	text-transform: uppercase;
 	font-weight: bolder;
+	color: var(--green-bright);
 }
 .project-card__name {
 	font-size: 1rem;
@@ -428,7 +429,6 @@ body.is-loading {
 }
 @media (min-width: 480px) {
 .project-grid {
-		flex-wrap: nowrap;
 		grid-gap: 40px;
 		gap: 40px
 }
@@ -470,8 +470,7 @@ body.is-loading {
 	content: '';
 	height: 8px;
 	width: 100%;
-	background-color: #f1592a;
-	background-color: var(--secondary);
+	background-color: var(--light-green);
 	position: absolute;
 	bottom: 0;
 }
@@ -497,7 +496,7 @@ body.is-loading {
 			   object-fit: cover;
 		}
 .section-home-projects {
-	padding: 60px 0 100px
+	padding: 30px 0 40px
 }
 .section-home-projects .section__container {
 		width: min(100% - 30px, 1200px);
@@ -529,7 +528,6 @@ body.is-loading {
 	}
 @media (min-width: 480px) {
 .section-home-projects .project-grid {
-			flex-wrap: nowrap;
 			grid-gap: 40px;
 			gap: 40px
 	}
@@ -538,6 +536,10 @@ body.is-loading {
 		width: calc(100%);
 	}
 @media (min-width: 768px) {
+	.section-home-projects {
+		padding: 60px 0 100px
+	}
+
 		.section-home-projects .project-grid {
 			grid-gap: 30px;
 			grid-gap: 30px;
@@ -966,8 +968,7 @@ body.is-loading {
 }
 .hero-banner {
 	background: #1f222d;
-	width: 100%;
-	padding: 40px
+	width: 100%
 }
 .hero-banner > .wp-block-group__inner-container {
 		padding: 0;
@@ -978,7 +979,7 @@ body.is-loading {
 .hero-banner__cover::before {
     content: '';
     display: block;
-    padding-top: calc(0.5 * 100%);
+    padding-top: calc(7/16 * 100%);
   }
 .hero-banner__cover .image__img {
     position: absolute;
@@ -989,14 +990,19 @@ body.is-loading {
 
     z-index: 1;
   }
-.hero-banner__cover {
-	max-height: 70vh;
-}
 .hero-banner__wrapper {
 	position: relative;
-	max-width: 1200px;
 	width: 100%;
-	margin: auto;
+	margin-bottom: 8px;
+}
+.hero-banner__wrapper::after {
+	content: '';
+	height: 8px;
+	width: 100%;
+	background-color: var(--light-green);
+	position: absolute;
+	bottom: 0;
+	z-index: 1;
 }
 .hero-banner__title {
 	position: absolute;
@@ -1011,23 +1017,18 @@ body.is-loading {
 	color: #fff;
 	color: var(--white);
 	grid-gap: 1em;
-	gap: 1em
+	gap: 1em;
+	font-weight: bolder
 }
 @media (min-width: 768px) {
 .hero-banner__title {
-		left: 50px;
-		bottom: 50px
+		left: 60px;
+		bottom: 20px
 }
 	}
 .hero-banner__title h1 {
 		margin-bottom: 0;
-		font-size: 30px
 	}
-@media (min-width: 768px) {
-.hero-banner__title h1 {
-			font-size: 42px
-	}
-		}
 .hero-banner__button svg {
 		width: 40px
 	}
@@ -1469,7 +1470,7 @@ body.is-loading {
 		max-width: 100%;
 	}
 .service-tabs {
-	padding-top: 40px;
+	padding-top: 20px;
 	color: #fff;
 	color: var(--white)
 }
@@ -1535,6 +1536,10 @@ body.is-loading {
   }
 }
 @media (min-width: 768px) {
+	.service-tabs {
+		padding-top: 40px
+	}
+
 		.service-tabs .section-title {
 			margin-bottom: 20px;
 		}
@@ -1560,11 +1565,6 @@ body.is-loading {
 			font-size: 30px;
 		}
 }
-/* @media (min-width: 1280px) {
-	.service-title {
-		font-size: 30px;
-	}
-} */
 .service-list {
 	padding-top: 40px;
 	color: #fff;
@@ -1807,13 +1807,10 @@ body.is-loading {
 	/* identical to box height */
 
 	text-transform: uppercase;
-	color: #1346af;
-	color: var(--primary);
 	margin-bottom: 0;
 }
 @media (min-width: 768px) {
 	.section__title {
-		font-size: 30px;
 		line-height: 70px;
 	}
 }
