@@ -49,7 +49,6 @@ class Video_Banner extends Kesbie_Toolkit_Block implements Kesbie_Toolkit_Block_
       // Settings
       'title',
       'video_thumbnail',
-      'video_url',
     ];
 
     parent::__construct();

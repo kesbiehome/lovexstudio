@@ -1,5 +1,5 @@
 .service-tabs {
-	padding-top: 40px;
+	padding-top: 20px;
 	color: var(--white);
 
 	& .section__container {
@@ -50,6 +50,8 @@
 
 @media (min-width: 768px) {
 	.service-tabs {
+		padding-top: 40px;
+
 		& .section-title {
 			margin-bottom: 20px;
 		}
@@ -79,9 +81,3 @@
 		}
 	}
 }
-
-/* @media (min-width: 1280px) {
-	.service-title {
-		font-size: 30px;
-	}
-} */

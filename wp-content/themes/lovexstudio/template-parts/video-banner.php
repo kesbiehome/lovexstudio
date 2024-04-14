@@ -14,28 +14,22 @@ if (!empty($embed_video) && empty($image_video)) {
 	$image_video = !empty($match) ? 'https://i.ytimg.com/vi/' . $match[1] . '/maxresdefault.jpg' : '';
 }
 
-if (!empty($embed_video)) :  ?>
-	<div class="grid-container">
-		<div class="hero-banner__wrapper">
-			<div class="hero-banner__cover">
-				<?php
-					the_block(
-						'image',
-						[
-							'image' => $image_video,
-							'class' => 'image--default image__img',
-							'size' => 'full'
-						]
-					);
-				?>
-			</div>
-			<div class="hero-banner__title">
-				<a href="<?php echo $data['video-url']; ?>" class="hero-banner__button" data-fancybox="video">
-					<?php echo kesbie_get_svg('next-btn'); ?>
-				</a>
-				<h1><?php echo $data['title']; ?></h1>
-			</div>
+if (!empty($image_video)) :  ?>
+	<div class="hero-banner__wrapper">
+		<div class="hero-banner__cover">
+			<?php
+			the_block(
+				'image',
+				[
+					'image' => $image_video,
+					'class' => 'image--default image__img',
+					'size' => 'full'
+				]
+			);
+			?>
+		</div>
+		<div class="hero-banner__title">
+			<h1 class="section__title"><?php echo $data['title']; ?></h1>
 		</div>
 	</div>
-
 <?php endif; ?>
