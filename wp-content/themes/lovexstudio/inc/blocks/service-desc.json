@@ -1,0 +1,32 @@
+{
+  "layout_523cd23kjtsu2e": {
+    "key": "layout_523cd23kjtsu2e",
+    "name": "service_desc",
+    "label": "Service Description",
+    "display": "row",
+    "sub_fields": [
+      {
+        "key": "field_660d00a49f0c5",
+        "label": "Description",
+        "name": "desc",
+        "aria-label": "",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "maxlength": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      }
+    ],
+    "min": "",
+    "max": ""
+  }
+}
