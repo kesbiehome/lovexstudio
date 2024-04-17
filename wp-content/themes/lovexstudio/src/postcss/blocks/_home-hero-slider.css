@@ -1,15 +1,19 @@
 .hero-banner-slider {
 	width: 100%;
-	margin-bottom: 8px;
 }
 
-.hero-banner-slider::after {
+.hero-banner-slider:first-child::after {
 	content: '';
-	height: 8px;
+	height: 4px;
 	width: 100%;
 	background-color: var(--light-green);
 	position: absolute;
 	bottom: 0;
+	z-index: 1;
+
+	@media (--s) {
+		height: 8px;
+	}
 }
 
 .home-hero-slider {

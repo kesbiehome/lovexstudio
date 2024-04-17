@@ -1,24 +1,22 @@
 .btn {
 	transition: all 0.3s ease-out;
-	color: var(--white);
-	background: var(--primary);
-	padding: 8px 25px;
-	background-size: 215% 100% !important;
-	background-position: right bottom !important;
-	border-radius: 0 20px 0 20px;
+	color: var(--primary);
+	border: 2px solid var(--primary);
+	padding: 6px 22px;
+	border-radius: 15px;
 	text-decoration: none;
-	font-weight: bolder;
+	font-weight: bold;
 	text-transform: uppercase;
 }
 
 .btn:hover {
-	background: var(--white);
-	color: var(--primary);
+	background: var(--primary);
+	color: var(--white);
 }
 
 @media (min-width: 768px) {
 	.btn {
-		padding: 8px 40px;
-		border-radius: 0 20px 0 20px;
+		padding: 6px 60px;
+		font-size: 24px;
 	}
 }
