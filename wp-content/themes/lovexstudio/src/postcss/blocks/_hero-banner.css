@@ -14,17 +14,20 @@
 .hero-banner__wrapper {
 	position: relative;
 	width: 100%;
-	margin-bottom: 8px;
 }
 
 .hero-banner__wrapper::after {
 	content: '';
-	height: 8px;
+	height: 4px;
 	width: 100%;
 	background-color: var(--light-green);
 	position: absolute;
 	bottom: 0;
 	z-index: 1;
+
+	@media (--s) {
+		height: 8px;
+	}
 }
 
 .hero-banner__title {
@@ -40,8 +43,8 @@
 	font-weight: bolder;
 
 	@media (--s) {
-		left: 60px;
-		bottom: 20px;
+		left: 70px;
+		bottom: 30px;
 	}
 
 	& h1 {

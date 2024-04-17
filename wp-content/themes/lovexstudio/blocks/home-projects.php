@@ -47,7 +47,7 @@ $project_featured = new WP_Query(array(
 
 the_block('default-section', [
     'attributes' => 'data-aos="fade-up"',
-    'class' => 'section-home-projects',
+    'class' => 'section-home-projects bg-dark',
     'header' => $section_title ?? '',
     'content' => $content,
     'footer' => $footer ?? '',

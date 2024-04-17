@@ -3,7 +3,7 @@
 	color: var(--white);
 
 	& .section__container {
-		width: min(100% - 30px, 1200px);
+		width: min(100% - 30px, 1300px);
 		margin: 0 auto;
 	}
 
@@ -13,31 +13,31 @@
 		color: var(--white);
 	}
 
-	.service-title {
-		font-size: 20px;
+	& .service-title {
+		font-size: 24px;
 		font-weight: bolder;
 		text-transform: uppercase;
-		margin-bottom: 20px;
 	}
 
-	.service-tab-title {
+	& .service-tab-title {
 		text-overflow: ellipsis;
 		overflow: hidden;
 		white-space: nowrap;
 	}
 
-	.service-desc {
-		font-size: 20px;
-		font-weight: bolder;
+	& .service-desc {
+		font-size: 17px;
+		font-weight: normal;
+		line-height: 1.3;
 	}
 
 	& .service-link {
 		margin-top: 30px;
 		display: flex;
-		justify-content: end;
+		justify-content: center;
 	}
 
-	.service-media {
+	& .service-media {
 		margin-top: 30px;
 		border-radius: 24px;
 		overflow: hidden;
@@ -57,11 +57,7 @@
 		}
 
 		& .service-title {
-			font-size: 24px;
-		}
-
-		& .service-desc {
-			font-size: 24px;
+			font-size: 30px;
 		}
 	}
 }
@@ -69,15 +65,12 @@
 @media (min-width: 1024px) {
 	.service-tabs {
 		& .section-title {
-			margin-bottom: 30px;
+			margin-bottom: 40px;
 		}
 
 		& .service-title {
-			font-size: 30px;
-		}
-
-		& .service-desc {
-			font-size: 30px;
+			font-size: 40px;
+			margin-bottom: 0;
 		}
 	}
 }
