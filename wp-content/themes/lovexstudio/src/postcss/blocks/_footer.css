@@ -54,7 +54,7 @@ footer {
 		display: flex;
 		gap: 40px;
 		align-items: center;
-		margin-bottom: 0!important;
+		margin-bottom: 0 !important;
 
 		& aside:last-child {
 			margin-left: auto;
@@ -65,4 +65,3 @@ footer {
 		}
 	}
 }
-

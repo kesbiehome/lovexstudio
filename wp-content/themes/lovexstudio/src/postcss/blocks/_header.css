@@ -3,7 +3,7 @@
 .footer-bar {
 	& li.menu-item {
 		margin: 0;
-		
+
 		&:hover {
 			& > a {
 				color: var(--primary) !important;
@@ -38,7 +38,7 @@
 		bottom: 0;
 		width: 100%;
 		height: 5px;
-		background-color: #0D261E;
+		background-color: #0d261e;
 	}
 }
 
@@ -52,7 +52,7 @@
 		bottom: 0;
 		width: 120px;
 		height: 5px;
-		background-color: #25906D;
+		background-color: #25906d;
 		z-index: 2;
 	}
 }
@@ -120,4 +120,3 @@ header {
 		fill: var(--white);
 	}
 }
-

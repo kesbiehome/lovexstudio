@@ -1,10 +1,22 @@
-.btn,
-.gform_button {
+.btn {
 	transition: all 0.3s ease-out;
-	color: var(--primary);
-	border: 2px solid var(--primary);
+	color: var(--white);
+	background: var(--primary);
+	padding: 8px 25px;
+	background-size: 215% 100% !important;
+	background-position: right bottom !important;
+	border-radius: 0 20px 0 20px;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+input.gform_button {
+	transition: all 0.3s ease-out;
+	color: var(--white);
+	background: var(--primary);
 	padding: 6px 22px;
-	border-radius: 15px;
+	border-radius: 0 20px;
 	text-decoration: none;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -45,7 +57,7 @@
 }
 
 .btn,
-.gform_button {
+input.gform_button {
 	&:hover {
 		background: var(--white);
 		color: var(--primary);
