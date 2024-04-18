@@ -46,8 +46,23 @@ body > .site-footer {
 			}
 		}
 	}
+}
 
-	& > footer {
-		display: none;
+footer {
+	& .footer-bar {
+		width: 100%;
+		display: flex;
+		gap: 40px;
+		align-items: center;
+		margin-bottom: 0!important;
+
+		& aside:last-child {
+			margin-left: auto;
+		}
+
+		& .menu {
+			gap: 40px;
+		}
 	}
 }
+
