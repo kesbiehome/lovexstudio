@@ -43,7 +43,6 @@
 }
 
 .project-card .image {
-	border-radius: 20px;
 	overflow: hidden;
 	@mixin ratio 1/2;
 }
@@ -53,12 +52,18 @@
 }
 
 .project-card__title {
-	font-size: 1.25rem;
+	font-size: 20px;
 	text-transform: uppercase;
-	font-weight: bolder;
+	font-weight: bold;
 	color: var(--green-bright);
 }
 
 .project-card__name {
 	font-size: 1rem;
+}
+
+@media (--s) {
+	.project-card__title {
+		font-size: 24px;
+	}
 }

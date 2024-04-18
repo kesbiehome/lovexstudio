@@ -3,23 +3,22 @@
 	display: flex;
 	justify-content: center;
 	padding: 20px 15px;
-	font-size: 20px;
 	text-align: center;
-	font-weight: bolder;
+	font-weight: normal;
 	color: var(--white);
 
 	@media (min-width: 768px) {
-		font-size: 24px;
+		font-size: 20px;
 		padding: 24px 24px;
 	}
 
 	@media (min-width: 960px) {
-		font-size: 30px;
+		font-size: 24px;
 		padding: 30px 40px;
 	}
 
 	@media (min-width: 1280px) {
-		font-size: 40px;
+		font-size: 26px;
 		padding: 60px 40px;
 	}
 }
