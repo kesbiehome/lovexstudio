@@ -1,13 +1,12 @@
 .service-list {
-	padding-top: 40px;
 	color: var(--white);
 
 	.service-list-item__wrapper.bg-black {
-		background-color: var(--black);
+		background-color: #0d0d0d;
 	}
 
 	& .container {
-		width: min(100% - 30px, 1200px);
+		width: min(100% - 30px, 1300px);
 		margin: 0 auto;
 	}
 
@@ -19,20 +18,17 @@
 
 	& .service-title {
 		font-size: 30px;
-		margin-bottom: 5px;
 		font-weight: bolder;
 		text-transform: uppercase;
 	}
 
 	& .service-desc {
-		font-size: 16px;
-		font-weight: bolder;
+		font-weight: normal;
 	}
 
 	& .service-link {
 		margin-top: 30px;
 		display: flex;
-		justify-content: end;
 	}
 
 	& .service-list-item {
@@ -67,9 +63,6 @@
 
 	& .service-list-left {
 		width: 100%;
-		& .service-list-item__media {
-			border-radius: 12px;
-		}
 	}
 }
 
@@ -86,25 +79,12 @@
 
 		& .service-title {
 			font-size: 50px;
-			margin-bottom: 20px;
 			font-weight: bolder;
 			text-transform: uppercase;
 		}
 
-		& .service-desc {
-			font-size: 20px;
-			font-weight: bolder;
-		}
-
 		& .service-list-right {
 			aspect-ratio: unset;
-		}
-
-		& .service-list-left {
-			& .service-list-item__media {
-				border-radius: 24px;
-				overflow: hidden;
-			}
 		}
 	}
 }
@@ -113,8 +93,8 @@
 	.service-list {
 		& .service-list-item {
 			padding: 60px 0;
-			grid-gap: 40px;
-			gap: 40px;
+			grid-gap: 100px;
+			gap: 100px;
 			flex-direction: row-reverse;
 		}
 
@@ -123,15 +103,9 @@
 		}
 
 		& .service-title {
-			font-size: 50px;
-			margin-bottom: 20px;
+			font-size: 60px;
 			font-weight: bolder;
 			text-transform: uppercase;
-		}
-
-		& .service-desc {
-			font-size: 20px;
-			font-weight: bolder;
 		}
 
 		& .service-list-right {
@@ -141,12 +115,6 @@
 
 		& .service-list-left {
 			width: calc(100% * 2 / 3);
-
-			& .service-list-item__media {
-				border-radius: 24px;
-				overflow: hidden;
-			}
-
 			& .image {
 				@mixin ratio 9/16;
 			}

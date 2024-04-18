@@ -59,6 +59,7 @@
                         "facebook": "Facebook",
                         "instagram": "Instagram",
                         "youtube": "Youtube",
+                        "tiktok": "Tiktok",
                         "behance": "Behance"
                     },
                     "default_value": "facebook",
@@ -261,5 +262,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1684659902
+    "modified": 1713128631
 }

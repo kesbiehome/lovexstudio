@@ -24,10 +24,6 @@ export default el => {
 				navigation: {
 					nextEl: select('.swiper-button-next', sliderEl),
 					prevEl: select('.swiper-button-prev', sliderEl)
-				},
-				pagination: {
-					el: '.swiper-pagination',
-					type: 'bullets'
 				}
 			})
 
@@ -54,13 +50,11 @@ export default el => {
 			}
 
 			slider.on('activeIndexChange', () => {
-				if (windowWidth > BREAKPOINT) {
-					slideEls.map(slideEl => {
-						if (hasClass('is-not-loaded', slideEl)) {
-							loadNoscriptContent(slideEl)
-						}
-					})
-				}
+				slideEls.map(slideEl => {
+					if (hasClass('is-not-loaded', slideEl)) {
+						loadNoscriptContent(slideEl)
+					}
+				})
 			})
 		}
 	}
