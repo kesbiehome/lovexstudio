@@ -3,7 +3,7 @@
 get_template_part('template-parts/video-banner', null,[
 	'title' => $title,
 	'video-thumbnail' => $video_thumbnail,
-	'video-url' => $video_url
+	'video-url' => $video_url ?? ''
 ]);
 ?>
 </div>

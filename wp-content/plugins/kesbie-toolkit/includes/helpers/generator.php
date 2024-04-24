@@ -52,7 +52,7 @@ function kesbie_generate_swiper_slides($slides, $args = [])
 		$markup .= '<div class="swiper-pagination"></div>';
 	endif;
 
-	if (isset($args['prevNextButton']) && !$args['prevNextButtonOutSide']):
+	if (isset($args['prevNextButton'])):
 		ob_start(); ?>
 		<div class="swiper-button-prev">
 			<svg width="47" height="73" viewBox="0 0 47 73" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -79,7 +79,7 @@ function kesbie_generate_swiper_slides($slides, $args = [])
 		$markup .= '<div class="swiper-pagination"></div>';
 	endif;
 
-	if (isset($args['prevNextButton']) && $args['prevNextButtonOutSide']):
+	if (isset($args['prevNextButton']) && isset($args['prevNextButtonOutSide']) && $args['prevNextButtonOutSide']):
 		ob_start(); ?>
 		<div class="swiper-button-prev">
 			<svg width="47" height="73" viewBox="0 0 47 73" fill="none" xmlns="http://www.w3.org/2000/svg">

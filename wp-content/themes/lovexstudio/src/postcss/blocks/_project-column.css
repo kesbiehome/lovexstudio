@@ -4,20 +4,16 @@
 	width: 100%;
 	gap: 20px;
 
-	&:last-child {
-		display: none;
-	}
-
 	@media (--xs) {
 		width: calc(100% / 2);
-		gap: 40px;
+		gap: 1em;
 	}
 
-	@media (--s) {
+	/* @media (--s) {
 		width: calc(100% / 3);
 
 		&:last-child {
 			display: flex;
 		}
-	}
+	} */
 }

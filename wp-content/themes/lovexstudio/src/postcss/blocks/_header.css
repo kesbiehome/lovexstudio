@@ -11,8 +11,10 @@
 		}
 
 		&:last-child {
-			&.current-menu-item a {
-				color: var(--white);
+			&:hover {
+				&.current-menu-item a {
+					color: var(--white) !important;
+				}
 			}
 		}
 

@@ -37,6 +37,21 @@ input.gform_button {
 	}
 }
 #menu-main-menu > li {
+	&.current-menu-item {
+		&:last-child {
+			&:hover {
+				& a {
+					background-color: var(--primary) !important;
+				}
+			}
+	
+			& a {
+				background-color: var(--white) !important;
+			}
+		}
+
+	}
+
 	&:last-child a {
 		transition: all 0.3s ease-out;
 		color: var(--white);

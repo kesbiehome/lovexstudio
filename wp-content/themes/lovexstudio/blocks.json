@@ -9,7 +9,8 @@
     "video-banner",
     "service-tabs",
     "service-list",
-    "service-desc"
+    "service-desc",
+    "shortcode-block"
   ],
   "blocks_path": "blocks",
   "blocks_part": "blocks",

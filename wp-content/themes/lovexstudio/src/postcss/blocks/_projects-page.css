@@ -1,5 +1,3 @@
-.page-id-49 {
-	& .grid-container {
-		max-width: 100%;
-	}
+.page-template-flexible.container {
+	max-width: unset;
 }
