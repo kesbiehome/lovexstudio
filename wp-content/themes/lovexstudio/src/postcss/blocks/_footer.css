@@ -49,6 +49,14 @@ body > .site-footer {
 }
 
 footer {
+	& a {
+		display: flex !important;
+	}
+
+	& .inside-site-info {
+		height: 100px;
+	}
+
 	& .footer-bar {
 		width: 100%;
 		display: flex;

@@ -78,6 +78,9 @@ function loadComplete () {
 		.then(() => {
 			removeClass('is-loading', bodyEl)
 		})
+	window.scrollTo({
+		top: 0
+	})
 	return preloaderOutTl
 }
 
@@ -219,9 +222,54 @@ function initAos () {
 	})
 }
 
+const VISIBLE_CLASS = 'visible'
+const HAS_PROGRESS_BAR = 'has-progress-bar'
+
+function loadScrollProgress () {
+	const headerEl = select('header')
+	const progressBarEl = select('.progress-bar', headerEl)
+	const progressEl = select('.progress', progressBarEl)
+	const section = document.querySelector('body')
+	removeClass(VISIBLE_CLASS, progressBarEl)
+
+	const scrollProgressBar = () => {
+		let scrollDistance = !section.getBoundingClientRect().top
+			? 0
+			: -section.getBoundingClientRect().top
+
+		if (scrollDistance !== 0) {
+			addClass(VISIBLE_CLASS, progressBarEl)
+			addClass(HAS_PROGRESS_BAR, headerEl)
+		} else {
+			removeClass(VISIBLE_CLASS, progressBarEl)
+			removeClass(HAS_PROGRESS_BAR, headerEl)
+		}
+
+		let progressPercentage =
+			(scrollDistance /
+				(section.getBoundingClientRect().height -
+					document.documentElement.clientHeight)) *
+			100
+
+		let val = Math.round(progressPercentage)
+		progressEl.style.width = val + '%'
+
+		if (val < 0) {
+			progressEl.style.width = '0%'
+		}
+	}
+
+	window.addEventListener('scroll', scrollProgressBar)
+
+	return () => {
+		window.removeEventListener('scroll', scrollProgressBar)
+	}
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	load()
 	initChildBlocks()
-	initAboutUs()
+	// initAboutUs();
 	initAos()
+	// loadScrollProgress()
 })

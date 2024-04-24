@@ -1,4 +1,4 @@
-.slideout-menu,
+/* .slideout-menu,
 .main-navigation,
 .footer-bar {
 	& li.menu-item {
@@ -11,8 +11,10 @@
 		}
 
 		&:last-child {
-			&.current-menu-item a {
-				color: var(--white);
+			&:hover {
+				&.current-menu-item a {
+					color: var(--white) !important;
+				}
 			}
 		}
 
@@ -27,45 +29,58 @@
 			line-height: 70px;
 		}
 	}
-}
+} */
 
 .site-header {
-	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10000;
+}
 
-	&::after {
-		content: '';
+.progress-bar {
+	&.visible {
+		display: block;
+	}
+
+	display: none;
+	position: absolute;
+	left: 0;
+	bottom: -7px;
+	width: 100%;
+	height: 7px;
+	background-color: #0d261e;
+	z-index: 10000;
+
+	& .progress {
 		position: absolute;
+		left: 0;
 		bottom: 0;
-		width: 100%;
-		height: 5px;
-		background-color: #0d261e;
+		height: 7px;
+		background-color: #25906d;
+		z-index: 10000;
 	}
 }
 
 .inside-header {
 	position: relative;
-
-	&::after {
-		content: '';
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		width: 120px;
-		height: 5px;
-		background-color: #25906d;
-		z-index: 2;
-	}
+	height: 48px;
 }
 
 header {
-	background-color: var(--header) !important;
+	transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+	background-color: rgba(17, 17, 17, 0.5);
+
+	&.has-progress-bar {
+		background-color: rgba(17, 17, 17) !important;
+	}
 
 	& .menu-item-has-children > a {
 		padding-right: 20px !important;
 	}
 
 	& .sub-menu {
-		background-color: var(--contrast-2) !important;
 		border-top: 3px solid var(--primary);
 		margin-top: -0.25em;
 		width: 100% !important;
@@ -93,8 +108,6 @@ header {
 	}
 
 	& .has-sticky-branding {
-		background-color: var(--header);
-
 		& .is-logo-image {
 			max-width: 200px;
 			height: auto !important;

@@ -1,9 +1,4 @@
 .project-grid {
 	display: flex;
-	flex-wrap: wrap;
-	gap: 20px;
-
-	@media (--xs) {
-		gap: 40px;
-	}
+	gap: 1em;
 }

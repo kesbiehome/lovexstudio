@@ -17,12 +17,7 @@ foreach ($project_category as $category) {
     }
 
     ob_start();
-    the_block('image', [
-        'image' => $thumbnail_id,
-        'size' => 'thumbnail',
-        'class' => 'image--square image--contain tab-thumbnail'
-    ])
-        ?>
+    ?>
     <div class="tab-title">
         <?php echo $category_name ?>
     </div>
@@ -67,7 +62,7 @@ the_block(
     'default-section',
     [
         'attributes' => 'data-aos="fade-up" data-child-block="project-tabs"',
-        'class' => $_class . 'bg-dark project-tabs',
+        'class' => 'bg-dark project-tabs',
         'header' => $title ?? '',
         'content' => $content ?? '',
         'footer' => $footer ?? ''

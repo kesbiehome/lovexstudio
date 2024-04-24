@@ -1,11 +1,10 @@
 .other-project {
 	display: flex;
-	background-color: #222635;
+	background-color: #d0d0d0;
 
 	& .other-project__container {
 		padding: 3em 0;
-		max-width: 1200px;
-		width: 100%;
+		width: min(100% - 30px, 1240px);
 		margin: 0 auto;
 	}
 
@@ -16,7 +15,9 @@
 
 	& .project-card {
 		margin-right: 40px;
-		width: calc((100% - 40px * 2) / 3);
+		width: calc((100% - 40px * 2) / 2);
+		overflow: hidden;
+		border-radius: 20px;
 
 		&:last-child {
 			margin-right: 0;
@@ -28,12 +29,14 @@
 	font-size: 2em;
 	font-weight: bold;
 	text-align: center;
-	color: var(--primary);
+	color: var(--black);
 	margin-bottom: 1em;
+	text-transform: uppercase;
 }
 
 .other-project__button {
 	display: flex;
 	justify-content: center;
 	margin-top: 2em;
+	text-transform: uppercase;
 }
