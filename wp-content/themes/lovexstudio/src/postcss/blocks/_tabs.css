@@ -1,3 +1,12 @@
+.kesbie-tabs {
+	display: flex;
+	flex-direction: column;
+
+	& > * {
+		width: 100%;
+	}
+}
+
 .kesbie-tabs__nav-items {
 	display: flex;
 	width: 100%;
@@ -7,6 +16,7 @@
 	white-space: nowrap;
 	margin-left: 0;
 	padding-left: 0;
+	margin-bottom: 3em;
 
 	@media (--s) {
 		justify-content: center;
@@ -15,25 +25,27 @@
 }
 
 .kesbie-tabs__nav-item {
-	width: calc(100% / 4 - 7px);
+	width: calc(100% / 4);
+	height: 65px;
 	min-width: 138px;
 	list-style: none;
 	cursor: pointer;
-	padding: 10px 12px;
-	font-size: 20px;
-	line-height: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2rem;
+	font-family: Karantina;
 	text-transform: capitalize;
 	border: 1px solid transparent;
 	transition: 0.3s;
 	color: var(--white);
 	background: var(--primary);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 10px;
-	border-radius: 24px;
+	border-radius: 20px;
 	font-weight: bolder;
 	text-transform: uppercase;
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
 
 	&:hover {
 		filter: brightness(0.6);
@@ -74,20 +86,10 @@
 	.kesbie-tabs__nav-items {
 		grid-gap: 20px;
 		gap: 20px;
-		max-width: 1100px;
-		margin: 0 auto 30px;
 	}
 
 	.kesbie-tabs__nav-item {
-		width: calc(100% / 4 - 15px);
-		font-size: 24px;
-		padding: 10px 15px;
+		width: calc(100% / 4);
 	}
 }
 
-@media (min-width: 1024px) {
-	.kesbie-tabs__nav-items {
-		grid-gap: 40px;
-		gap: 40px;
-	}
-}

@@ -1,0 +1,33 @@
+{
+    "layout_523cd23lozsu2e": {
+      "key": "layout_523cd23lozsu2e",
+      "name": "shortcode_block",
+      "label": "Shortcode Block",
+      "display": "row",
+      "sub_fields": [
+        {
+            "key": "field_6636365666f4e",
+            "label": "Shortcode",
+            "name": "shortcode",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+      ],
+      "min": "",
+      "max": ""
+    }
+  }
+  

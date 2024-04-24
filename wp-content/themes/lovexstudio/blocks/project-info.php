@@ -20,7 +20,7 @@ $first_tag = !empty($tags) ? $tags[0]->name : '';
             'lazyload' => true
         ]); ?>
     </div>
-    <div class="project-info__description">
+    <!-- <div class="project-info__description">
         <div class="project-info__description--inner">
             <?php if (!empty($sub_title)): ?>
 
@@ -42,5 +42,10 @@ $first_tag = !empty($tags) ? $tags[0]->name : '';
                 </p>
             <?php endif; ?>
         </div>
-    </div>
+    </div> -->
+    <?php if (!empty($excerpt)): ?>
+        <p class="project-info__excerpt">
+            <?php echo $excerpt; ?>
+        </p>
+    <?php endif; ?>
 </div>
