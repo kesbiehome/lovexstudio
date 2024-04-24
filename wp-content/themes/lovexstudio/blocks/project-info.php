@@ -43,9 +43,12 @@ $first_tag = !empty($tags) ? $tags[0]->name : '';
             <?php endif; ?>
         </div>
     </div> -->
-    <?php if (!empty($excerpt)): ?>
+</div>
+
+<div class="project-excerpt">
+    <!-- <?php if (!empty($excerpt)): ?>
         <p class="project-info__excerpt">
             <?php echo $excerpt; ?>
         </p>
-    <?php endif; ?>
+    <?php endif; ?> -->
 </div>

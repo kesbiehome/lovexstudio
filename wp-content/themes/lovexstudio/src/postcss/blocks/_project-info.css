@@ -1,9 +1,11 @@
 .project-info {
 	display: flex;
-	max-width: 1440px;
-	width: 1200px;
-	margin: 0 auto;
-	flex-direction: 
+	width: 100%;
+}
+
+.project-excerpt {
+	width: min(100% - 30px, 1240px);
+	margin: 2em auto;
 }
 
 .project-info__media {

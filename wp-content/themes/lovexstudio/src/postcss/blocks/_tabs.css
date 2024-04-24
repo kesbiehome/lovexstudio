@@ -14,26 +14,26 @@
 	gap: 15px;
 	overflow-x: auto;
 	white-space: nowrap;
-	margin-left: 0;
 	padding-left: 0;
-	margin-bottom: 3em;
+	margin: 0 auto 3em;
 
 	@media (--s) {
 		justify-content: center;
-		gap: 1em;
+		gap: 50px;
+		width: 80%;
 	}
 }
 
 .kesbie-tabs__nav-item {
 	width: calc(100% / 4);
-	height: 65px;
+	height: 44px;
 	min-width: 138px;
 	list-style: none;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-family: Karantina;
 	text-transform: capitalize;
 	border: 1px solid transparent;
@@ -83,13 +83,4 @@
 }
 
 @media (min-width: 768px) {
-	.kesbie-tabs__nav-items {
-		grid-gap: 20px;
-		gap: 20px;
-	}
-
-	.kesbie-tabs__nav-item {
-		width: calc(100% / 4);
-	}
 }
-

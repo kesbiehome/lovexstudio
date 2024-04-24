@@ -64,6 +64,7 @@ class Kesbie_Theme
 		add_action('admin_menu', [$this, 'add_usable_menu_page']);
 		add_filter('manage_wp_block_posts_columns', [$this, 'reblex_reusable_screen_add_column']);
 		add_action('manage_wp_block_posts_custom_column', [$this, 'reblex_reusable_screen_fill_column'], 1000, 2);
+		add_action('generate_after_header_content', [$this,'render_progress_bar'], 10);
 	}
 
 	/**
@@ -496,6 +497,13 @@ class Kesbie_Theme
 	}
 
 
+	function render_progress_bar() {
+		?>
+			<div class="progress-bar js-progress">
+				<div class="progress"></div>
+			</div>
+		<?php
+	}
 }
 
 Kesbie_Theme::instance();

@@ -1,11 +1,10 @@
 .other-project {
 	display: flex;
-	background-color: #D0D0D0;
+	background-color: #d0d0d0;
 
 	& .other-project__container {
 		padding: 3em 0;
-		max-width: 1200px;
-		width: 100%;
+		width: min(100% - 30px, 1240px);
 		margin: 0 auto;
 	}
 
