@@ -1,10 +1,10 @@
 <?php
 
 $class = 'project-card';
-$class .= $is_large_card ? ' large-card' : '';
+$class .= isset($is_large_card) ? ' large-card' : '';
 
-$image_size = $is_large_card ? [350, 450] : [350, 350];
-$image_class = $is_large_card ? 'image--large image--cover' : 'image--square image--cover';
+$image_size = isset($is_large_card) ? [350, 450] : [350, 350];
+$image_class = isset($is_large_card) ? 'image--large image--cover' : 'image--square image--cover';
 
 $data = get_project_data_by_id($project_id);
 

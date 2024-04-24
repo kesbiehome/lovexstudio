@@ -14,7 +14,7 @@ if (($key = array_search($project_id, $project_relate_ids)) !== false) {
 <div class="other-project">
     <div class="other-project__container">
         <h2 class="other-project__title">
-            <?php echo __('Other Project', 'lovexstudio'); ?>
+            <?php echo __('Related Projects', 'lovexstudio'); ?>
         </h2>
         <div class="other-project__list">
             <?php
@@ -26,8 +26,8 @@ if (($key = array_search($project_id, $project_relate_ids)) !== false) {
             ?>
         </div>
         <div class="other-project__button">
-            <button class="other-project__link">
-                <?php echo __('Show more', 'lovexstudio'); ?>
+            <button class="btn other-project__link">
+                <?php echo __('See more', 'lovexstudio'); ?>
             </button>
         </div>
     </div>

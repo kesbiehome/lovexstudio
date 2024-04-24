@@ -5,11 +5,11 @@ $columns = [];
 $column_index = 1;
 
 foreach ($project_ids as $id) {
-    if ($column_index > 3) {
+    if ($column_index > 2) {
         $column_index = 1;
     }
 
-    if (!$columns[$column_index]) {
+    if (empty($columns[$column_index])) {
         $columns[$column_index] = [];
     }
 

@@ -9,7 +9,7 @@ $_tag    = !empty($tag) ? $tag : 'div';
 
 // Support lazyload main block
 $_lazyload_loader_class = !empty($lazyload_loader_class) ? $lazyload_loader_class : 'loader--dark';
-if ($_enable_lazyload) {
+if (isset($_enable_lazyload) && $_enable_lazyload) {
 	$_attrs .= empty($attributes) ? ' data-block="default-section"' : '';
 	$_class .= ' is-loading has-lazyload';
 }

@@ -28,4 +28,5 @@ function theme_load_dependencies() {
   require_once THEME_INCLUDES_DIR . '/helpers/shortcodes.php';
   require_once THEME_INCLUDES_DIR . '/helpers/project.php';
   require_once THEME_INCLUDES_DIR . '/helpers/global.php';
+  require_once THEME_INCLUDES_DIR . '/helpers/reusable.php';
 }
