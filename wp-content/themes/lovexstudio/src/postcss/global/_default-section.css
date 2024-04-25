@@ -25,7 +25,6 @@
 
 @media (--ml) {
 	.section__title {
-		line-height: 117px;
 		font-size: 70px;
 	}
 }

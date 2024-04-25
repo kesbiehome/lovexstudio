@@ -1,10 +1,15 @@
 .service-tabs {
 	padding-top: 20px;
 	color: var(--white);
+	background-color: var(--dark);
 
 	& .section__container {
-		width: min(100% - 30px, 1240px);
+		width: min(100% - 70px, 1240px);
 		margin: 0 auto;
+	}
+
+	& .service-content {
+		padding-bottom: 1em;
 	}
 
 	& .section__title {
@@ -43,7 +48,7 @@
 		overflow: hidden;
 
 		& .image {
-			@mixin ratio 9/16;
+			@mixin ratio 1/2;
 		}
 	}
 }
@@ -52,7 +57,7 @@
 	.service-tabs {
 		padding-top: 40px;
 
-		& .section-title {
+		& .section__title {
 			margin-bottom: 20px;
 		}
 
@@ -64,13 +69,14 @@
 
 @media (min-width: 1024px) {
 	.service-tabs {
-		& .section-title {
-			margin-bottom: 40px;
+		& .section__title {
+			margin-bottom: 35px;
 		}
 
 		& .service-title {
 			font-size: 40px;
-			margin-bottom: 0;
+			margin-bottom: 20px;
+			line-height: 1;
 		}
 	}
 }
