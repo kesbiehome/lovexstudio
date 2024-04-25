@@ -3,7 +3,7 @@
 	color: var(--white);
 
 	& .section__container {
-		width: min(100% - 30px, 1240px);
+		width: min(100% - 70px, 1240px);
 		margin: 0 auto;
 	}
 
