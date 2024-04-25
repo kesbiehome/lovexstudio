@@ -9,6 +9,7 @@ $tabs = [];
 foreach ($project_category as $category) {
     $category_id = $category->term_id;
     $category_name = $category->name;
+    $category_slug = $category->slug;
 
     $thumbnail_id = get_field('category_thumbnail', 'project_cat_' . $category_id);
 
@@ -36,7 +37,9 @@ foreach ($project_category as $category) {
 
     $tabs[] = [
         'name' => $tab_html,
-        'content' => $tab_content
+        'content' => $tab_content,
+        'key' => $category_slug,
+        'lazyload' => false
     ];
 }
 
@@ -61,7 +64,7 @@ if (!empty($button['title']) && !empty($button['url'])) {
 the_block(
     'default-section',
     [
-        'attributes' => 'data-aos="fade-up" data-child-block="project-tabs"',
+        'attributes' => 'data-aos="fade-up" data-child-block="project-tabs" id="project-tabs"',
         'class' => 'bg-dark project-tabs',
         'header' => $title ?? '',
         'content' => $content ?? '',

@@ -61,10 +61,8 @@ class Kesbie_Theme
 		add_action('generate_inside_slideout_navigation', [$this, 'logo_mobile_header_menu'], 1);
 		add_action('generate_inside_slideout_navigation', [$this, 'social_links_shortcode']);
 		add_filter('generate_svg_icon', [$this, 'change_svg_icon_slideout_menu'], 10, 2);
-		add_action('admin_menu', [$this, 'add_usable_menu_page']);
-		add_filter('manage_wp_block_posts_columns', [$this, 'reblex_reusable_screen_add_column']);
-		add_action('manage_wp_block_posts_custom_column', [$this, 'reblex_reusable_screen_fill_column'], 1000, 2);
-		add_action('generate_after_header_content', [$this,'render_progress_bar'], 10);
+		add_action('generate_after_header_content', [$this, 'render_progress_bar'], 10);
+		add_filter('use_block_editor_for_post_type', [$this, 'disable_project_gutenberg'], 10, 2);
 	}
 
 	/**
@@ -149,7 +147,7 @@ class Kesbie_Theme
 			'label' => __('Project', 'lovexstudio'),
 			'description' => __('About Love X Studio projects', 'lovexstudio'),
 			'labels' => $labels,
-			'supports' => array('title', 'excerpt', 'thumbnail'),
+			'supports' => array('title', 'editor', 'thumbnail'),
 			'hierarchical' => false,
 			'public' => true,
 			'show_ui' => true,
@@ -167,6 +165,20 @@ class Kesbie_Theme
 		);
 
 		register_post_type('project', $args);
+	}
+
+	function disable_project_gutenberg($current_status, $post_type)
+	{
+		// Disabled post types
+
+		$disabled_post_types = array('project');
+
+		// Change $can_edit to false for any post types in the disabled post types array
+		if (in_array($post_type, $disabled_post_types, true)) {
+			$current_status = false;
+		}
+
+		return $current_status;
 	}
 
 	function my_acf_op_init()
@@ -442,66 +454,12 @@ class Kesbie_Theme
 		<?php
 	}
 
-	function add_usable_menu_page()
+	function render_progress_bar()
 	{
-		add_menu_page(
-			__('Usable Block', 'lovexstudio'),
-			'Usable Block',
-			'manage_options',
-			'/edit.php?post_type=wp_block',
-			'',
-			'dashicons-grid-view',
-			6
-		);
-	}
-
-
-	function reblex_reusable_screen_add_column($columns)
-	{
-		$columns = array(
-			'cb' => '<input type="checkbox" />',
-			'title' => esc_html__('Block title', 'lovexstudio'),
-			'reblex-reusable-preview' => esc_html__('Usage', 'lovexstudio'),
-			'reblex-date-modified' => esc_html__('Last modified', 'lovexstudio')
-		);
-		return $columns;
-	}
-	function reblex_reusable_screen_fill_column($column, $ID)
-	{
-		global $post;
-
-		switch ($column) {
-			case 'reblex-reusable-preview':
-				echo '<p>' . esc_html__('Shortcode:', 'lovexstudio') . ' <code>[reusable id=\'' . $ID . '\']</code></p>';
-				echo '<p>' . esc_html__('PHP function:', 'lovexstudio') . ' <code>reusable_display_block(' . $ID . ')</code></p>';
-				break;
-			case 'reblex-date-modified':
-
-				$d = get_date_from_gmt($post->post_modified, 'Y-m-d H:i:s');
-				echo sprintf(
-					/* translators: %1$s: Date the block was last modified %2$s Time the block was last modified %3$s Author */
-					esc_html__('%1$s at %2$s', 'lovexstudio'),
-					date_i18n(get_option('date_format'), strtotime($d)),
-					date_i18n(get_option('time_format'), strtotime($d))
-				);
-				if (get_post_meta($ID, '_edit_last', true)) {
-					$last_user = get_userdata(get_post_meta($ID, '_edit_last', true));
-					echo ' ' . esc_html__('by', 'lovexstudio') . ' ' . $last_user->display_name;
-				}
-				break;
-
-			default:
-				break;
-		}
-
-	}
-
-
-	function render_progress_bar() {
 		?>
-			<div class="progress-bar js-progress">
-				<div class="progress"></div>
-			</div>
+		<div class="progress-bar js-progress">
+			<div class="progress"></div>
+		</div>
 		<?php
 	}
 }

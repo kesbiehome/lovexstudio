@@ -110,7 +110,8 @@ function kesbie_generate_tabs_data($items)
 			$nav_items[] = [
 				'id' => $tab_id,
 				'is_active' => $index === 0,
-				'name' => $item['name']
+				'name' => $item['name'],
+				'key' => $item['key'] ?? '',
 			];
 
 			$content_items[] = [
@@ -148,9 +149,10 @@ function kesbie_generate_tabs($items, $args = [])
 		echo '<ul class="kesbie-tabs__nav-items" data-aos="fade-up" aria-controls="js-tab-contents" role="tablist">';
 		foreach ($tab_data['nav_items'] as $nav_item) :
 			printf(
-				'<li class="rel kesbie-tabs__nav-item" role="tab" aria-controls="%1$s" aria-selected="%2$s">%3$s</li>',
+				'<li class="rel kesbie-tabs__nav-item" role="tab" aria-controls="%1$s" aria-selected="%2$s" data-key="%3$s">%4$s</li>',
 				$nav_item['id'],
 				var_export($nav_item['is_active'], true),
+				$nav_item['key'],
 				$nav_item['name']
 			);
 		endforeach;

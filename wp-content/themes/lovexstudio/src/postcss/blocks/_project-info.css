@@ -60,6 +60,7 @@
 	}
 }
 
-.project-info__excerpt {
+.project-info__content {
 	font-size: 1rem;
+	color: #8B8B8B;
 }
