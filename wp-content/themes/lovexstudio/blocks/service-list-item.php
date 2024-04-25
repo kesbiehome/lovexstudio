@@ -27,7 +27,7 @@ $class_wrapper = $revert ? 'service-list-item__wrapper bg-black' : 'service-list
                     <div class="service-link">
                         <a href="<?php esc_attr_e($link); ?>" class="btn">
                             <span>
-                                <?php esc_html_e('See The Gallery'); ?>
+                                <?php esc_html_e('See More'); ?>
                             </span>
                         </a>
                     </div>
