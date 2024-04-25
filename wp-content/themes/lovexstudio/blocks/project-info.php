@@ -8,6 +8,7 @@ $title = $post->post_title;
 $excerpt = $post->post_excerpt;
 $tags = get_the_terms(get_the_id(), 'tag');
 $first_tag = !empty($tags) ? $tags[0]->name : '';
+$content =  get_the_content();
 
 ?>
 
@@ -45,10 +46,10 @@ $first_tag = !empty($tags) ? $tags[0]->name : '';
     </div> -->
 </div>
 
-<div class="project-excerpt">
-    <!-- <?php if (!empty($excerpt)): ?>
-        <p class="project-info__excerpt">
-            <?php echo $excerpt; ?>
+<div class="project-content">
+    <?php if (!empty($content)): ?>
+        <p class="project-info__content">
+            <?php echo $content; ?>
         </p>
-    <?php endif; ?> -->
+    <?php endif; ?>
 </div>

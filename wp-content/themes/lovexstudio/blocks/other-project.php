@@ -10,6 +10,10 @@ if (($key = array_search($project_id, $project_relate_ids)) !== false) {
     unset($project_relate_ids[$key]);
 }
 
+if (empty($project_relate_ids)) {
+    return;
+}
+
 ?>
 <div class="other-project">
     <div class="other-project__container">

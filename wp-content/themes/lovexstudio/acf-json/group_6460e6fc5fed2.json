@@ -3,26 +3,6 @@
     "title": "Project",
     "fields": [
         {
-            "key": "field_647c414427ae5",
-            "label": "Sub Title",
-            "name": "sub_title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_6460e6fccf6b8",
             "label": "Gallery",
             "name": "gallery",
@@ -69,5 +49,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1685887691
+    "modified": 1714084983
 }
