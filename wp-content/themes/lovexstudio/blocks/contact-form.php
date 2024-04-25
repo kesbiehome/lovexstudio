@@ -1,6 +1,10 @@
 <?php
 
-$form = do_shortcode('[gravityform id="1" title="false" description="false" ajax="true"]')
+$form = do_shortcode('[gravityform id="1" title="false" description="false" ajax="true"]');
+
+if (empty($image)) {
+    return;
+}
 
 ?>
 <div class="contact-form">

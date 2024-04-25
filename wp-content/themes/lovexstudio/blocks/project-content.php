@@ -2,6 +2,10 @@
 
 $gallery = get_field('gallery', get_the_ID());
 
+if (!empty($gallery)) {
+    return;
+}
+
 ?>
 <div class="project-content">
     <?php if (!empty($gallery)): ?>

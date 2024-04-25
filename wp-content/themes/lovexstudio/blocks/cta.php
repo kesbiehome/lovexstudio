@@ -1,5 +1,7 @@
 <?php
-
+if (empty($image)) {
+    return;
+}
 ?>
 
 <div class="cta-section">
