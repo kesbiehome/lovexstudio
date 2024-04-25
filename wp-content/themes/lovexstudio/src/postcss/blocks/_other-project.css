@@ -4,7 +4,7 @@
 
 	& .other-project__container {
 		padding: 3em 0;
-		width: min(100% - 30px, 1240px);
+		width: min(100% - 70px, 1240px);
 		margin: 0 auto;
 	}
 
