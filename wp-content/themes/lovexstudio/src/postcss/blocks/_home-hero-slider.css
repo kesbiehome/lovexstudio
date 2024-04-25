@@ -18,6 +18,7 @@
 
 .home-hero-slider {
 	width: 100%;
+	flex: auto;
 
 	& .home-hero-slider__media {
 		position: relative;
@@ -25,7 +26,7 @@
 		&:after {
 			content: '';
 			display: block;
-			padding-top: calc(7 / 16 * 100%);
+			padding-top: 70vh;
 		}
 
 		& .image--default img {
@@ -37,5 +38,11 @@
 			z-index: 1;
 			object-fit: cover;
 		}
+	}
+}
+
+@media (--m) {
+	.home-hero-slider .home-hero-slider__media:after {
+		padding-top: 100vh;
 	}
 }

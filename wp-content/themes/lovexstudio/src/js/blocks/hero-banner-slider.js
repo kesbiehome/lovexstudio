@@ -21,7 +21,7 @@ export default el => {
 				autoplay: {
 					delay: 5000
 				},
-				effect: "fade",
+				effect: 'fade',
 				navigation: {
 					nextEl: select('.swiper-button-next', sliderEl),
 					prevEl: select('.swiper-button-prev', sliderEl)

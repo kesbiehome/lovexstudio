@@ -44,7 +44,7 @@
 
 .project-card .image {
 	overflow: hidden;
-	@mixin ratio 1/2;
+	@mixin ratio 9/16;
 }
 
 .project-card .image img {

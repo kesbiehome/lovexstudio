@@ -25,8 +25,8 @@ input.gform_button {
 	}
 
 	&:hover {
-		background: var(--primary);
-		color: var(--white);
+		color: var(--dark-text);
+		background-color: var(--white);
 	}
 }
 
@@ -63,7 +63,7 @@ input.gform_button {
 					background-color: var(--primary) !important;
 				}
 			}
-	
+
 			& a {
 				background-color: var(--white) !important;
 			}

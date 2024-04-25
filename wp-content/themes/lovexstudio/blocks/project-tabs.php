@@ -18,9 +18,9 @@ foreach ($project_category as $category) {
 
     ob_start();
     ?>
-    <div class="tab-title">
+    <span class="tab-title">
         <?php echo $category_name ?>
-    </div>
+    </span>
     <?php
 
     $tab_html = ob_get_clean();

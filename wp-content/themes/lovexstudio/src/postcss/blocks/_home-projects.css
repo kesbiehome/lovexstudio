@@ -1,7 +1,5 @@
 .section-home-projects {
-	padding: 30px 0;
 	margin-top: 30px;
-
 	& .section__container {
 		width: min(100% - 30px, 1240px);
 		margin: 0 auto;
