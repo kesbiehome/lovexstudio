@@ -38,7 +38,7 @@
 	text-transform: capitalize;
 	border: 1px solid transparent;
 	transition: 0.3s;
-	color: var(--white);
+	color: var(--dark-text);
 	background: var(--primary);
 	border-radius: 15px;
 	font-weight: bolder;
@@ -53,7 +53,6 @@
 
 	&.is-active {
 		background: var(--white);
-		color: var(--primary);
 	}
 
 	&.is-active:hover {
