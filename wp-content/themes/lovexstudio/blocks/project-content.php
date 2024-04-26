@@ -16,7 +16,7 @@ if (!empty($gallery)) {
             <?php if ($key < 2)
                 $project_image_classes .= " image-full"; ?>
             <a href="<?php echo esc_url($image_src); ?>" class="<?php echo esc_attr($project_image_classes) ?>"
-                data-caption="<?php echo ($image_title); ?>" data-fancybox="super">
+                data-caption="<?php echo ($image_title); ?>" data-fancybox="super" data-aos="fade-up">
                 <?php
                 the_block('image', [
                     'image' => $image_id,

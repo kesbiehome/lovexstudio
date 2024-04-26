@@ -7,7 +7,7 @@ if (empty($image)) {
 }
 
 ?>
-<div class="contact-form">
+<div class="contact-form" data-aos="fade-up">
     <div class="contact-form__container">
         <div class="contact-form__left">
             <?php
