@@ -4,7 +4,7 @@ if (empty($image)) {
 }
 ?>
 
-<div class="cta-section">
+<div class="cta-section" data-aos="fade-up">
     <div class="cta-section__container">
         <div class="cta-section__left">
             <div class="cta-section__content">
