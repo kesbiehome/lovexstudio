@@ -218,7 +218,8 @@ function initAos () {
 
 	AOS.init({
 		duration: 800,
-		delay: 200
+		delay: 200,
+		once: true
 	})
 }
 
