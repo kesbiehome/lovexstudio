@@ -272,5 +272,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	initChildBlocks()
 	// initAboutUs();
 	initAos()
-	// loadScrollProgress()
+	loadScrollProgress()
 })
