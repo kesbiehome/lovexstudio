@@ -38,5 +38,6 @@ input:focus {
 	align-items: center;
 
 	& .gform_button {
+		font-family: 'Heading Now';
 	}
 }
