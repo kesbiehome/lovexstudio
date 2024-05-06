@@ -85,7 +85,7 @@ module.exports = {
 		}),
     new BrowserSyncPlugin({
       host: 'localhost',
-      port: 3000,
+      port: 3636,
       watch: true,
       proxy: {
         target: 'http://lovexstudio.test/',
