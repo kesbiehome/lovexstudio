@@ -601,8 +601,11 @@ body.is-loading {
 	justify-content: center;
 	align-items: center;
 	grid-gap: 1em;
-	gap: 1em;
+	gap: 1em
 }
+.social-links svg {
+		height: 18px;
+	}
 #generate-slideout-menu {
 	width: 100% !important;
 	background-color: #000;
@@ -1840,6 +1843,7 @@ input:focus {
 	align-items: center
 }
 .gform_footer .gform_button {
+		font-family: 'Heading Now';
 	}
 ul.menu {
 	display: flex;
@@ -1847,7 +1851,6 @@ ul.menu {
 	gap: 40px
 }
 ul.menu a {
-		font-family: Karantina, display;
 		font-size: 1.125rem;
 		line-height: 1rem !important;
 		font-weight: 700;
@@ -1865,37 +1868,38 @@ ul.menu li.current-menu-item a {
 			color: #1346af !important;
 			color: var(--primary) !important;
 		}
-header ul.menu > li:last-child.current-menu-item a {
-				color: #1346af !important;
+header ul.menu > li {
+		/* &:last-child {
+			&.current-menu-item a {
 				color: var(--primary) !important;
 				background: transparent !important;
-				border: 2px solid #1346af;
-				border: 2px solid var(--primary)
-			}
-header ul.menu > li:last-child.current-menu-item a:hover {
-					background: #1346af !important;
+				border: 2px solid var(--primary);
+
+				&:hover {
 					background: var(--primary) !important;
-					color: #fff !important;
 					color: var(--white) !important;
 				}
+			}
+		} */
+	}
 header ul.menu > li:last-child a {
 			display: flex;
 			align-items: center;
-			padding: 0.5em 2em !important;
+			padding: 0 2em !important;
+			height: 30px;
+			font-size: 1rem;
 			background: #1346af;
 			background: var(--primary);
-			border-radius: 0 20px;
+			border-radius: 5px;
 			transition: all 0.3s ease-out;
-			color: #fff;
-			color: var(--white);
-			background: #1346af;
-			background: var(--primary);
+			color: #000 !important;
+			color: var(--black) !important;
+			background: #2cc295;
 			background-size: 215% 100% !important;
 			background-position: right bottom !important
 		}
 header ul.menu > li:last-child a:hover {
-				background: #fff;
-				background: var(--white);
+				background: #f1f7f7;
 			}
 .contact-form__container {
 	display: flex;

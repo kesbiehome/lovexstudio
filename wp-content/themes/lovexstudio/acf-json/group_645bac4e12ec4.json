@@ -60,7 +60,8 @@
                         "instagram": "Instagram",
                         "youtube": "Youtube",
                         "tiktok": "Tiktok",
-                        "behance": "Behance"
+                        "behance": "Behance",
+                        "twitter": "Twitter"
                     },
                     "default_value": "facebook",
                     "return_format": "value",
@@ -312,5 +313,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1713984952
+    "modified": 1715033179
 }
