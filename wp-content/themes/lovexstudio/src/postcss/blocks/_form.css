@@ -25,13 +25,13 @@
 }
 
 .gform_wrapper.gravity-theme .gform_fields {
-	grid-row-gap: 25px!important;
+	grid-row-gap: 25px !important;
 }
 
 textarea:focus,
 input:focus {
-	color: var(--black)!important;
-	background-color: var(--white)!important;
+	color: var(--black) !important;
+	background-color: var(--white) !important;
 }
 
 .gform_footer {
