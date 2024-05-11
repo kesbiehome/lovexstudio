@@ -30,34 +30,29 @@
 	}
 }
 
-.hero-banner__title {
+.hero-banner-title__wrapper {
 	position: absolute;
+	width: min(100% - 70px, 1240px);
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+	bottom: 0;
+
+	@media (--s) {
+		bottom: 30px;
+	}
+}
+
+.hero-banner__title {
 	width: max-content;
 	display: flex;
 	align-items: center;
-	bottom: 0;
-	left: 1em;
 	z-index: 1;
 	color: var(--white);
 	gap: 1em;
 	font-weight: bolder;
 
-	@media (--s) {
-		left: 70px;
-		bottom: 30px;
-	}
-
 	& h1 {
 		margin-bottom: 0;
-	}
-}
-
-.hero-banner__button {
-	& svg {
-		width: 40px;
-
-		@media (--s) {
-			width: 84px;
-		}
 	}
 }

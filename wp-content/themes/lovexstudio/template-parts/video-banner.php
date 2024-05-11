@@ -28,8 +28,10 @@ if (!empty($image_video)) :  ?>
 			);
 			?>
 		</div>
-		<div class="hero-banner__title">
-			<h1 class="section__title"><?php echo $data['title']; ?></h1>
+		<div class="hero-banner-title__wrapper">
+			<div class="hero-banner__title">
+				<h1 class="section__title"><?php echo $data['title']; ?></h1>
+			</div>
 		</div>
 	</div>
 <?php endif; ?>
