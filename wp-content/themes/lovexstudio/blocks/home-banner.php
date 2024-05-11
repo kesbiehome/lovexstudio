@@ -19,6 +19,15 @@ if (!empty($images)) :
                 </div>
             <?php endif; ?>
         </div>
+        <?php if (!empty($text)) : ?>
+            <div class="home-hero-text__wrapper">
+            <div class="home-hero__text">
+                    <h1 class="section__title">
+                        <?php esc_html_e($text); ?>
+                    </h1>
+                </div>
+            </div>
+        <?php endif; ?>
 <?php
 
         $content_html = ob_get_clean();
