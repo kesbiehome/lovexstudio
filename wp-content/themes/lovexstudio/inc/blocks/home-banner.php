@@ -47,7 +47,8 @@ class Home_banner extends Kesbie_Toolkit_Block implements Kesbie_Toolkit_Block_I
     $this->block_title = __('Home Banner', 'lovexstudio');
     $this->fields = [
       // Settings
-      'images'
+      'images',
+      'text'
     ];
 
     parent::__construct();

@@ -2,6 +2,24 @@
 	width: 100%;
 }
 
+.home-hero-text__wrapper {
+	position: absolute;
+	bottom: 20px;
+	z-index: 1;
+	width: min(100% - 70px, 1240px);
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.home-hero__text .section__title {
+	text-transform: none;
+}
+
+.home-hero__text {
+	max-width: clamp(300px, 60vw, 710px);
+	color: white;
+}
+
 .hero-banner-slider:first-child::after {
 	content: '';
 	height: 4px;
@@ -44,5 +62,9 @@
 @media (--m) {
 	.home-hero-slider .home-hero-slider__media:after {
 		padding-top: 100vh;
+	}
+
+	.home-hero-text__wrapper {
+		bottom: 60px;
 	}
 }
