@@ -3,17 +3,21 @@ if (empty($services)) return;
 
 $tab = [];
 
+$services = explode(",", $services);
+
 foreach ($services as $service) :
-    $service_id = $service->term_id;
-    $service_name = $service->name;
-    $desc = $service->description;
-    $slug = $service->slug;
+
+    $db = get_term_by('slug', $service, 'service');
+    $service_id = $db->term_id;
+    $service_name = $db->name;
+    $desc = $db->description;
+    $slug = $db->slug;
 
     if (empty($service_name) || empty($service_id)) continue;
 
     ob_start(); ?>
 
-    <span class="service-tab-title" id="<?php esc_attr_e('service_'.$slug) ?>">
+    <span class="service-tab-title" id="<?php esc_attr_e('service_' . $slug) ?>">
         <?php esc_html_e($service_name);  ?>
     </span>
 

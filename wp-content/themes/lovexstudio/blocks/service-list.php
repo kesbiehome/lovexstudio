@@ -7,10 +7,11 @@ ob_start();
     <?php
 
     foreach ($services as $index => $service) :
-        $service_id = $service->term_id;
-        $service_name = $service->name;
-        $desc = $service->description;
-        $slug = $service->slug;
+        $db = get_term($service);
+        $service_id = $db->term_id;
+        $service_name = $db->name;
+        $desc = $db->description;
+        $slug = $db->slug;
         $revert = false;
         if ((($index + 1) % 2) == 0) :
             $revert = true;
