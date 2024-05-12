@@ -4,7 +4,7 @@ if (empty($services)) return;
 $tab = [];
 
 foreach ($services as $service) :
-    $db = get_term_by('ID', $service['service'], 'service');
+    $db = get_term_by('ID', $service, 'service');
     $service_id = $db->term_id;
     $service_name = $db->name;
     $desc = $db->description;
