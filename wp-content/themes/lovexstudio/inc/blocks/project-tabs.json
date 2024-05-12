@@ -44,7 +44,7 @@
         "save_terms": 1,
         "load_terms": 1,
         "return_format": "object",
-        "field_type": "checkbox",
+        "field_type": "multi_select",
         "multiple": 0,
         "allow_null": 0
       },

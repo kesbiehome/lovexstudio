@@ -166,10 +166,23 @@ body > .site-footer .footer-widget-1 .inner-padding.widget_nav_menu ul li a {
 footer a {
 		display: flex !important;
 	}
+@media (--max-tablet) {
 footer .inside-site-info {
-		height: 100px;
+			padding: 30px
 	}
+		}
+@media (min-width: 1024px) {
+footer .inside-site-info {
+			height: 100px
+	}
+		}
+@media (--max-tablet) {
 footer .footer-bar {
+			flex-direction: column
+	}
+		}
+footer .footer-bar {
+
 		width: 100%;
 		display: flex;
 		grid-gap: 40px;
@@ -177,9 +190,11 @@ footer .footer-bar {
 		align-items: center;
 		margin-bottom: 0 !important
 	}
+@media (min-width: 1024px) {
 footer .footer-bar aside:last-child {
-			margin-left: auto;
+				margin-left: auto
 		}
+			}
 footer .footer-bar .menu {
 			grid-gap: 40px;
 			gap: 40px;
@@ -623,7 +638,7 @@ body.is-loading {
 	gap: 1em
 }
 .social-links svg {
-		height: 18px;
+		height: 32px;
 	}
 #generate-slideout-menu {
 	width: 100% !important;
@@ -1529,7 +1544,7 @@ body.is-loading {
 	}
 .project-info__content {
 	font-size: 1rem;
-	color: #8b8b8b;
+	color: #f1f7f7;
 }
 .project-content {
 	display: flex;
@@ -1843,7 +1858,8 @@ body.is-loading {
 				height: 43px;
 				font-size: 1rem !important;
 				padding: 8px 16px !important;
-				font-family: 'Heading Now';
+				font-family: 'Heading Now 46';
+				font-family: var(--font-family-bold);
 				color: #fff;
 				color: var(--white);
 			}
@@ -1861,7 +1877,8 @@ input:focus {
 	align-items: center
 }
 .gform_footer .gform_button {
-		font-family: 'Heading Now';
+		font-family: 'Heading Now 46';
+		font-family: var(--font-family-bold);
 	}
 ul.menu {
 	display: flex;
@@ -1962,8 +1979,6 @@ header ul.menu > li:last-child a:hover {
 	background-color: #121212;
 }
 .cta-section__container {
-	display: flex;
-
 	flex-direction: column-reverse
 }
 @media (min-width: 1024px) {
@@ -1973,6 +1988,7 @@ header ul.menu > li:last-child a:hover {
 	}
 .cta-section__container {
 
+	display: flex;
 	width: min(100% - 70px, 1240px);
 	margin: 0 auto;
 	justify-content: space-between;
@@ -1989,6 +2005,11 @@ header ul.menu > li:last-child a:hover {
 		line-height: initial;
 		margin-right: 4em
 	}
+@media (--max-tablet) {
+.cta-section__container h2 {
+			font-size: 3rem
+	}
+		}
 @media (min-width: 1024px) {
 .cta-section__container h2 {
 			margin-right: 6rem
@@ -2200,6 +2221,24 @@ input.gform_button {
 		}
 	}
 } */
+body {
+	font-family: 'Heading Now 46';
+	font-family: var(--font-family-bold);
+}
+.font-f-bold {
+	font-family: 'Heading Now 46';
+	font-family: var(--font-family-bold);
+}
+.font-f-regular {
+	font-family: 'Heading Now 64';
+	font-family: var(--font-family-regular);
+}
+@media (min-width: 1280px) {
+.gap-md-100 {
+		grid-gap: 100px;
+		gap: 100px
+}
+	}
 .site-content {
 	flex-direction: column;
 }
@@ -2249,23 +2288,69 @@ body.error404 .grid-container {
 .page-template-flexible .grid-container {
 	max-width: 100%;
 }
+:root {
+	--black: #000;
+	--white: #fff;
+	--dark: #1e1e1e;
+	--dark-2: #141414;
+	--dark-3: #444;
+	--dark-green: #253c57;
+	--gray: #8f8f8f;
+	--light: #f8f8f8;
+	--light-2: #f1f3f5;
+	--primary: #1346af; /** rgba(19, 70, 175, 1) **/
+	--primary-light: rgba(19, 70, 175, 0.1);
+	--primary-darker: #1521e5;
+	--secondary: #f1592a;
+	--yellow: #ffcb47;
+	--blue: #0081af;
+	--red: #f22b29;
+	--pink: #d8315b;
+	--border: #f1f2f3;
+	--body-text-color: #121314;
+	--font-default: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+	--font-normal: 400;
+	--font-bold: 700;
+	--grid-gutter: 10px;
+	--grid-gutter-m: 16px;
+	--container-gutter: 20px;
+	--container-gutter-s: 40px;
+	--container-gutter-m: 60px;
+	--container-gutter-ml: 80px;
+	--container-max: 1280px;
+	--section-space: 2em;
+	--xxs: 360px;
+	--xs: 480px;
+	--s: 768px;
+	--sm: 960px;
+	--m: 1024px;
+	--ml: 1280px;
+	--l: 1440px;
+	--sidebar-width: 300px;
+	--small-sidebar-width: 250px;
+	--border-radius: 6px;
+	--header-breakpoint: 1024px;
+	--text-large: 1.15rem;
+	--text-small: 0.85rem;
+	--font-family-bold: 'Heading Now 46';
+	--font-family-extra: 'Heading Now 47';
+	--font-family-regular: 'Heading Now 64';
+}
 @font-face {
-	font-family: Heading Now;
+	font-family: 'Heading Now 46';
 	src: url(../517bdbb0a8b28dfd0082.woff2) format('truetype');
 	font-weight: bold;
 }
 @font-face {
-	font-family: Heading Now;
+	font-family: 'Heading Now 47';
 	src: url(../6c639a957e806bed7f82.woff2) format('truetype');
 	font-weight: bolder;
 }
 @font-face {
-	font-family: Heading Now;
+	font-family: 'Heading Now 64';
 	src: url(../1fb80794c7c8001808ea.woff2) format('truetype');
 	font-display: swap;
 	font-weight: normal;
-}
-body {
-	font-family: 'Heading Now';
 }
 
