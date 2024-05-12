@@ -43,6 +43,9 @@
 	--header-breakpoint: 1024px;
 	--text-large: 1.15rem;
 	--text-small: 0.85rem;
+	--font-family-bold: 'Heading Now 46';
+	--font-family-extra: 'Heading Now 47';
+	--font-family-regular: 'Heading Now 64';
 }
 
 @custom-media --xxs (min-width: 375px);

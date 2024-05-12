@@ -2,26 +2,23 @@
 @import 'blocks/';
 @import 'global/';
 @import 'pages/';
+@import 'variables';
 
 @font-face {
-	font-family: Heading Now;
+	font-family: 'Heading Now 46';
 	src: url('../../fonts/Heading-Now-46-Bold.woff2') format('truetype');
 	font-weight: bold;
 }
 
 @font-face {
-	font-family: Heading Now;
+	font-family: 'Heading Now 47';
 	src: url('../../fonts/Heading-Now-47-Extrabold.woff2') format('truetype');
 	font-weight: bolder;
 }
 
 @font-face {
-	font-family: Heading Now;
+	font-family: 'Heading Now 64';
 	src: url('../../fonts/Heading-Now-64-Regular.woff2') format('truetype');
 	font-display: swap;
 	font-weight: normal;
-}
-
-body {
-	font-family: 'Heading Now';
 }

@@ -17,7 +17,7 @@
 				height: 43px;
 				font-size: 1rem !important;
 				padding: 8px 16px !important;
-				font-family: 'Heading Now';
+				font-family: var(--font-family-bold);
 				color: var(--white);
 			}
 		}
@@ -25,19 +25,19 @@
 }
 
 .gform_wrapper.gravity-theme .gform_fields {
-	grid-row-gap: 25px!important;
+	grid-row-gap: 25px !important;
 }
 
 textarea:focus,
 input:focus {
-	color: var(--black)!important;
-	background-color: var(--white)!important;
+	color: var(--black) !important;
+	background-color: var(--white) !important;
 }
 
 .gform_footer {
 	align-items: center;
 
 	& .gform_button {
-		font-family: 'Heading Now';
+		font-family: var(--font-family-bold);
 	}
 }
