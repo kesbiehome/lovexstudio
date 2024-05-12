@@ -7,7 +7,7 @@ ob_start();
     <?php
 
     foreach ($services as $index => $service) :
-        $db = get_term_by('ID', $service['service'], 'service');
+        $db = get_term_by('ID', $service, 'service');
         $service_id = $db->term_id;
         $service_name = $db->name;
         $desc = $db->description;
