@@ -3,7 +3,7 @@
 }
 .cta-section__container {
 	flex-direction: column-reverse;
-	
+
 	@media (--m) {
 		flex-direction: row;
 	}
@@ -22,7 +22,7 @@
 		font-weight: bold;
 		line-height: initial;
 		margin-right: 4em;
-		
+
 		@media (--max-tablet) {
 			font-size: 3rem;
 		}
