@@ -1,15 +1,13 @@
 <?php
 if (empty($services)) return;
 
-$services = explode(",", $services);
-
 ob_start();
 ?>
 <div class="service-list__content">
     <?php
 
     foreach ($services as $index => $service) :
-        $db = get_term_by('slug', $service, 'service');
+        $db = get_term_by('ID', $service['service'], 'service');
         $service_id = $db->term_id;
         $service_name = $db->name;
         $desc = $db->description;
