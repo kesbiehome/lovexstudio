@@ -2,7 +2,7 @@
 
 $gallery = get_field('gallery', get_the_ID());
 
-if (!empty($gallery)) {
+if (empty($gallery)) {
     return;
 }
 

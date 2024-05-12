@@ -54,10 +54,20 @@ footer {
 	}
 
 	& .inside-site-info {
-		height: 100px;
+		@media (--max-tablet) {
+			padding: 30px;
+		}
+
+		@media (--m) {
+			height: 100px;
+		}
 	}
 
 	& .footer-bar {
+		@media (--max-tablet) {
+			flex-direction: column;
+		}
+
 		width: 100%;
 		display: flex;
 		gap: 40px;
@@ -65,7 +75,9 @@ footer {
 		margin-bottom: 0 !important;
 
 		& aside:last-child {
-			margin-left: auto;
+			@media (--m) {
+				margin-left: auto;
+			}
 		}
 
 		& .menu {
