@@ -17,8 +17,8 @@ $content =  get_the_content();
         <?php the_block('image', [
             'image' => $thumbnail_id,
             'type' => 'large',
-            'class' => 'image--square image--cover',
-            'lazyload' => true
+            'class' => 'image-custom image--cover',
+            'lazyload' => true,
         ]); ?>
     </div>
     <!-- <div class="project-info__description">
