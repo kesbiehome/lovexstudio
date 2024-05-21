@@ -9,7 +9,7 @@ if (empty($image)) {
         <div class="cta-section__left">
             <div class="cta-section__content">
                 <h2>WE LOVE MAKING ARTS</h2>
-                <p>Looking for art collaboration?</p>
+                <p class="font-f-bold">Looking for art collaboration?</p>
                 <div class="cta-button">
                     <a class="btn" href="/contact">
                         <span>Contact Now</span>

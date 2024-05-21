@@ -21,12 +21,12 @@
         },
         "taxonomy": "service",
         "add_term": 1,
-        "save_terms": 1,
-        "load_terms": 1,
-        "return_format": "object",
-        "field_type": "checkbox",
-        "multiple": 0,
-        "allow_null": 0
+        "save_terms": 0,
+        "load_terms": 0,
+        "return_format": "id",
+        "field_type": "multi_select",
+        "allow_null": 0,
+        "multiple": 0
       }
     ],
     "min": "",
