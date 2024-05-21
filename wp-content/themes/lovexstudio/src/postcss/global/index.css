@@ -3,6 +3,7 @@
 @import '_single-project';
 @import '_button';
 @import '_custom';
+@import '_page';
 .site-content {
 	flex-direction: column;
 }
