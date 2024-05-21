@@ -15,9 +15,9 @@
 				border-width: 0;
 				border-color: unset;
 				height: 43px;
-				font-size: 1rem !important;
+				font-size: 15px !important;
 				padding: 8px 16px !important;
-				font-family: var(--font-family-bold);
+				font-family: var(--font-family-regular);
 				color: var(--white);
 			}
 		}
