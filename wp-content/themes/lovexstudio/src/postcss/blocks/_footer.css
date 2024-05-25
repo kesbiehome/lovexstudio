@@ -122,6 +122,7 @@ footer {
 
 			&:nth-of-type(4) {
 				& a {
+					cursor: pointer;
 					font-size: 11px;
 					font-weight: lighter;
 					font-family: var(--font-family-regular);

@@ -12,7 +12,7 @@ ul.menu {
 		color: var(--white) !important;
 
 		&:hover {
-			color: var(--primary) !important;
+			color: var(--primary-light) !important;
 		}
 	}
 
@@ -44,11 +44,10 @@ header {
 			padding: 0 2em !important;
 			height: 30px;
 			font-size: 1rem;
-			background: var(--primary);
 			border-radius: 5px;
 			transition: all 0.3s ease-out;
 			color: var(--black) !important;
-			background: #2cc295;
+			background: var(--primary-light);
 			background-size: 215% 100% !important;
 			background-position: right bottom !important;
 
