@@ -241,6 +241,7 @@ footer .footer-bar > * {
 				}
 			}
 footer .footer-bar > *:nth-of-type(4) a {
+					cursor: pointer;
 					font-size: 11px;
 					font-weight: lighter;
 					font-family: 'Heading Now 64';
@@ -1935,7 +1936,7 @@ ul.menu a {
 		color: var(--white) !important
 	}
 ul.menu a:hover {
-			color: var(--primary) !important;
+			color: var(--primary-light) !important;
 		}
 ul.menu li.current-menu-item a {
 			color: var(--primary) !important;
@@ -1960,12 +1961,11 @@ header ul.menu > li:last-child a {
 			padding: 0 2em !important;
 			height: 30px;
 			font-size: 1rem;
-			background: var(--primary);
 			border-radius: 5px;
 			transition: all 0.3s ease-out;
 			color: #000 !important;
 			color: var(--black) !important;
-			background: #2cc295;
+			background: var(--primary-light);
 			background-size: 215% 100% !important;
 			background-position: right bottom !important
 		}
