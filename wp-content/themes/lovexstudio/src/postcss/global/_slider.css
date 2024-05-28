@@ -11,6 +11,15 @@
 			content: none !important;
 		}
 	}
+
+	.swiper-button-next {
+		right: 25px;
+	}
+
+	.swiper-button-prev {
+		left: 25px;
+	}
+
 	& .swiper-button-prev,
 	& .swiper-button-next {
 		width: 42px;
@@ -58,9 +67,11 @@
 			opacity: 0 !important;
 		}
 
-		&.swiper-button-next__wrapper:hover
+		&
+			.swiper-button-next__wrapper:hover
 			.swiper-button-next.swiper-button-disabled,
-		&.swiper-button-prev__wrapper:hover
+		&
+			.swiper-button-prev__wrapper:hover
 			.swiper-button-prev.swiper-button-disabled {
 			opacity: 0.35 !important;
 		}
