@@ -320,7 +320,7 @@ body.is-loading {
 }
 @media (min-width: 768px) {
 .kesbie-tabs__nav-items {
-		justify-content: center;
+		justify-content: space-between;
 		grid-gap: 50px;
 		gap: 50px;
 		width: 80%
@@ -2082,20 +2082,44 @@ header ul.menu > li:last-child a:hover {
 .hero-banner-slider {
 	position: relative
 }
+.hero-banner-slider .swiper-button-prev__wrapper,
+	.hero-banner-slider .swiper-button-next__wrapper {
+		position: absolute;
+		width: 84px;
+		height: 100%;
+		top: 0
+	}
+.hero-banner-slider .swiper-button-prev__wrapper::after, .hero-banner-slider .swiper-button-next__wrapper::after {
+			content: none !important;
+		}
+.hero-banner-slider {
+
+	.swiper-button-next {
+		right: 25px;
+	}
+
+	.swiper-button-prev {
+		left: 25px;
+	}
+}
 .hero-banner-slider .swiper-button-prev,
 	.hero-banner-slider .swiper-button-next {
-		width: 84px;
-		height: 84px
+		width: 42px;
+		height: 65px;
+		opacity: 0;
+		transition: all 0.5s
 	}
 .hero-banner-slider .swiper-button-prev::after, .hero-banner-slider .swiper-button-next::after {
 			content: none !important;
 		}
-.hero-banner-slider .swiper-button-next {
-		right: 80px;
+.hero-banner-slider .swiper-button-next__wrapper {
+		right: 0;
+		padding-right: 30px;
 		display: none;
 	}
-.hero-banner-slider .swiper-button-prev {
-		left: 80px;
+.hero-banner-slider .swiper-button-prev__wrapper {
+		left: 0;
+		padding-left: 30px;
 		display: none;
 	}
 .hero-banner-slider .swiper-pagination-bullet {
@@ -2103,9 +2127,32 @@ header ul.menu > li:last-child a:hover {
 		border-radius: 0;
 	}
 @media (min-width: 960px) {
-		.hero-banner-slider .swiper-button-next,
-		.hero-banner-slider .swiper-button-prev {
+		.hero-banner-slider .swiper-button-next__wrapper,
+		.hero-banner-slider .swiper-button-prev__wrapper {
 			display: flex;
+			align-items: center;
+			z-index: 10;
+		}
+.hero-banner-slider {
+
+		.swiper-button-next__wrapper:hover .swiper-button-next,
+		.swiper-button-prev__wrapper:hover .swiper-button-prev {
+			opacity: 1;
+		}
+}
+
+		.hero-banner-slider .swiper-button-next.swiper-button-disabled,
+		.hero-banner-slider .swiper-button-prev.swiper-button-disabled {
+			opacity: 0 !important;
+		}
+
+		.hero-banner-slider
+			.swiper-button-next__wrapper:hover
+			.swiper-button-next.swiper-button-disabled,
+		.hero-banner-slider
+			.swiper-button-prev__wrapper:hover
+			.swiper-button-prev.swiper-button-disabled {
+			opacity: 0.35 !important;
 		}
 
 		.hero-banner-slider .swiper-pagination-bullet {

@@ -57,7 +57,7 @@ class Kesbie_Theme
 		add_action('acf/init', [$this, 'my_acf_op_init'], 0);
 		add_action('after_setup_theme', [$this, 'load_child_theme_language'], 99);
 		add_action('wp_enqueue_scripts', [$this, 'load_assets'], 30);
-		add_action('generate_before_header', [$this, 'render_loader']);
+		// add_action('generate_before_header', [$this, 'render_loader']);
 		add_action('generate_inside_slideout_navigation', [$this, 'logo_mobile_header_menu'], 1);
 		add_action('generate_inside_slideout_navigation', [$this, 'social_links_shortcode']);
 		add_filter('generate_svg_icon', [$this, 'change_svg_icon_slideout_menu'], 10, 2);
