@@ -12,7 +12,8 @@ if (!empty($images)) :
                         [
                             'image' => $image['image'],
                             'class' => 'image--default',
-                            'size' => 'full'
+                            'size' => 'full',
+                            'lazyload' => true
                         ]
                     )
                     ?>

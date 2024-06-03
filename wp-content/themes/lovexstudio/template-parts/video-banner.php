@@ -19,11 +19,12 @@ if (!empty($image_video)) :  ?>
 		<div class="hero-banner__cover">
 			<?php
 			the_block(
-				'image',
+			'image',
 				[
 					'image' => $image_video,
 					'class' => 'image--default image__img',
-					'size' => 'full'
+					'size' => 'full',
+					'lazyload' => true 
 				]
 			);
 			?>

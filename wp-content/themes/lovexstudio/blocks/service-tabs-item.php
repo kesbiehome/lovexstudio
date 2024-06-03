@@ -21,7 +21,7 @@ $link = home_url() . '/projects?service=' . $slug;
         <?php
         the_block('image', [
             'image' => $thumbnail,
-            'class' => 'image--square service-media__image',
+            'class' => 'image--square image__img',
             'lazyload' => true
         ]);
         ?>
