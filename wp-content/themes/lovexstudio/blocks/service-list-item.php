@@ -39,7 +39,7 @@ $class_wrapper = $revert ? 'service-list-item__wrapper bg-black' : 'service-list
                     <?php
                     the_block('image', [
                         'image' => $thumbnail,
-                        'class' => 'image--default service-media__image',
+                        'class' => 'image--default image__img',
                         'lazyload' => true
                     ]);
                     ?>
