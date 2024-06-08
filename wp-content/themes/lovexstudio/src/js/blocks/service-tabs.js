@@ -17,11 +17,11 @@ export default el => {
 	let index = 0
 	let activeLoop = true
 	let nav = select('.kesbie-tabs__nav-items')
+	let navItems = selectAll('[role="tab"]', el)
 
 	if (service) {
 		let elSearch = select('#service_' + service)
 		let elChoice = getParent(elSearch)
-		let navItems = selectAll('[role="tab"]', el)
 		index = navItems.indexOf(elChoice) ?? 0
 	}
 
@@ -68,10 +68,17 @@ export default el => {
 		e => {
 			const currentTabIndex = e.detail.currentIndex
 			index = currentTabIndex
-			activeLoop = false
 			setTabActive(currentTabIndex)
 		},
 		el
+	)
+
+	on(
+		'click',
+		e => {
+			activeLoop = false
+		},
+		navItems
 	)
 
 	function loop () {
@@ -92,7 +99,7 @@ export default el => {
 				loop()
 
 				// Every 5 sec
-			}, 5000)
+			}, 2500)
 		}
 	}
 
