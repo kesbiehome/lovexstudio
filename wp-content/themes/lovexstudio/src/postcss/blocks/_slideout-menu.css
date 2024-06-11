@@ -37,9 +37,18 @@
 		& li {
 			text-align: center !important;
 		}
+
+		& a {
+			text-transform: uppercase;
+			font-size: 18px;
+		}
 	}
 
 	& .slideout-navigation__social-links {
 		order: 4;
+	}
+
+	& [aria-current="page"] {
+		color: var(--primary-light);
 	}
 }
