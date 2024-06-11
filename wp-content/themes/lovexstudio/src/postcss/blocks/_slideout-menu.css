@@ -48,7 +48,7 @@
 		order: 4;
 	}
 
-	& [aria-current="page"] {
+	& [aria-current='page'] {
 		color: var(--primary-light);
 	}
 }
