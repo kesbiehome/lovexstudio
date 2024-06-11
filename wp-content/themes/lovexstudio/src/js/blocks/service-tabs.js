@@ -15,11 +15,13 @@ export default el => {
 	let url = new URL(url_string)
 	let service = url.searchParams.get('service')
 	let index = 0
+	let activeLoop = true
+	let nav = select('.kesbie-tabs__nav-items')
+	let navItems = selectAll('[role="tab"]', el)
 
 	if (service) {
 		let elSearch = select('#service_' + service)
 		let elChoice = getParent(elSearch)
-		let navItems = selectAll('[role="tab"]', el)
 		index = navItems.indexOf(elChoice) ?? 0
 	}
 
@@ -65,9 +67,42 @@ export default el => {
 		'update',
 		e => {
 			const currentTabIndex = e.detail.currentIndex
-
+			index = currentTabIndex
 			setTabActive(currentTabIndex)
 		},
 		el
 	)
+
+	on(
+		'click',
+		e => {
+			activeLoop = false
+		},
+		navItems
+	)
+
+	function loop () {
+		if (activeLoop) {
+			setTimeout(function () {
+				if (index < tabContentEls.length - 1) {
+					index = index + 1
+					nav.scrollLeft += 120
+				} else {
+					index = 0
+					nav.scrollLeft = 0
+				}
+				let tabInstance = Tabs(el, {
+					index: index
+				})
+
+				// Again
+				loop()
+
+				// Every 5 sec
+			}, 2500)
+		}
+	}
+
+	// Begins
+	loop()
 }
