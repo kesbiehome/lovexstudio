@@ -1497,7 +1497,7 @@ body.is-loading {
 		}
 .other-project {
 	display: flex;
-	background-color: #d0d0d0
+	background-color: #0f0f0f
 }
 .other-project .other-project__container {
 		padding: 3em 0;
@@ -1507,25 +1507,51 @@ body.is-loading {
 .other-project .other-project__list {
 		display: flex;
 		width: 100%;
+		flex-wrap: wrap;
+		grid-gap: 20px;
+		gap: 20px
 	}
+@media (min-width: 1024px) {
+.other-project .other-project__list {
+			grid-gap: 40px;
+			gap: 40px
+	}
+		}
 .other-project .project-card {
-		margin-right: 40px;
-		width: calc((100% - 40px * 2) / 2);
+		width: 100%;
 		overflow: hidden;
 		border-radius: 20px
 	}
+@media (min-width: 768px) {
+.other-project .project-card {
+			width: calc((100% - 40px) / 2)
+	}
+		}
+.other-project .project-card .image::before {
+			padding-top: calc(100% / 3);
+		}
+@media (min-width: 1024px) {
+.other-project .project-card .project-card__title {
+				font-size: 35px
+		}
+			}
 .other-project .project-card:last-child {
 			margin-right: 0;
 		}
 .other-project__title {
-	font-size: 2em;
+	font-size: 32px;
 	font-weight: bold;
 	text-align: center;
-	color: #000;
-	color: var(--black);
+	color: #fff;
+	color: var(--white);
 	margin-bottom: 1em;
-	text-transform: uppercase;
+	text-transform: uppercase
 }
+@media (min-width: 1024px) {
+.other-project__title {
+		font-size: 64px
+}
+	}
 .other-project__button {
 	display: flex;
 	justify-content: center;

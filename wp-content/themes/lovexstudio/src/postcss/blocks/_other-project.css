@@ -1,6 +1,6 @@
 .other-project {
 	display: flex;
-	background-color: #d0d0d0;
+	background-color: #0f0f0f;
 
 	& .other-project__container {
 		padding: 3em 0;
@@ -11,13 +11,32 @@
 	& .other-project__list {
 		display: flex;
 		width: 100%;
+		flex-wrap: wrap;
+		gap: 20px;
+
+		@media (--m) {
+			gap: 40px;
+		}
 	}
 
 	& .project-card {
-		margin-right: 40px;
-		width: calc((100% - 40px * 2) / 2);
+		width: 100%;
 		overflow: hidden;
 		border-radius: 20px;
+
+		@media (--s) {
+			width: calc((100% - 40px) / 2);
+		}
+
+		& .image::before {
+			padding-top: calc(100% / 3);
+		}
+
+		& .project-card__title {
+			@media (--m) {
+				font-size: 35px;
+			}
+		}
 
 		&:last-child {
 			margin-right: 0;
@@ -26,12 +45,16 @@
 }
 
 .other-project__title {
-	font-size: 2em;
+	font-size: 32px;
 	font-weight: bold;
 	text-align: center;
-	color: var(--black);
+	color: var(--white);
 	margin-bottom: 1em;
 	text-transform: uppercase;
+
+	@media (--m) {
+		font-size: 64px;
+	}
 }
 
 .other-project__button {
