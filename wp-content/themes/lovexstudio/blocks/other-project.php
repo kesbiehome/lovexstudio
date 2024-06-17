@@ -1,9 +1,17 @@
 <?php
 
 $project_id = get_the_id();
-$project_term = get_the_terms($project_id, 'project_cat');
+$project_terms = get_the_terms($project_id, 'project_cat');
 
-$project_relate = get_project_by_term_id($project_term[0]->term_id, 3);
+$project_term_ids = [];
+foreach ($project_terms as $project_term) {
+    $project_term_ids[] = $project_term->term_id;
+}
+
+$project_relate = get_project_by_term_id($project_term_ids, [
+    'post__not_in' => [$project_id]
+], 4);
+
 $project_relate_ids = $project_relate['project_ids'];
 
 if (($key = array_search($project_id, $project_relate_ids)) !== false) {

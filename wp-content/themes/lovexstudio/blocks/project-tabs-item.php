@@ -2,7 +2,7 @@
 
 $term_link = get_term_link($category_id);
 
-$project_data = get_project_by_term_id($category_id, $posts_per_page);
+$project_data = get_project_by_term_id($category_id, [], $posts_per_page);
 $project_ids = $project_data['project_ids'] ?? [];
 $max_num_pages = $project_data['project_ids'] ?? 0;
 
