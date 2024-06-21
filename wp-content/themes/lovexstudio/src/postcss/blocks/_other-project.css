@@ -22,7 +22,6 @@
 	& .project-card {
 		width: 100%;
 		overflow: hidden;
-		border-radius: 20px;
 
 		@media (--s) {
 			width: calc((100% - 40px) / 2);
@@ -62,4 +61,8 @@
 	justify-content: center;
 	margin-top: 2em;
 	text-transform: uppercase;
+
+	& button {
+		font-family: var(--font-family-bold);
+	}
 }
