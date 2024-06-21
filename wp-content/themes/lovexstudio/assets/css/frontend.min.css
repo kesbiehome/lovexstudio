@@ -1519,8 +1519,7 @@ body.is-loading {
 		}
 .other-project .project-card {
 		width: 100%;
-		overflow: hidden;
-		border-radius: 20px
+		overflow: hidden
 	}
 @media (min-width: 768px) {
 .other-project .project-card {
@@ -1556,8 +1555,12 @@ body.is-loading {
 	display: flex;
 	justify-content: center;
 	margin-top: 2em;
-	text-transform: uppercase;
+	text-transform: uppercase
 }
+.other-project__button button {
+		font-family: 'Heading Now 46';
+		font-family: var(--font-family-bold);
+	}
 .project-info {
 	display: flex;
 	width: 100%;
