@@ -1,0 +1,67 @@
+{
+    "key": "group_project_youtube",
+    "title": "Project Videos",
+    "fields": [
+        {
+            "key": "field_project_youtube_videos",
+            "label": "YouTube Videos",
+            "name": "youtube_videos",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Th\u00eam link YouTube cho project n\u00e0y",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Video",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_project_youtube_url",
+                    "label": "YouTube URL",
+                    "name": "youtube_url",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "D\u00e1n link YouTube (v\u00ed d\u1ee5: https://www.youtube.com/watch?v=XXXXX)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "https://www.youtube.com/watch?v=",
+                    "parent_repeater": "field_project_youtube_videos"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "project"
+            }
+        ]
+    ],
+    "menu_order": 5,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1740470400
+}

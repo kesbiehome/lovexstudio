@@ -1,13 +1,36 @@
 <?php
 
 $gallery = get_field('gallery', get_the_ID());
+$youtube_videos = get_field('youtube_videos', get_the_ID());
 
-if (empty($gallery)) {
+if (empty($gallery) && empty($youtube_videos)) {
     return;
 }
 
 ?>
 <div class="project-content">
+    <?php if (!empty($youtube_videos)): ?>
+        <div class="project-videos">
+            <?php foreach ($youtube_videos as $video_row): ?>
+                <?php
+                $embed_url = getYoutubeEmbedUrl($video_row['youtube_url']);
+                if (!$embed_url) continue;
+                ?>
+                <div class="project-videos__item" data-aos="fade-up">
+                    <div class="project-videos__embed">
+                        <iframe
+                            src="<?php echo esc_url($embed_url); ?>"
+                            title="<?php echo esc_attr(get_the_title()); ?> - video"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                            loading="lazy"
+                        ></iframe>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    <?php endif; ?>
     <?php if (!empty($gallery)): ?>
         <?php foreach ($gallery as $key => $image_id): ?>
             <?php $image_src = wp_get_attachment_image_src($image_id, 'full')[0]; ?>
