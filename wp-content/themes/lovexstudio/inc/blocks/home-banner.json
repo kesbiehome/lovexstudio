@@ -6,6 +6,23 @@
     "display": "row",
     "sub_fields": [
       {
+        "key": "field_homebanner_youtube_url",
+        "label": "YouTube URL",
+        "name": "youtube_url",
+        "aria-label": "",
+        "type": "url",
+        "instructions": "N\u1ebfu c\u00f3 link YouTube th\u00ec hi\u1ec3n th\u1ecb video thay cho slider. \u0110\u1ec3 tr\u1ed1ng \u0111\u1ec3 d\u00f9ng slider h\u00ecnh \u1ea3nh.",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "placeholder": "https://www.youtube.com/watch?v="
+      },
+      {
         "key": "field_645esd73fd4e0",
         "label": "Images",
         "name": "images",

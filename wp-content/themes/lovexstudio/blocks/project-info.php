@@ -46,10 +46,10 @@ $content =  get_the_content();
     </div> -->
 </div>
 
+<?php if (!empty($content)): ?>
 <div class="project-content">
-    <?php if (!empty($content)): ?>
         <p class="project-info__content">
             <?php echo $content; ?>
         </p>
-    <?php endif; ?>
-</div>
+    </div>
+<?php endif; ?>

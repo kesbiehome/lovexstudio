@@ -68,3 +68,48 @@
 		bottom: 60px;
 	}
 }
+
+.hero-banner-video {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+
+	&::after {
+		content: '';
+		height: 4px;
+		width: 100%;
+		background-color: var(--light-green);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+
+		@media (--s) {
+			height: 8px;
+		}
+	}
+
+	& .home-hero-text__wrapper {
+		z-index: 3;
+	}
+}
+
+.hero-banner-video__embed {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	height: 70vh;
+
+	& iframe {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 177.78vh;
+		height: 100%;
+		min-width: 100%;
+		min-height: 56.25vw;
+		border: 0;
+		pointer-events: none;
+	}
+}
