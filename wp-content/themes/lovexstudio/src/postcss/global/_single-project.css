@@ -1,6 +1,0 @@
-.single-project {
-	& .container.grid-container {
-		max-width: 100%;
-		background-color: #0d0d0d;
-	}
-}
